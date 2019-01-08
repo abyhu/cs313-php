@@ -8,6 +8,8 @@ body {
 .container {
     height: auto; 
     overflow: auto; 
+    padding: 5px; 
+    margin: 5px; 
 }
 
 #one {
@@ -26,7 +28,8 @@ body {
 
 .alertMessage {
     padding: 15px; 
-    font-size: 1.25em;
+    margin: 10px; 
+    font-size: 2em;
     background-color: darkseagreen;
     color: white; 
 }
