@@ -5,6 +5,11 @@ body {
     font-size: 14px; 
 }
 
+div {
+    height: auto; 
+    overflow: auto; 
+}
+
 #one {
     font-size: 10px; 
     background-color: lightpink; 
