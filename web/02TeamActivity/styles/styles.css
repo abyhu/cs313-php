@@ -23,3 +23,18 @@ body {
     font-size: 18px; 
     background-color: lightcyan; 
 }
+
+.alertMessage {
+    padding: 15px; 
+    background-color: darkseagreen;
+}
+
+.closeMessage {
+    margin-left: 10px; 
+    float: right; 
+    font-size: 1.5em; 
+}
+
+.closeMessage:hover {
+    color: blue; 
+}
