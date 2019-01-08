@@ -1,0 +1,19 @@
+body {
+    width: 50%; 
+    font-family: monospace; 
+    font-size: 14px; 
+}
+
+#1 {
+    font-size: 10px; 
+    background-color: lightpink; 
+}
+
+#2 {
+    background-color: lightgoldenrodyellow; 
+}
+
+#3 {
+    font-size: 14px; 
+    background-color: lightcyan; 
+}
