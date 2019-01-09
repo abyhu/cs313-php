@@ -27,8 +27,15 @@
 	  </nav>
   
 	  <main>
-	  	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
-		 <p>I am Abrial Marroquin. I study at BYU-Idaho. I am currently seeking internships. I love web development and can't wait to learn more about backend development this semester.</p>
+		 <div id="mainContainer">
+			 <div class="item1">
+			 	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
+			 </div>
+			 <div class="item2">
+			 	<p>I am Abrial Marroquin. I study at BYU-Idaho. I am currently seeking internships. I love web development and can't wait to learn more about backend development this semester.</p>
+			 </div>
+		  </div>
+	  	 
 	  </main>
 	  
 	  <footer>
