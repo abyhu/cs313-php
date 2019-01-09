@@ -24,17 +24,17 @@ nav, footer {
 
 nav a {
 	padding-right: 3%; 
-	color: white; 
+	color: #5f766a;  
 	text-decoration: none; 
 }
 
 footer p a {
-	color: white;
+	color: #5f766a; 
 	text-decoration: underline;
 }
 
 a:hover, a:active {
-	color: #5f766a; 
+	color: #4c516d;
 }
 
 
