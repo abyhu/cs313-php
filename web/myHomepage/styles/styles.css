@@ -31,7 +31,7 @@ nav, footer {
 	width: 100%; 
 }
 
-nav a {
+nav a, li a {
 	padding: 0 3%; 
 	color: #4c516d;  
 	text-decoration: none; 
@@ -67,15 +67,6 @@ em {
 
 li {
 	list-style: none;
-}
-
-li a {
-	color: #8e5572; 
-	text-decoration: none; 
-}
-
-li a:hover, li a:active {
-	color: #4c516d;
 }
 
 a:hover, a:active {
