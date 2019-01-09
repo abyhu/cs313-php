@@ -20,21 +20,22 @@ h1 {
 nav, footer {
 	background-color: #add2be; 
 	padding: 1%; 
+	margin: 0 auto; 
 }
 
 nav a {
 	padding-right: 3%; 
-	color: #5f766a;  
+	color: #4c516d;  
 	text-decoration: none; 
 }
 
 footer p a {
-	color: #5f766a; 
+	color: #4c516d; 
 	text-decoration: underline;
 }
 
 a:hover, a:active {
-	color: #4c516d;
+	color: white;
 }
 
 
