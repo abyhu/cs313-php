@@ -59,8 +59,21 @@ img {
   	max-width: 100%; 
 }
 
+em {
+	color: #8e5572;
+}
+
 li {
 	list-style: none;
+}
+
+li a {
+	color: #8e5572; 
+	text-decoration: none; 
+}
+
+li a:hover, li a:active {
+	color: #add2be;
 }
 
 a:hover, a:active {
