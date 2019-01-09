@@ -13,8 +13,8 @@ h1 {
 	font-size: 2em; 
 	color: white; 
 	text-align: right;
-	margin: 10% 10% 10% auto; 
-	
+	margin: 0 10% 0 auto; 
+	padding: 10% 0; 	
 }
 
 
