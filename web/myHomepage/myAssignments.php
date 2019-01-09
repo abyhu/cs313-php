@@ -16,7 +16,6 @@
     <title>Abrial Marroquin CS 313 Assignments</title>
   </head>
   <body>
-    <body>
 	  <header>
 		  <h1>Abrial Marroquin</h1>
 		  <h2>A Homepage Website for CS 313</h2>
