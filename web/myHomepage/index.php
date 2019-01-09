@@ -17,7 +17,8 @@
   </head>
   <body>
 	  <header>
-	   <h1>Abrial <br> Marroquin</h1>
+		  <h1>Abrial Marroquin</h1>
+		  <h2>A Homepage Website for CS 313</h2>
 	  </header>
 	  
 	  <nav>
