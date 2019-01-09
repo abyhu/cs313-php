@@ -39,6 +39,7 @@ nav a {
 #mainContainer {
 	display: grid; 
 	grid-template-columns: auto auto;  
+	grid-column-gap: 5%; 
 }
 
 .item1 {
@@ -47,7 +48,7 @@ nav a {
 }
 
 .item2 {
-	margin: 10%; 
+	 margin-right: 10%; 
 }
 
 img {
