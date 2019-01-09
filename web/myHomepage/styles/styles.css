@@ -1,6 +1,7 @@
 body {
 	
 	font-family: 'Open Sans', sans-serif;
+	font-size: 14px; 
 	color: dimgray; 
 }
 header {
@@ -9,9 +10,11 @@ header {
 
 h1 {
 	font-family: 'Parisienne', cursive;
+	font-size: 2em; 
 	color: white; 
 	text-align: right;
-	padding: 10% 10% 10% auto; 
+	margin: 10% 10% 10% auto; 
+	
 }
 
 
