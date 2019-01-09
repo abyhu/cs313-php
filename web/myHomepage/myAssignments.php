@@ -14,13 +14,41 @@
     <title>Abrial Marroquin CS 313 Assignments</title>
   </head>
   <body>
-    <h1>Abrial Marroquin</h1>
+    <body>
+	  <header>
+		  <h1>Abrial Marroquin</h1>
+		  <h2>A Homepage Website for CS 313</h2>
+	  </header>
+	  
 	  <nav>
-		  <a href="index.php">Home</a>
-		  <a href="myAssignments.php">Assignments</a>	  
+	  	<a href="index.php">Home</a>
+	  	<a href="myAssignments.php">Assignments</a>	  
 	  </nav>
-	  <img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
-	  <p>I am Abrial Marroquin. I study at BYU-Idaho. I am currently seeking internships. I love web development and can't wait to learn more about backend development this semester.</p>
+  
+	  <main>
+		 <div id="mainContainer">
+			 <div class="item1">
+			 	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
+			 </div>
+			 <div class="item2">
+				 <ul> 
+					 <li><a href="">Assignment One ... Coming Soon!</a></li>
+					 <li><a href="">Assignment Two ... Coming Soon!</a></li>
+					 <li><a href="">Assignment Three ... Coming Soon!</a></li>
+					 <li><a href="">Assignment Four ... Coming Soon!</a></li>
+					 <li><a href="">Assignment Five ... Coming Soon!</a></li>
+					 <li><a href="">Assignment Six ... Coming Soon!</a></li>
+					 <li><a href="">Assignment Seven ... Coming Soon!</a></li>
+				 </ul>
+			 </div>
+		  </div>
+	  	 
+	  </main>
+	  
+	  <footer>
+		  <p>&copy; <?php echo date("Y") ?> Abrial Marroquin | Student at <a href="http://www.byui.edu/">BYU-Idaho</a> | Homepage Assignment for CS 313 | Viewed on <?php echo date("M d, Y") ?></p>
+	  
+	  </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
