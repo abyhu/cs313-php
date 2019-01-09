@@ -21,11 +21,10 @@ nav, footer {
 	background-color: #add2be; 
 	padding: 1%; 
 	width: 100%; 
-	margin: 0 auto; 
 }
 
 nav a {
-	padding-right: 3%; 
+	padding: 0 3%; 
 	color: #4c516d;  
 	text-decoration: none; 
 }
