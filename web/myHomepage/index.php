@@ -17,7 +17,7 @@
   </head>
   <body>
 	  <header>
-	   <h1>Abrial Marroquin</h1>
+	   <h1>Abrial <br> Marroquin</h1>
 	  </header>
 	  
 	  <nav>
