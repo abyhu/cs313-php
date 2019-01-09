@@ -37,7 +37,6 @@ nav a {
 }
 
 #mainContainer {
-	width: 100%; 
 	display: grid; 
 	grid-template-columns: auto auto;  
 	grid-column-gap: 5%; 
@@ -49,11 +48,12 @@ nav a {
 }
 
 .item2 {
-	 margin-right: 10%; 
+	margin-right: 10%; 
+	max-width: 100%; 
 }
 
 img {
-  	max-height: 100%; 
+  	max-width: 100%; 
 }
 
 a:hover, a:active {
@@ -69,7 +69,6 @@ footer p a {
 footer p { 
 	text-align: center; 
 	margin: 0 auto; 
-	padding: 1%; 
 }
 
 
