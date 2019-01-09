@@ -47,15 +47,11 @@ nav a {
 }
 
 .item 2 {
-	
+	padding: 10%; 
 }
 
 img {
 	
-}
-
-p {
-	padding: 10%; 
 }
 
 a:hover, a:active {
@@ -71,7 +67,7 @@ footer p a {
 footer p { 
 	text-align: center; 
 	margin: 0 auto; 
-	padding: none; 
+	padding: 2%; 
 }
 
 
