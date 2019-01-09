@@ -32,7 +32,9 @@
 			 	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
 			 </div>
 			 <div class="item2">
-			 	<p>I am Abrial Marroquin. I study at BYU-Idaho. I am currently seeking internships. I love web development and can't wait to learn more about backend development this semester.</p>
+			 	<p><em>Developer and Designer:</em> I am not satisfied with something that "works", it also needs to look good. I will often continue working on a project until I am satisfied with both functionality and user interface. I design and structure my programs with the end product in mind. By considering the UX/UI experience from the start, I ensure the product is functional and visually pleasing when I finish.</p> 
+				<p><em>Professional Problem Solver:</em> I believe in using my whole "tool box" to solve problems. I do not limit programming solutions to programming tools. When faced with a problem I cannot solve, I don't give up. I will leave the project but continue thinking about potential solutions until one is found. Even if the solution is unexpected or unconventional.</p> 
+				<p><em>Life-long Learner</em> I am a junior at BYU-Idaho studying Software Engineering. Even when not in school, I cannot stop learning. My most recent non-school related project was using YouTube videos to build an apartment in the basement of my home.</p> 
 			 </div>
 		  </div>
 	  	 
