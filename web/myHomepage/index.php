@@ -29,7 +29,7 @@
 	  </main>
 	  
 	  <footer>
-		  <p>&copy; 2019 Abrial Marroquin | Student at <a href="http://www.byui.edu/">BYU-Idaho | Homepage Assignment for CS 313</a></p>
+		  <p>&copy; <?php date("m/d/Y") ?> Abrial Marroquin | Student at <a href="http://www.byui.edu/">BYU-Idaho</a> | Homepage Assignment for CS 313</p>
 	  
 	  </footer>
 	  
