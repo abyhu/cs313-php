@@ -43,22 +43,22 @@ nav a, li a {
 	grid-template-columns: auto auto;  
 	grid-column-gap: 5%;
 	background-color: whitesmoke; 
+	align-items: center; 
 }
 
 .item1 {
 	grid-column-start: 1; 
 	grid-column-end: 2;
-	align-items: center; 
 }
 
 .item2 {
 	margin-right: 10%; 
 	width: 100%;  
-	align-items: center; 
+	
 }
 
 img {
-	width: 100%; 
+	width: 96%; 
 }
 
 em {
