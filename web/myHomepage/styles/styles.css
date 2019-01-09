@@ -3,6 +3,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px; 
 	color: #4c516d;
+	max-height: 100%; 
 	margin: auto 0; 
 }
 header {
@@ -22,7 +23,7 @@ h2 {
 	color: #add2be;
 	font-size: 18px; 
 	text-align: center; 
-	margin: 1% auto; 
+	margin: 0.5% auto; 
 }
 
 nav, footer {
