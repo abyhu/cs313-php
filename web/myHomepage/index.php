@@ -29,7 +29,7 @@
 	  </main>
 	  
 	  <footer>
-		  <p>&copy; <?php date("m/d/Y") ?> Abrial Marroquin | Student at <a href="http://www.byui.edu/">BYU-Idaho</a> | Homepage Assignment for CS 313</p>
+		  <p>&copy; <?php echo date("m/d/Y") ?> Abrial Marroquin | Student at <a href="http://www.byui.edu/">BYU-Idaho</a> | Homepage Assignment for CS 313</p>
 	  
 	  </footer>
 	  
