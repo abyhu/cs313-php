@@ -12,6 +12,10 @@ body {
     margin: 5px; 
 }
 
+.container:hover {
+    font-weight: bold; 
+}
+
 #one {
     font-size: 10px; 
     background-color: lavenderblush; 
