@@ -61,7 +61,7 @@ img {
 }
 
 em {
-	color: #8e5572;
+	color: lightpink;
 	font-weight: 600; 
 	font-size: 18px; 
 }
@@ -71,9 +71,8 @@ li {
 }
 
 a:hover, a:active {
-	color: #8e5572;
-	text-decoration: none; 
-	font-size: 18px; 
+	color: lightpink;
+	text-decoration: underline;  
 }
 
 footer p a {
