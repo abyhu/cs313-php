@@ -61,7 +61,7 @@ img {
 }
 
 em {
-	color: lightpink;
+	color: #b7410e;
 	font-weight: 600; 
 	font-size: 18px; 
 }
@@ -71,7 +71,7 @@ li {
 }
 
 a:hover, a:active {
-	color: lightpink;
+	color: #b7410e;
 	text-decoration: underline;  
 }
 
