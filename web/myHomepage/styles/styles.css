@@ -35,7 +35,7 @@ nav a, li a {
 	padding: 0 3%; 
 	color: #4c516d;  
 	text-decoration: none; 
-	font-size: 15px; 
+	font-family: 'Roboto', sans-serif;
 } 
 
 #mainContainer {
