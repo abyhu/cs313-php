@@ -1,3 +1,1 @@
-$(document).ready(function () {
-    $(".mainContainer").fadeIn("slow");
-});
+$(document).ready($(".mainContainer").fadeIn("slow"));
