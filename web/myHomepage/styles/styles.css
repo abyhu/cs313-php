@@ -59,6 +59,10 @@ img {
   	max-width: 100%; 
 }
 
+li {
+	list-style: none;
+}
+
 a:hover, a:active {
 	color: #8e5572;
 	text-decoration: none; 

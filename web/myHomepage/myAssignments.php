@@ -33,6 +33,7 @@
 			 	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
 			 </div>
 			 <div class="item2">
+				 <p><em>CS 313 Web Engineering II:</em><br> According to the syllabus, this course builds upon Web Engineering I allowing students to create more advanced web applications and services. The emphasis of this course will be on server-side technologies and n-tier applications using relational database technology. Different server-side technologies will be used for creating dynamic n-tier web applications. Client side technologies will be enhanced and combined with server-side technologies to create rich; web applications.I am not satisfied with something that "works", it also needs to look good. I will often continue working on a project until I am satisfied with both functionality and user interface.</p> 
 				 <ul> 
 					 <li><a href="">Assignment One ... Coming Soon!</a></li>
 					 <li><a href="">Assignment Two ... Coming Soon!</a></li>
