@@ -1,17 +1,17 @@
 body {
 	
 	font-family: 'Open Sans', sans-serif;
-	font-size: 18px; 
+	font-size: 14px; 
 	color: #4c516d;
 }
 header {
 	background-color: #4c516d;
-	padding: 3% 0; 
+	padding: 2% 0; 
 }
 
 h1 {
 	font-family: 'Parisienne', cursive;
-	font-size: 50px; 
+	font-size: 40px; 
 	color: white; 
 	text-align: center;
 	margin: 0 auto; 
@@ -19,7 +19,7 @@ h1 {
 
 h2 {
 	color: #add2be;
-	font-size: 20px; 
+	font-size: 18px; 
 	text-align: center; 
 	margin: 1% auto; 
 }
