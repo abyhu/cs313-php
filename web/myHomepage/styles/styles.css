@@ -20,7 +20,7 @@ h1 {
 nav, footer {
 	background-color: #add2be; 
 	padding: 1%; 
-	width: auto; 
+	width: 100%; 
 	margin: 0 auto; 
 }
 
