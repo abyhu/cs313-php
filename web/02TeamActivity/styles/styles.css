@@ -1,5 +1,5 @@
 body {
-    width: 50%; 
+    width: 75%; 
     margin: 0 auto; 
     font-family: monospace; 
     font-size: 14px; 
@@ -24,6 +24,11 @@ body {
 #three {
     font-size: 18px; 
     background-color: lightcyan; 
+}
+
+button {
+    padding: 10px; 
+    margin: 10px; 
 }
 
 #alertMessage {
