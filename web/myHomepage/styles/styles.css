@@ -43,6 +43,7 @@ nav a, li a {
 	grid-column-gap: 5%;
 	align-items: center; 
 	background-color: whitesmoke; 
+	display: hidden; 
 }
 
 .item1 {
