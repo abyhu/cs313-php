@@ -61,6 +61,8 @@ img {
 
 em {
 	color: #8e5572;
+	font-weight: 600; 
+	font-size: 18px; 
 }
 
 li {
