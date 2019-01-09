@@ -29,14 +29,21 @@ nav a {
 	text-decoration: none; 
 }
 
+
+
+a:hover, a:active {
+	color: #136b38;
+	text-decoration: none; 
+}
+
 footer p a {
 	color: #4c516d; 
 	text-decoration: underline;
 }
 
-a:hover, a:active {
-	color: #136b38;
-	text-decoration: none; 
+footer p { 
+	text-align: center; 
+	margin: 0 auto; 
 }
 
 
