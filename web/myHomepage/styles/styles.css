@@ -1,6 +1,15 @@
 body {
 	
+	font-family: 'Open Sans', sans-serif;
+	color: dimgray; 
+}
+header {
+	background-color: dimgrey; 
 }
 
+h1 {
+	font-family: 'Parisienne', cursive;
+	color: white; 
+}
 
 
