@@ -17,4 +17,14 @@ h1 {
 	margin: 0 10% 0 auto; 
 }
 
+nav {
+	background-color: #add2be; 
+	color: white; 
+	padding: 1%; 
+}
+
+nav a {
+	padding-right: 3%; 
+}
+
 
