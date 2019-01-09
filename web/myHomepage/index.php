@@ -14,13 +14,24 @@
     <title>Abrial Marroquin CS 313 Homepage</title>
   </head>
   <body>
-   <h1>Abrial Marroquin</h1>
+	  <header>
+	   <h1>Abrial Marroquin</h1>
+	  </header>
+	  
 	  <nav>
-		  <a href="index.php">Home</a>
-		  <a href="myAssignments.php">Assignments</a>	  
+	  	<a href="index.php">Home</a>
+	  	<a href="myAssignments.php">Assignments</a>	  
 	  </nav>
-	  <img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
-	  <p>I am Abrial Marroquin. I study at BYU-Idaho. I am currently seeking internships. I love web development and can't wait to learn more about backend development this semester.</p>
+  
+	  <main>
+	  	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
+		 <p>I am Abrial Marroquin. I study at BYU-Idaho. I am currently seeking internships. I love web development and can't wait to learn more about backend development this semester.</p>
+	  </main>
+	  
+	  <footer>
+		  <p>&copy; 2019 Abrial Marroquin | Student at <a href="http://www.byui.edu/">BYU-Idaho | Homepage Assignment for CS 313</a></p>
+	  
+	  </footer>
 	  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
