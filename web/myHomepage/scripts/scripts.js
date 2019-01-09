@@ -1,5 +1,1 @@
-$(document).ready(function () {
-    $('div.mainContainer').fadeIn("slow", function () {
-		$(this).css("display", "normal");
-	});
-});
+$('.mainContainer').delay(100).animate({'opacity':'1'},600);
