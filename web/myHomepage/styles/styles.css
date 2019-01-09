@@ -33,10 +33,9 @@ nav, footer {
 
 nav a, li a {
 	padding: 0 3%; 
-	color: #4c516d;  
-	text-decoration: none; 
+	color: #4c516d;   
 	font-family: 'Roboto', sans-serif;
-	font-size: 18px; 
+	font-size: 16px; 
 } 
 
 #mainContainer {
