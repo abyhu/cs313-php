@@ -6,6 +6,7 @@ body {
 }
 header {
 	background-color: dimgrey; 
+	padding: 5% 0; 
 }
 
 h1 {
@@ -14,7 +15,6 @@ h1 {
 	color: white; 
 	text-align: right;
 	margin: 0 10% 0 auto; 
-	padding: 10% 0; 	
 }
 
 
