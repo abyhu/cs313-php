@@ -3,8 +3,6 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px; 
 	color: #4c516d;
-	max-height: 100%; 
-	margin: auto 0; 
 	background-color: #4c516d;
 }
 header {
@@ -28,7 +26,7 @@ h2 {
 }
 
 nav, footer {
-	background-color: #add2be; 
+	background-color:  ; 
 	padding: 1%; 
 	width: 100%; 
 }
@@ -62,7 +60,7 @@ img {
 }
 
 a:hover, a:active {
-	color: #136b38;
+	color: #8e5572;
 	text-decoration: none; 
 }
 
