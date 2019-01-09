@@ -37,6 +37,7 @@ nav a {
 }
 
 #mainContainer {
+	width: 100%; 
 	display: grid; 
 	grid-template-columns: auto auto;  
 	grid-column-gap: 5%; 
