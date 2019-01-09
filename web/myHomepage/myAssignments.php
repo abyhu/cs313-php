@@ -30,7 +30,6 @@
       
       <?php
 
-  phpinfo();
 
 ?>
   </body>
