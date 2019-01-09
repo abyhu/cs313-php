@@ -5,6 +5,7 @@ body {
 	color: #4c516d;
 	max-height: 100%; 
 	margin: auto 0; 
+	background-color: #4c516d;
 }
 header {
 	background-color: #4c516d;
@@ -43,6 +44,7 @@ nav a {
 	grid-template-columns: auto auto;  
 	grid-column-gap: 5%;
 	align-items: center; 
+	background-color: white; 
 }
 
 .item1 {
