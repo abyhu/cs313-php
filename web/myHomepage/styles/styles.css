@@ -39,7 +39,8 @@ nav a {
 #mainContainer {
 	display: grid; 
 	grid-template-columns: auto auto;  
-	grid-column-gap: 5%; 
+	grid-column-gap: 5%;
+	align-items: center; 
 }
 
 .item1 {
