@@ -1,1 +1,3 @@
-$('.mainContainer').animate({'opacity':'1'},600);
+$(document).ready(function () {
+    $(".mainContainer").fadeIn("slow");
+});
