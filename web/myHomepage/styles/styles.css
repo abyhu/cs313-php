@@ -1,17 +1,17 @@
 body {
 	
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px; 
-	color: dimgray; 
+	font-size: 18px; 
+	color: slategray; 
 }
 header {
-	background-color: dimgrey; 
+	background-color: slategray; 
 	padding: 5% 0; 
 }
 
 h1 {
 	font-family: 'Parisienne', cursive;
-	font-size: 2em; 
+	font-size: 50px; 
 	color: white; 
 	text-align: right;
 	margin: 0 10% 0 auto; 
