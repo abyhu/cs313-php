@@ -17,14 +17,26 @@ h1 {
 	margin: 0 10% 0 auto; 
 }
 
-nav {
+nav, footer {
 	background-color: #add2be; 
-	color: white; 
 	padding: 1%; 
 }
 
 nav a {
 	padding-right: 3%; 
+	color: white; 
+	text-decoration: none; 
 }
+
+footer p a {
+	color: white;
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	color: #5f766a; 
+}
+
+
 
 
