@@ -44,7 +44,7 @@ nav a, li a {
 	grid-template-columns: auto auto;  
 	grid-column-gap: 5%;
 	align-items: center; 
-	background-color: white; 
+	background-color: whitesmoke; 
 }
 
 .item1 {
