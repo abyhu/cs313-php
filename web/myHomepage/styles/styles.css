@@ -42,18 +42,19 @@ nav a, li a {
 	display: grid; 
 	grid-template-columns: auto auto;  
 	grid-column-gap: 5%;
-	align-items: center; 
 	background-color: whitesmoke; 
 }
 
 .item1 {
 	grid-column-start: 1; 
 	grid-column-end: 2;
+	align-items: center; 
 }
 
 .item2 {
 	margin-right: 10%; 
 	width: 100%;  
+	align-items: center; 
 }
 
 img {
