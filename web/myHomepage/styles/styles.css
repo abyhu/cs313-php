@@ -6,12 +6,12 @@ body {
 }
 header {
 	background-color: slategray; 
-	padding: 5% 0; 
+	padding: 3% 0; 
 }
 
 h1 {
 	font-family: 'Parisienne', cursive;
-	font-size: 50px; 
+	font-size: 40px; 
 	color: white; 
 	text-align: right;
 	margin: 0 10% 0 auto; 
