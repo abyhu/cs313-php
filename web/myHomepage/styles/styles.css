@@ -38,16 +38,16 @@ nav a {
 
 #mainContainer {
 	display: grid; 
-	grid-template-columns: auto auto auto;  
+	grid-template-columns: auto auto auto auto auto;  
 }
 
 .item1 {
 	grid-column-start: 1; 
-	grid-column-end: 3;
+	grid-column-end: 4;
 }
 
 .item 2 {
-	padding: 10%; 
+	margin: 10%; 
 }
 
 img {
