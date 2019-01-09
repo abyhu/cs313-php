@@ -20,6 +20,7 @@ h1 {
 nav, footer {
 	background-color: #add2be; 
 	padding: 1%; 
+	width: auto; 
 	margin: 0 auto; 
 }
 
@@ -30,7 +31,7 @@ nav a {
 }
 
 footer p a {
-	color: lightgrey; 
+	color: #4c516d; 
 	text-decoration: underline;
 }
 
