@@ -8,7 +8,7 @@ body {
 .container {
     height: auto; 
     overflow: auto; 
-    padding: 5px; 
+    padding: 15px; 
     margin: 5px; 
 }
 
@@ -26,8 +26,8 @@ body {
     background-color: lightcyan; 
 }
 
-.alertMessage {
-    padding: 15px; 
+#alertMessage {
+    padding: 10px; 
     margin: 10px; 
     font-size: 2em;
     background-color: darkseagreen;
