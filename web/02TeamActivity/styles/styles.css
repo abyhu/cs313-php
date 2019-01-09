@@ -32,7 +32,7 @@ body {
     font-size: 2em;
     background-color: darkseagreen;
     color: white; 
-    display: hidden;
+    display: none;
 }
 
 .closeMessage {
