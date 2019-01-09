@@ -51,7 +51,7 @@ nav a {
 }
 
 img {
-	
+	max-width: 50%;  
 }
 
 a:hover, a:active {
