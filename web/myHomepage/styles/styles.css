@@ -30,12 +30,13 @@ nav a {
 }
 
 footer p a {
-	color: #4c516d; 
+	color: lightgrey; 
 	text-decoration: underline;
 }
 
 a:hover, a:active {
-	color: white;
+	color: lightgrey;
+	text-decoration: none; 
 }
 
 
