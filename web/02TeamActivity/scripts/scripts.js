@@ -1,5 +1,5 @@
 function buttonClick() {
-    var alert = document.getElementById("alertMessage");
+    var alert = this.document.getElementById("alertMessage");
     if (alert.style.display === "none") {
         alert.style.display = "block";
     } else {
