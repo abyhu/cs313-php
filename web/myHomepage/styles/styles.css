@@ -36,6 +36,7 @@ nav a, li a {
 	color: #4c516d;  
 	text-decoration: none; 
 	font-family: 'Roboto', sans-serif;
+	font-size: 18px; 
 } 
 
 #mainContainer {
