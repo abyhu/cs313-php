@@ -31,12 +31,12 @@
 			 	<img src="images/family.jpg" alt="Abrial Marroquin's Family Photo" />
 			 </div>
 			 <div class="item2">
-			 	<p><em>Developer and Designer:</em><br> I am not satisfied with something that "works", it also needs to look good. I will often continue working on a project until I am satisfied with both functionality and user interface.</p> 
-				<p><em>Professional Problem Solver:</em><br> I believe in using my whole "tool box" to solve problems. When faced with a problem I cannot solve, I don't give up. I will leave the project but continue thinking about potential solutions until one is found.</p> 
+			 	<p><em>Developer and Designer</em><br> I am not satisfied with something that "works", it also needs to look good. I will often continue working on a project until I am satisfied with both functionality and user interface.</p> 
+				<p><em>Professional Problem Solver</em><br> I believe in using my whole "tool box" to solve problems. When faced with a problem I cannot solve, I don't give up. I will leave the project but continue thinking about potential solutions until one is found.</p> 
 				<p><em>Life-long Learner</em><br> Even when not in school, I cannot stop learning. My most recent non-school related project was using YouTube videos to build an apartment in the basement of my home.</p> 
 			 </div>
 		  </div>
-	  	 
+	  	 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" id="example"> <path id="myWave" d=""></path></svg>
 	  </main>
 	  
 	  <footer>
@@ -46,8 +46,15 @@
 	  
     <!-- Optional JavaScript -->
     <!-- jQuery first -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="scripts/scripts.js"></script>
+	  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous">
+ 		</script>
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js" 
+        integrity="sha384-FnCBqnv8Ooragy2NhzDDRIKYAUR7YclZ/H7KIyBhDrsJrgLsM+dtDOOttUP5gNWB" 
+        crossorigin="anonymous">
+	  	</script>
+		<script src="scripts/scripts.js"></script>
       
   </body>
 </html>
