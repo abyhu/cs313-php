@@ -45,6 +45,7 @@ nav a, li a {
 	background-color: whitesmoke; 
 	align-items: center; 
 	padding: 3%; 
+	display: hidden;
 }
 
 .item1 {
