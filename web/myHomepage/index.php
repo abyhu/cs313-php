@@ -36,7 +36,6 @@
 				<p><em>Life-long Learner</em><br> Even when not in school, I cannot stop learning. My most recent non-school related project was using YouTube videos to build an apartment in the basement of my home.</p> 
 			 </div>
 		  </div>
-	  	 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" id="example"> <path id="myWave" d=""></path></svg>
 	  </main>
 	  
 	  <footer>

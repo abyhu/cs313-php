@@ -1,6 +1,6 @@
 $(document).ready(onPageLoad()); 
 
 function onPageLoad() {
-	$("#mainContainer").fadeIn("slow");
+	$("img").fadeIn(5000);
 }
 	
