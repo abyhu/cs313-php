@@ -1,6 +1,6 @@
 $(document).ready(onPageLoad()); 
 
 function onPageLoad() {
-	$("img").fadeIn(5000);
+	$("#pOne").fadeIn(5000);
 }
 	
