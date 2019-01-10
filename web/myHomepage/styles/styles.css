@@ -32,6 +32,10 @@ nav, footer {
 	width: 100%; 
 }
 
+span a {
+	text-decoration: none; 
+}
+
 nav a, li a {
 	padding: 0 3%; 
 	color: #4c516d;   
