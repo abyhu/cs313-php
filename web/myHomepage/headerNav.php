@@ -6,8 +6,11 @@
   </head>
   <body>
 	  <header>
-		  <h1>Abrial Marroquin</h1>
-		  <h2>A Homepage Website for CS 313</h2>
+		  <span> 
+			<a href="index.php"><h1>Abrial Marroquin</h1>
+		  	<h2>A Homepage Website for CS 313</h2></a>
+		  </span>
+		  
 	  </header>
 	  
 	  <nav>
