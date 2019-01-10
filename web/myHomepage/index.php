@@ -16,4 +16,4 @@
 				<p id="pThree"><em>Life-long Learner</em><br> Even when not in school, I cannot stop learning. My most recent non-school related project was using YouTube videos to build an apartment in the basement of my home.</p> 
 			 </div>
 
-	<?php require('headerNav.php'); ?>
+	<?php require('footer.php'); ?>
