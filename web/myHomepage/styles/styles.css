@@ -57,7 +57,7 @@ nav a, li a {
 }
 
 #pOne, #pTwo, #pThree {
-	display: hidden; 
+	display: none; 
 }
 
 img {
