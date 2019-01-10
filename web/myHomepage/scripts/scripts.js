@@ -1,11 +1,6 @@
-this.$('#myWave').drawWaves({
+$(document).ready(onPageLoad()); 
 
-  // defaults
-  container: 'body',
-  color: '#33ABF9',
-  height: 200,
-  waveDelta: 100,
-  wavePoints: 3,
-  speed: .15
-  
-});
+function onPageLoad() {
+	$("#mainContainer").fadeIn("slow"));
+}
+	
