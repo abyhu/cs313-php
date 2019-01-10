@@ -1,4 +1,4 @@
-$('#myWave').drawWaves({
+this.$('#myWave').drawWaves({
 
   // defaults
   container: 'body',
