@@ -76,7 +76,7 @@ footer p {
 	margin: 0 auto; 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
 	#mainContainer {
 		display: grid; 
 		grid-template-columns: auto auto;  
