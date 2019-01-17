@@ -7,7 +7,7 @@
       		<a href="index.php" class="nav 0">Home</a>
       		<a href="shop.php" class="nav 1">Shop</a>
       		<a href="references.php" class="nav 2">References</a>
-      		<a href="www.facebook.com" class="nav 3">Facebook</a>
-      		<a href="www.gmail.com" class="nav 4">Email</a>
+      		<a href="https://www.facebook.com" class="nav 3">Facebook</a>
+      		<a href="https://www.gmail.com" class="nav 4">Email</a>
 		</nav>
 <main>
