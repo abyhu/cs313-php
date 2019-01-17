@@ -6,12 +6,11 @@ function activateNavItem(navItem) {
         navItemsList[i].setAttribute("id", "");
     }
     //set the selected id to an active attribute
-	var page = location.pathname;
+	var page = window.location.href;
 	$('.nav').each(function() {
-		var $this = $(this); 
 		//if the path and link are the same - make id active 
-		if($this.attr('href').indexOf(current) !== -1) {
-			$this.addId('active');
+		if(this.href === path) {
+			$(this).attr('id', 'active');
 		}
 	})
 }
