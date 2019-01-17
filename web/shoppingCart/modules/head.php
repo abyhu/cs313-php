@@ -9,6 +9,5 @@
 	<!--SCRIPTS-->
 		<script src="scripts/navigation.js"></script>
 		<script src="scripts/slider.js"></script>
-		<script src="scripts/form.js"></script>
 </head>
 <body onload="addFunctions()">
