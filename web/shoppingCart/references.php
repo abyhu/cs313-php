@@ -1,4 +1,17 @@
-<div id="references" style="display: none;">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Pursula">
+	<title>Pursula Shop</title>
+	
+	<!--INCLUDE HEAD-->
+	<?php include('modules/head.php'); ?>
+	
+	<!--INCLUDE HEADERNAV-->
+	<?php $page = 'references.php'; include('modules/headerNav.php'); ?>
+
+	<div id="references">
                 <h2>Image Credits</h2>
                 <ul>
                     <li>
@@ -58,3 +71,6 @@
                     </li>
                 </ul>
             </div>
+	<!--INCLUDE FOOTER-->
+	<?php include('modules/footer.php'); ?>
+            

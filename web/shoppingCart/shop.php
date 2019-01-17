@@ -11,7 +11,7 @@
 	<!--INCLUDE HEADERNAV-->
 	<?php $page = 'shop.php'; include('modules/headerNav.php'); ?>
   
-		<div id="shop" style="display: none;">
+		<div id="shop">
                 <div id="shopGallery">
                     <div class="item">
                         <img src="images/purse6med.jpg" alt="Little Black Pocketbook" class="purse" />
