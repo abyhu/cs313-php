@@ -1,0 +1,339 @@
+/* Google API Fonts:
+font-family: 'Love Ya Like A Sister', cursive;
+font-family: 'Abel', sans-serif;*/
+
+
+/* ___________Large Elements____________ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    font-size: 14px;
+    background-color: dimgray;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+div {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#references {
+    margin: 7% auto;
+}
+
+#checkout {
+    display: none;
+}
+
+#purchase
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* ___________Header Styles____________ */
+
+h1 {
+    display: none;
+}
+
+h2 {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 225%;
+    margin: 25% 0 10% 0;
+}
+
+h3 {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 125%;
+    margin: 0% 0 2% 0;
+}
+
+#checkout h2 {
+    margin: 5% 0 2% 2%;
+}
+
+#references h2 {
+    margin: 5% 0 2% 0;
+}
+
+#review {
+    margin: 0;
+}
+
+.review {
+    margin: 5% 0 2% 0;
+}
+
+
+/* ___________Image Styles____________ */
+
+#logo {
+    width: 60%;
+    margin: 2% auto;
+    padding: 0 20%;
+}
+
+
+/* ________Navigation, Footer and Link Styles______ */
+
+nav,
+footer {
+    width: 100%;
+    background-color: lightgray;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 125%;
+}
+
+footer {
+    padding: 0;
+}
+
+.nav {
+    font-size: 100%;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 19%;
+    padding: 0;
+    display: inline-block;
+    color: dimgray;
+    text-align: center;
+}
+
+a {
+    font-size: 100%;
+    line-height: 200%;
+    padding: 2% 0;
+    color: dimgray;
+}
+
+footer a {
+    color: rebeccapurple;
+}
+
+nav a:hover,
+#active {
+    background-color: rebeccapurple;
+    color: white;
+}
+
+a:hover {
+    color: lightseagreen;
+}
+
+a:visited {
+    color: rebeccapurple;
+}
+
+
+/* ___________Paragraph Styles____________ */
+#message {
+    color: red;
+    font-size: 150%;
+}
+
+#finalMessage {
+    margin: 5%;
+    font-size: 150%;
+    color: rebeccapurple;
+}
+
+
+/* ___________Form Styles____________ */
+form {
+    display: block;
+    font-size: 135%;
+    line-height: 150%;
+}
+
+#newForm{
+    margin: 5% 10%;
+}
+
+form div {
+    border: solid dimgray 3px;
+    margin: 2%;
+    padding: 3%;
+}
+.radio {
+    display: block;
+    padding: 0 2%;
+}
+
+input {
+    display: inline-block;
+    align-self: baseline;
+    margin: 0 2%;
+    font-size: 115%;
+}
+.help {
+    color: lightseagreen;
+    display: none;
+}
+
+form p span {
+    margin: 2%;
+}
+
+
+/* ___________List Styles____________ */
+
+ul {
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+}
+
+#references ul {
+    margin: 0 0 5% 0;
+}
+
+
+/* ___________Footer Styles____________ */
+
+
+/* ___________Main Slider____________ */
+
+#slider {
+    display: grid;
+    grid-template-columns: 5% 55% 35% 5%;
+    grid-template-rows: auto;
+    padding: 0;
+    width: 90%;
+    margin: 7% auto;
+}
+
+#slider input {
+    color: dimgray;
+    background-color: lightgray;
+    font-size: 300%;
+    margin: auto 0;
+    border-radius: 10%;
+}
+
+#leftArrow {
+    grid-column: 1;
+}
+
+#sliderImage {
+    max-width: 100%;
+    grid-column: 2;
+    margin: auto;
+}
+
+#sliderTextDiv {
+    max-width: 100%;
+    grid-column: 3;
+    margin: auto;
+}
+
+#sliderTextDiv #buyNow {
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 150%;
+    border-radius: 10%;
+    padding: 3% 6%;
+    margin: 10% 0;
+    grid-column: 3;
+}
+
+#rightArrow {
+    grid-column: 4;
+}
+
+#submitButton, #clear {
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 125%;
+    border-radius: 5%;
+    padding: 1% 3%;
+    margin: 3% 1% 0 1%;
+}
+
+#clear {
+    background-color: dimgray;
+}
+
+
+/* ___________Shop Gallery____________ */
+
+#shopGallery {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 5%;
+}
+
+.item {
+    padding: 8%;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+}
+
+#shopGallery h2 {
+    font-size: 125%;
+    margin: 0 0 2% 0;
+    text-align: center;
+    grid-column: 1/6;
+    grid-row: 2;
+}
+
+#shopGallery h3 {
+    font-size: 150%;
+    margin: 0 0 2% 0;
+    text-align: center;
+    grid-column: 1/6;
+    grid-row: 3;
+}
+
+#shopGallery img {
+    width: 100%;
+    grid-column: 1/6;
+    grid-row: 1;
+    margin: 0;
+}
+
+#shopGallery input {
+    height: 40px;
+    font-size: 100%;
+    padding: 2% 0;
+    margin: 0 4%;
+    grid-row: 4;
+    border-radius: 5%;
+}
+
+.checkout {
+    grid-column: 3/6;
+    background-color: lightgray;
+    color: dimgray;
+}
+
+.addCart {
+    grid-column: 1/3;
+    background-color: dimgray;
+    color: white;
+}
+
+.inCart {
+    grid-column: 1/3;
+    background-color: lightseagreen;
+    color: white;
+}
