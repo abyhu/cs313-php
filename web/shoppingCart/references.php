@@ -15,11 +15,6 @@
                 <h2>Image Credits</h2>
                 <ul>
                     <li>
-                        <a href="https://pixabay.com/en/abstract-universe-smoke-star-space-1963838/">
-                            <p>Universe Background Image: Modified from an image created by lumina_obscura. CC0 Creative Commons license.</p>
-                        </a>
-                    </li>
-                    <li>
                         <a href="https://pixabay.com/en/purse-fashion-woman-female-handbag-1460526/">
                             <p>Purse Clip Art in Logo: Modified from an image created by Maklay62. CC0 Creative Commons license.</p>
                         </a>
