@@ -1,4 +1,17 @@
-<div id="shop" style="display: none;">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Pursula">
+	<title>Pursula Shop</title>
+	
+	<!--INCLUDE HEAD-->
+	<?php include('modules/head.php'); ?>
+	
+	<!--INCLUDE HEADERNAV-->
+	<?php $page = 'shop.php'; include('modules/headerNav.php'); ?>
+  
+		<div id="shop" style="display: none;">
                 <div id="shopGallery">
                     <div class="item">
                         <img src="images/purse6med.jpg" alt="Little Black Pocketbook" class="purse" />
@@ -65,3 +78,7 @@
                     </div>
                 </div>
             </div>
+	
+	<!--INCLUDE FOOTER-->
+	<?php include('modules/footer.php'); ?>
+            
