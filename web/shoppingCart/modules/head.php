@@ -4,9 +4,9 @@
 	<!--FONTS AND STYLESHEETS-->
 		<link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../styles/main.css" />
+		<link rel="stylesheet" type="text/css" href="styles/main.css" />
 	
 	<!--SCRIPTS-->
-		<script src="../scripts/navigation.js"></script>
+		<script src="scripts/navigation.js"></script>
 </head>
 <body onload="addFunctions()">
