@@ -9,4 +9,4 @@
 	<!--SCRIPTS-->
 		<script src="../scripts/navigation.js"></script>
 </head>
-<body onload="addFunctions()">'); 
+<body onload="addFunctions()">
