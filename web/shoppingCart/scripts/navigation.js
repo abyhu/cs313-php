@@ -6,13 +6,14 @@ function activateNavItem(navItem) {
         navItemsList[i].setAttribute("id", "");
     }
     //set the selected id to an active attribute
-	var page = $(location).attr("href").split('/').pop();
-	for (var i = 0; i < navItemsList.length; i++) {
-		if (navItemsList[i].attr("href") == page) {
-			navItemsList[i].setAttribute("id", "active");
+	var page = location.pathname;
+	$('.nav').each(function() {
+		var $this = $(this); 
+		//if the path and link are the same - make id active 
+		if($this.attr('href').indexOf(current) !== -1) {
+			$this.addId('active');
 		}
-	}
-    //var itemClass = navItem.classList[1];
+	})
 }
 
 
