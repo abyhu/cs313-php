@@ -1,5 +1,4 @@
-<?php
-echo(' <div id="checkout">
+<div id="checkout">
                 <h2>Checkout</h2>
                 <form method="post" action="scripts/purchase.php" onreset="resetForm()" onsubmit="return validateAndPost()" name="myForm">
                     <div>
@@ -77,5 +76,4 @@ echo(' <div id="checkout">
                         </p>
                     </div>
                 </form>
-            </div>');
-?>
+            </div>

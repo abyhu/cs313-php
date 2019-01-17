@@ -1,5 +1,4 @@
-<?php
-echo('<div id="references" style="display: none;">
+<div id="references" style="display: none;">
                 <h2>Image Credits</h2>
                 <ul>
                     <li>
@@ -58,5 +57,4 @@ echo('<div id="references" style="display: none;">
                         </a>
                     </li>
                 </ul>
-            </div>');
-?>
+            </div>

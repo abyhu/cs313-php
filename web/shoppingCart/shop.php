@@ -1,5 +1,4 @@
-<?php
-echo('<div id="shop" style="display: none;">
+<div id="shop" style="display: none;">
                 <div id="shopGallery">
                     <div class="item">
                         <img src="images/purse6med.jpg" alt="Little Black Pocketbook" class="purse" />
@@ -65,6 +64,4 @@ echo('<div id="shop" style="display: none;">
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
                     </div>
                 </div>
-            </div>');
-
-?>
+            </div>
