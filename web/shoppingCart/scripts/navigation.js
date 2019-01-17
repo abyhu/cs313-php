@@ -9,7 +9,7 @@ function activateNavItem(navItem) {
 	var page = window.location.href;
 	$('.nav').each(function() {
 		//if the path and link are the same - make id active 
-		if(this.href === path) {
+		if(this.href == path) {
 			$(this).attr('id', 'active');
 		}
 	})
