@@ -11,6 +11,7 @@ function activateNavItem(navItem) {
 		if (navItemsList[i].attr("href") == page) {
 			navItemsList[i].setAttribute("id", "active");
 		}
+	}
     //var itemClass = navItem.classList[1];
 }
 
