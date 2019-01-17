@@ -6,8 +6,12 @@ function activateNavItem(navItem) {
         navItemsList[i].setAttribute("id", "");
     }
     //set the selected id to an active attribute
-    navItem.setAttribute("id", "active");
-    var itemClass = navItem.classList[1];
+	var page = $(location).attr("href").split('/').pop();
+	for (var i = 0; i < navItemsList.length; i++) {
+		if (navItemsList[i].attr"href" === page) {
+			navItemsList[i].setAttribute("id", "active");
+		}
+    //var itemClass = navItem.classList[1];
 }
 
 
