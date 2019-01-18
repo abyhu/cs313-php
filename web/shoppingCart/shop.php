@@ -1,3 +1,9 @@
+<?php 
+//start a session 
+session_start(); 
+$_SESSION['items'] = array(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,6 +84,34 @@
                     </div>
                 </div>
             </div>
+	
+	<!--ADD CART AND OPEN CHECKOUT FUNCTIONS-->
+	<script> 
+		
+		/* ___________Add Cart____________ */
+		function addCart(shopItem) {
+    		//toggle between addCart and inCart classes on each click
+    		if (shopItem.className == "addCart") {
+        		shopItem.className = "inCart";
+				//array_push($_SESSION['items'], shopItem.name); 
+    		} else if (shopItem.className = "inCart") {
+        		shopItem.className = "addCart";
+				//for (int i = 0; i < $_SESSION['items'].length, i++) {
+					//if (shopItem.name == $_SESSION['items'].get(i)) { 
+						//$_SESSION['items'].pop(i); 
+					//}
+				//}
+			}
+		}
+
+		/* ___________Open Checkout____________ */
+		function openCheckout() {
+			window.open ('checkout.php','_self',false)
+		}
+	
+	</script>
+	
+	
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>

@@ -1,4 +1,17 @@
-<div id="checkout">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Pursula">
+	<title>Pursula Checkout</title>
+	
+	<!--INCLUDE HEAD-->
+	<?php include('modules/head.php'); ?>
+	
+	<!--INCLUDE HEADERNAV-->
+	<?php $page = 'shop.php'; include('modules/headerNav.php'); ?>
+
+		<div id="checkout">
                 <h2>Checkout</h2>
                 <form method="post" action="scripts/purchase.php" onreset="resetForm()" onsubmit="return validateAndPost()" name="myForm">
                     <div>
