@@ -85,7 +85,7 @@ $_SESSION['items'] = array();
                 </div>
             </div>
 	
-	<!--ADD CART AND OPEN CHECKOUT FUNCTIONS-->
+	<!--ADD FUNCTIONS-->
 	<script> 
 		
 		/* ___________Add Cart____________ */

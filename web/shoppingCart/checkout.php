@@ -84,8 +84,7 @@
                         <p class="radio"><input type="radio" name="radio" value="American Express" /> American Express</p>
                         <p id=message></p>
                         <p>
-                            <input type="button" id="continueShop" name="continueShop" value="Continue Shopping" onlick="continueShopping()"/>
-							<input type="button" id="clear" name="clearForm" value="Cancel Order" />
+                            <input type="button" id="continueShop" name="continueShop" value="Continue Shopping" onclick="continueShopping()"/>
                             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
                         </p>
                     </div>
