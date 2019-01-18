@@ -84,12 +84,24 @@
                         <p class="radio"><input type="radio" name="radio" value="American Express" /> American Express</p>
                         <p id=message></p>
                         <p>
-                            <input type="button" id="clear" name="clearForm" value="Cancel Order" />
+                            <input type="button" id="continueShop" name="continueShop" value="Continue Shopping" onlick="continueShopping()"/>
+							<input type="button" id="clear" name="clearForm" value="Cancel Order" />
                             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
                         </p>
                     </div>
                 </form>
             </div>
+	
+	<script> 
+		/* ___________Cancel Order____________ */
+		function continueShopping() { 
+			window.open('shop.php','_self',false); 
+		}
+		
+		/* ___________Cancel Order____________ */
+
+	
+	</script>
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
