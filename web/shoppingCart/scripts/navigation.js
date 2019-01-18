@@ -11,8 +11,8 @@ function activateNavItem() {
 	
 	var page = window.location.href.split('/').pop();
 	for (var i = 0; i < navItemsList.length; i++) {
-		if (navItemsList[i].attr("href") === page) {
-			navItemsList[i].setAttribute("id", "active");
+		if ($(navItemsList[i]).attr("href") === page) {
+			$(navItemsList[i]).setAttribute("id", "active");
 		}
 	}
 }
