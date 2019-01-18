@@ -7,6 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="styles/main.css" />
 	
 	<!--SCRIPTS-->
+		<script
+				src="https://code.jquery.com/jquery-3.3.1.slim.js"
+  			integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+  			crossorigin="anonymous"></script>
 		<script src="scripts/navigation.js"></script>
 		<script src="scripts/slider.js"></script>
 </head>

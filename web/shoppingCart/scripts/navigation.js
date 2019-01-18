@@ -1,21 +1,19 @@
 /* ___________Nav Bar Wayfinding____________ */
-function activateNavItem(navItem) {
-	console.log("activateNavItem called")
+jQuery.ready(activateNavItem);
+
+function activateNavItem() {
     //for all navigation items reset the id to ""
     var navItemsList = document.getElementsByClassName("nav");
     for (var i = 0; i < navItemsList.length; i++) {
         navItemsList[i].setAttribute("id", "");
     }
     //set the selected id to an active attribute
-	var page = window.location.href;
-	console.log(page); 
-	console.log(this.href);
-	$(".nav").each(function() {
-		//if the path and link are the same - make id active 
-		if(this.href == path) {
-			$(this).attr("id", "active");
+	var page = $(location).attr("href").split('/').pop();
+	for (var i = 0; i < navItemsList.length; i++) {
+		if (navItemsList[i].attr("href") === page) {
+			navItemsList[i].setAttribute("id", "active");
 		}
-	})
+    //var itemClass = navItem.classList[1];
 }
 
 
