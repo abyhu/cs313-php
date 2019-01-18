@@ -9,7 +9,7 @@
 	<?php include('modules/head.php'); ?>
 	
 	<!--INCLUDE HEADERNAV-->
-	<?php $page = 'shop.php'; include('modules/headerNav.php'); ?>
+	<?php $page = 'checkout.php'; include('modules/headerNav.php'); ?>
 
 		<div id="checkout">
                 <h2>Checkout</h2>
@@ -90,3 +90,6 @@
                     </div>
                 </form>
             </div>
+	
+	<!--INCLUDE FOOTER-->
+	<?php include('modules/footer.php'); ?>
