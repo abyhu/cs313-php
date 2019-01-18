@@ -8,7 +8,8 @@ function activateNavItem() {
         navItemsList[i].setAttribute("id", "");
     }
     //set the selected id to an active attribute
-	var page = window.location.split('/').pop();
+	
+	var page = window.location.href.split('/').pop();
 	for (var i = 0; i < navItemsList.length; i++) {
 		if (navItemsList[i].attr("href") === page) {
 			navItemsList[i].setAttribute("id", "active");
