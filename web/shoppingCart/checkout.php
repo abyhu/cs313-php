@@ -59,8 +59,8 @@ if(session_id() == '') {
 								
 							<?php 
 	   							foreach ($_SESSION['items'] as $key=>$val) {
-									echo $key." ".$val."<br/>";
-									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart()"/>';
+									echo '<p>$key." ".$val."';
+									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart()"/></p>';
 								}		
 							?>
 							
