@@ -1,3 +1,8 @@
+<?php 
+//start a session 
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,8 +56,9 @@
                             <span id=itemsOrdered>
 								
 							<?php 
-								echo $_SESSION['items']; 
-							
+	   							echo "<h3> PHP List All Session Variables</h3>";
+    							foreach ($_SESSION as $key=>$val)
+    							echo $key." ".$val."<br/>";
 							?>
 							
 							</span>
