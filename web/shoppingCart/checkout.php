@@ -54,14 +54,14 @@ if(session_id() == '') {
                     </div>
                     <div id="orderSummary">
                         <h3>Order Summary</h3>
-                        <p>Your order includes: <br/>
-                            <span id=itemsOrdered>
+                        <p>Your order includes: 
+							<span id=itemsOrdered>
 								
 							<?php 
 	   							foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
 									echo $key." ".$val;
-									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart()"/>';
+									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart()"/><br/>';
 								}		
 							?>
 							
