@@ -48,7 +48,14 @@
                     <div id="orderSummary">
                         <h3>Order Summary</h3>
                         <p>Your order includes: <br/>
-                            <span id=itemsOrdered></span>
+                            <span id=itemsOrdered>
+								
+							<?php 
+								print_r(array_keys($_SESSION['items'])); 
+							
+							?>
+							
+							</span>
                             <input type="hidden" name="itemsOrdered" />
                         </p>
                         <p>Items Subtotal
@@ -92,7 +99,7 @@
             </div>
 	
 	<script> 
-		/* ___________Cancel Order____________ */
+		/* ___________CONTINUE SHOPPING____________ */
 		function continueShopping() { 
 			window.open('shop.php','_self',false); 
 		}
