@@ -86,6 +86,8 @@ $_SESSION['items'] = array();
             </div>
 	
 	<!--ADD FUNCTIONS-->
+	
+	
 	<script> 
 		
 		/* ___________Add Cart____________ */
@@ -93,14 +95,10 @@ $_SESSION['items'] = array();
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
-				if(!(isset($_SESSION['items'][shopItem.id]))) {
-				   $_SESSION['items'][shopItem.id] = 1; 
-				   }
+				$.post('scripts/addToCart.php', shopItem); 
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
-				if(isset($_SESSION['items'][shopItem.id])) {
-				   unset($_SESSION['items'][shopItem.id]); 
-				   }
+				
 			}
 		}
 
