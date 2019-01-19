@@ -93,7 +93,7 @@ $_SESSION["items"] = array();
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
-				if(!isSet($_SESSION["items"][shopItem.id])) {
+				if(!isset($_SESSION["items"][shopItem.id])) {
 				   $_SESSION["items"][shopItem.id] = 1; 
 				   }
     		} else if (shopItem.className = "inCart") {
