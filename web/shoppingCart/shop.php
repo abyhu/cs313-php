@@ -98,7 +98,7 @@ $_SESSION["items"] = array();
 				   }
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
-				if(isSet($_SESSION["items"][shopItem.id])) {
+				if(isset($_SESSION["items"][shopItem.id])) {
 				   unset($_SESSION["items"][shopItem.id]); 
 				   }
 			}
