@@ -119,7 +119,6 @@ if(session_id() == '') {
 		function removeFromCart(shopItem) { 
 			var itemId = {id: shopItem.id};  
 			$.post('scripts/removeCart.php', itemId);
-			window.open('shop.php','_self',false); 
 		}
 		
 
