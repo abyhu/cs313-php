@@ -99,7 +99,7 @@ $_SESSION['items'] = array();
 				$.post('scripts/addToCart.php', itemId); 
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
-				
+				$.post('scripts/removeCart.php', itemId); 
 			}
 		}
 
