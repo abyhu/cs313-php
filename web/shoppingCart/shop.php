@@ -1,6 +1,8 @@
 <?php 
 //start a session 
-session_start(); 
+if(session_id() == '') {
+    session_start();
+}
 $_SESSION['items'] = array(); 
 ?>
 
