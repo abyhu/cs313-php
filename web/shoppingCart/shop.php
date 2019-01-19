@@ -95,7 +95,7 @@ $_SESSION['items'] = array();
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
-				$.post('scripts/addToCart.php', shopItem); 
+				$.post('scripts/addToCart.php'); 
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
 				
