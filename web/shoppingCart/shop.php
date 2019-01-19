@@ -24,7 +24,7 @@ $_SESSION['items'] = array();
                         <h2>Little Black Pocketbook</h2>
                         <h3>$25.00</h3>
 						<?php
-							if ($_SESSION['items']["6"]) {
+							if (isset($_SESSION['items']["6"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="6" name="6" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="6" name="6" onclick="addCart(this)" />'
@@ -37,7 +37,7 @@ $_SESSION['items'] = array();
                         <h2>Hollywood Glam Purse</h2>
                         <h3>$35.00</h3>
 						<?php
-							if ($_SESSION['items']["2"]) {
+							if (isset($_SESSION['items']["2"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="2" name="2" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="2" name="2" onclick="addCart(this)" />'
@@ -50,7 +50,7 @@ $_SESSION['items'] = array();
                         <h2>Pinch of Punk Purse</h2>
                         <h3>$45.00</h3>
 						<?php
-							if ($_SESSION['items']["1"]) {
+							if (isset($_SESSION['items']["1"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="1" name="1" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="1" name="1" onclick="addCart(this)" />'
@@ -63,7 +63,7 @@ $_SESSION['items'] = array();
                         <h2>Cherry On Top Handbag</h2>
                         <h3>$30.00</h3>
 						<?php
-							if ($_SESSION['items']["5"]) {
+							if (isset($_SESSION['items']["5"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="5" name="5" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="5" name="5" onclick="addCart(this)" />'
@@ -76,7 +76,7 @@ $_SESSION['items'] = array();
                         <h2>Essential Clutch</h2>
                         <h3>$20.00</h3>
 						<?php
-							if ($_SESSION['items']["8"]) {
+							if (isset($_SESSION['items']["8"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="8" name="8" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="8" name="8" onclick="addCart(this)" />'
@@ -88,7 +88,7 @@ $_SESSION['items'] = array();
                         <img src="images/purse0med.jpg" alt="Retro Traveler Purse" class="purse" />
                         <h2>Oh So Retro Traveler Purse</h2>
                         <h3>$50.00</h3>
-							if ($_SESSION['items']["0"]) {
+							if (isset($_SESSION['items']["0"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="0" name="0" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="0" name="0" onclick="addCart(this)" />'
@@ -101,7 +101,7 @@ $_SESSION['items'] = array();
                         <h2>Bohemian Handcrafted Bag</h2>
                         <h3>$40.00</h3>
 						<?php
-							if ($_SESSION['items']["3"]) {
+							if (isset($_SESSION['items']["3"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="3" name="3" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="3" name="3" onclick="addCart(this)" />'
@@ -114,7 +114,7 @@ $_SESSION['items'] = array();
                         <h2>City Commuter Purse</h2>
                         <h3>$60.00</h3>
 						<?php 
-							if ($_SESSION['items']["4"]) {
+							if (isset($_SESSION['items']["4"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="4" name="4" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="4" name="4" onclick="addCart(this)" />'
@@ -127,7 +127,7 @@ $_SESSION['items'] = array();
                         <h2>International Traveler Purse</h2>
                         <h3>$55.00</h3>
 						<?php
-							if ($_SESSION['items']["7"]) {
+							if (isset($_SESSION['items']["7"])) {
 								echo '<input type="button" class="inCart" value="Add to Cart" id="7" name="7" onclick="addCart(this)" />'
 							} else {
 								echo '<input type="button" class="addCart" value="Add to Cart" id="7" name="7" onclick="addCart(this)" />'
