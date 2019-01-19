@@ -61,7 +61,7 @@ if(session_id() == '') {
 	   							foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
 									echo $key." ".$val;
-									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(this)"/><br/>';
+									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart($key)"/><br/>';
 								}		
 							?>
 							
@@ -116,9 +116,8 @@ if(session_id() == '') {
 		}
 		
 		/* ___________REMOVE FROM CART____________ */
-		function removeFromCart(shopItem) { 
-			var itemId = {id: shopItem.id};  
-			$.post('scripts/removeCart.php', itemId);
+		function removeFromCart(itemKey) { 
+			$.post('scripts/removeCart.php', key);
 			window.open('checkout.php','_self',false); 
 		}
 		
