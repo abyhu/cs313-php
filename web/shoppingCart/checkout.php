@@ -51,7 +51,7 @@
                             <span id=itemsOrdered>
 								
 							<?php 
-								print_r(array_keys($_SESSION['items'])); 
+								echo array_keys($_SESSION['items']); 
 							
 							?>
 							
