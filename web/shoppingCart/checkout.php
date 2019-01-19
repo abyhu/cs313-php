@@ -61,7 +61,7 @@ if(session_id() == '') {
 	   							foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
 									echo $key." ".$val;
-									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart()"/><br/>';
+									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(this)"/><br/>';
 								}		
 							?>
 							
@@ -111,11 +111,13 @@ if(session_id() == '') {
 	<script> 
 		/* ___________CONTINUE SHOPPING____________ */
 		function continueShopping() { 
+			//??? DO I NEED TO POST HERE BEFORE I GO BACK? 
 			window.open('shop.php','_self',false); 
 		}
 		
 		/* ___________REMOVE FROM CART____________ */
-		function removeFromCart() { 
+		function removeFromCart(shopItem) { 
+			var itemId = {id: shopItem.id};  
 			$.post('scripts/removeCart.php', itemId);
 			window.open('shop.php','_self',false); 
 		}
