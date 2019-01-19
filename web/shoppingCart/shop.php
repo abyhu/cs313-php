@@ -92,11 +92,11 @@ $_SESSION['items'] = array();
 		
 		/* ___________Add Cart____________ */
 		function addCart(shopItem) {
-			console.log(shopItem); 
+			var itemId = {id: shopItem.id};  
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
-				$.post('scripts/addToCart.php', shopItem.id); 
+				$.post('scripts/addToCart.php', itemId); 
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
 				
