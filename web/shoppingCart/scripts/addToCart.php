@@ -1,5 +1,7 @@
 <?php
 
-isset($_SESSION['items'][shopItem.id] = $_POST['id']; 
+if(!isset($_SESSION['items'][shopItem.id]]) {
+	$_SESSION['items'][shopItem.id] = $_POST['id']; 
+} 
 	  
 ?>
