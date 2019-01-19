@@ -51,7 +51,7 @@
                             <span id=itemsOrdered>
 								
 							<?php 
-								echo $_SESSION['items']['6']); 
+								echo $_SESSION['items'][6]); 
 							
 							?>
 							
