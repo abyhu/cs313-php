@@ -1,7 +1,7 @@
 <?php 
 //start a session 
 session_start(); 
-$_SESSION['items'] = array(); 
+$_SESSION["items"] = array(); 
 ?>
 
 <!DOCTYPE html>
@@ -93,14 +93,14 @@ $_SESSION['items'] = array();
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
-				//array_push($_SESSION['items'], shopItem.name); 
+				if(!isSet($_SESSION["items"][shopItem.id])) {
+				   $_SESSION["items"][shopItem.id] = 1; 
+				   }
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
-				//for (int i = 0; i < $_SESSION['items'].length, i++) {
-					//if (shopItem.name == $_SESSION['items'].get(i)) { 
-						//$_SESSION['items'].pop(i); 
-					//}
-				//}
+				if(isSet($_SESSION["items"][shopItem.id])) {
+				   unset($_SESSION["items"][shopItem.id]); 
+				   }
 			}
 		}
 
