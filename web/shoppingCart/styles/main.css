@@ -249,7 +249,7 @@ ul {
     grid-column: 4;
 }
 
-#submitButton, #continueShop {
+#submitButton, #continueShop, .remove {
     background-color: rebeccapurple;
     color: white;
     font-size: 125%;
@@ -258,7 +258,7 @@ ul {
     margin: 3% 1% 0 1%;
 }
 
-#continueShop {
+#continueShop, .remove {
     background-color: dimgray;
 }
 

@@ -56,8 +56,10 @@ session_start();
                             <span id=itemsOrdered>
 								
 							<?php 
-	   							foreach ($_SESSION['items'] as $key=>$val)
-    								echo $key." ".$val."<br/>";
+	   							foreach ($_SESSION['items'] as $key=>$val) {
+									echo $key." ".$val."<br/>";
+									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart()"/>'
+								}		
 							?>
 							
 							</span>
@@ -109,7 +111,12 @@ session_start();
 			window.open('shop.php','_self',false); 
 		}
 		
-		/* ___________Cancel Order____________ */
+		/* ___________REMOVE FROM CART____________ */
+		function removeFromCart() { 
+			$.post('scripts/removeCart.php', itemId);
+			window.open('shop.php','_self',false); 
+		}
+		
 
 	
 	</script>
