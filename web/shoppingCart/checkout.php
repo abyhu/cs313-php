@@ -119,8 +119,8 @@ if(session_id() == '') {
 		
 		/* ___________REMOVE FROM CART____________ */
 		function removeFromCart(itemKey) { 
-			var key = itemKey; 
-			$.post('scripts/removeCart.php', key);
+			var itemId = {id: itemKey}
+			$.post('scripts/removeCart.php', itemId);
 			window.open('checkout.php','_self',false); 
 		}
 		
