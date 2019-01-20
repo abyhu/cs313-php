@@ -1,9 +1,12 @@
 <?php 
 //start a session 
 if(session_id() == '') {
-    session_start();
+    session_start(); 
 }
-$_SESSION['items'] = array(); 
+if(!isset($_SESSION['items'])) {
+	$_SESSION['items'] = array(); 
+}
+
 ?>
 
 <!DOCTYPE html>
