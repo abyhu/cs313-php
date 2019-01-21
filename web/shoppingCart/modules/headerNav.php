@@ -10,4 +10,5 @@
       		<a href="https://www.facebook.com" class="nav">Facebook</a>
       		<a href="https://www.gmail.com" class="nav">Email</a>
 		</nav>
+		<script>$(document).ready(activateNavItem);</script>
 <main>

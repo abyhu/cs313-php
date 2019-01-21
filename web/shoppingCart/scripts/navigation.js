@@ -1,5 +1,4 @@
 /* ___________Nav Bar Wayfinding____________ */
-$(document).ready(activateNavItem);
 
 function activateNavItem() {
     //for all navigation items reset the id to ""
