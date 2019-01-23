@@ -324,12 +324,14 @@ ul {
 
 .addCart {
     grid-column: 1/3;
+	width: 100%; 
     background-color: dimgray;
     color: white;
 }
 
 .inCart {
     grid-column: 1/3;
+	width: 100%; 
     background-color: lightseagreen;
     color: white;
 }
