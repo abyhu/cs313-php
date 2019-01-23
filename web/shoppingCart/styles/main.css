@@ -276,7 +276,7 @@ ul {
 }
 
 .item {
-	width: 100%; 
+	width: 30%; 
     padding: 8%;
     text-decoration: none;
     display: grid;
