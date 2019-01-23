@@ -309,10 +309,9 @@ ul {
 }
 
 #shopGallery input {
-    height: 20px;
 	width: 92%; 
     font-size: 100%;
-    padding: 2%;
+    padding: 8%;
     margin: 0 4%;
     grid-row: 4;
     border-radius: 5%;
