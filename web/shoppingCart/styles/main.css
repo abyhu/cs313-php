@@ -271,7 +271,6 @@ ul {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
-    margin: 0 auto;
     padding: 5% 5%;
 }
 
@@ -301,6 +300,7 @@ ul {
 }
 
 #shopGallery img {
+	width: 100%; 
     grid-column: 1/6;
     grid-row: 1;
     margin: 0;
