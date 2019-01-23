@@ -302,7 +302,6 @@ ul {
 }
 
 #shopGallery img {
-    width: 100%;
     grid-column: 1/6;
     grid-row: 1;
     margin: 0;
