@@ -305,8 +305,7 @@ ul {
     margin: 0;
 }
 
-#shopGallery input {
-	width: 90%; 
+#shopGallery input { 
 	margin: 5%; 
     font-size: 100%;
     grid-row: 4;
