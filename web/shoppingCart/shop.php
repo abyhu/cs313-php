@@ -154,9 +154,11 @@ if(!isset($_SESSION['items'])) {
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
+				shopItem.value = "In Cart";
 				$.post('scripts/addToCart.php', itemId); 
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
+				shopItem.value = "Add to Cart";
 				$.post('scripts/removeCart.php', itemId); 
 			}
 		}
