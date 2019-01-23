@@ -274,8 +274,7 @@ ul {
     padding: 5% 5%;
 }
 
-.item {
-	width: 32%; 
+.item { 
     padding: 8%;
     text-decoration: none;
     display: grid;
