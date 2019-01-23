@@ -30,9 +30,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$25.00</h3>
 						<?php
 							if(isset($_SESSION['items']["6"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="6" name="6" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="6" name="6" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="6" name="6" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="6" name="6" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -43,9 +43,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$35.00</h3>
 						<?php
 							if(isset($_SESSION['items']["2"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="2" name="2" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="2" name="2" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="2" name="2" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="2" name="2" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -56,9 +56,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$45.00</h3>
 						<?php
 							if(isset($_SESSION['items']["1"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="1" name="1" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="1" name="1" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="1" name="1" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="1" name="1" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -69,9 +69,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$30.00</h3>
 						<?php
 							if(isset($_SESSION['items']["5"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="5" name="5" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="5" name="5" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="5" name="5" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="5" name="5" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -82,9 +82,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$20.00</h3>
 						<?php
 							if(isset($_SESSION['items']["8"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="8" name="8" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="8" name="8" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="8" name="8" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="8" name="8" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -95,9 +95,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$50.00</h3>
 						<?php
 							if(isset($_SESSION['items']["0"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="0" name="0" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="0" name="0" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="0" name="0" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="0" name="0" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -108,9 +108,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$40.00</h3>
 						<?php
 							if(isset($_SESSION['items']["3"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="3" name="3" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="3" name="3" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="3" name="3" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="3" name="3" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -121,9 +121,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$60.00</h3>
 						<?php 
 							if(isset($_SESSION['items']["4"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="4" name="4" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="4" name="4" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="4" name="4" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="4" name="4" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -134,9 +134,9 @@ if(!isset($_SESSION['items'])) {
                         <h3>$55.00</h3>
 						<?php
 							if(isset($_SESSION['items']["7"])) {
-								echo '<input type="button" class="inCart" value="In the Cart" id="7" name="7" onclick="addCart(this)" />';
+								echo '<input type="button" class="inCart" value="In Your Cart" id="7" name="7" onclick="addCart(this)" />';
 							} else {
-								echo '<input type="button" class="addCart" value="Add to Cart" id="7" name="7" onclick="addCart(this)" />';
+								echo '<input type="button" class="addCart" value="Add To Cart" id="7" name="7" onclick="addCart(this)" />';
 							}
 						?>
                         <input type="button" class="checkout" value="Checkout" onclick="openCheckout()" />
@@ -154,11 +154,11 @@ if(!isset($_SESSION['items'])) {
     		//toggle between addCart and inCart classes on each click
     		if (shopItem.className == "addCart") {
         		shopItem.className = "inCart";
-				shopItem.value = "In the Cart";
+				shopItem.value = "In Your Cart";
 				$.post('scripts/addToCart.php', itemId); 
     		} else if (shopItem.className = "inCart") {
         		shopItem.className = "addCart";
-				shopItem.value = "Add to Cart";
+				shopItem.value = "Add To Cart";
 				$.post('scripts/removeCart.php', itemId); 
 			}
 		}
