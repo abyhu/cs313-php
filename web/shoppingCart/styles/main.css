@@ -266,7 +266,7 @@ ul {
 /* ___________Shop Gallery____________ */
 
 #shopGallery {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: auto auto auto;
