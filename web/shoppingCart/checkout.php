@@ -91,7 +91,16 @@ if(session_id() == '') {
                             <input type="hidden" name="itemsSubtotal" />
                         </p>
                         <p>Shipping total
-                            <span id="shippingCost">$0.00</span>
+                            <span id="shippingCost">
+								<?php 
+								$shipping = 0; 
+								if(isset($_SESSION['items'])) {
+									$shipping = 9.99;  
+								} 
+								echo money_format('$%i', $subtotal);			
+							?>
+								
+							</span>
                             <input type="hidden" name="shippingCost" />
                         </p>
                         <p>Tax Estimate
