@@ -17,6 +17,7 @@ function addCart(shopItem) {
 function openCheckout() {
 	window.open('checkout.php','_self',false)
 }
-		
+	
+
 		
 	

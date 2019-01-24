@@ -135,7 +135,7 @@ a:visited {
 
 
 /* ___________Paragraph Styles____________ */
-#message {
+#message, #emptyCartMessage {
     color: red;
     font-size: 150%;
 }

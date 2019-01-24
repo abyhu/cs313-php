@@ -58,13 +58,17 @@ if(session_id() == '') {
 							<span id=itemsOrdered>
 								
 							<?php 
-	   							foreach ($_SESSION['items'] as $key=>$val) {
+								
+								if(isset($_SESSION['items'])) {
+									foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
 									echo $key." ".$val;
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
 									echo ')"/><br/>';
-								}		
+								} else {
+									echo '<p id="emptyCartMessage">You do not have items in your cart. Please select an item to purchase before checking out.</p>';
+								}
 							?>
 							
 							</span>
@@ -101,7 +105,7 @@ if(session_id() == '') {
                         <p class="radio"><input type="radio" name="radio" value="Visa" /> Visa</p>
                         <p class="radio"><input type="radio" name="radio" value="Mastercard" /> Mastercard</p>
                         <p class="radio"><input type="radio" name="radio" value="American Express" /> American Express</p>
-                        <p id=message></p>
+                        <p class=message></p>
                         <p>
                             <input type="button" id="continueShop" name="continueShop" value="Continue Shopping" onclick="continueShopping()"/>
                             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />

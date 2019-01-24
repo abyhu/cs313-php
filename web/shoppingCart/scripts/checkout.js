@@ -10,24 +10,6 @@
 		window.open('checkout.php','_self',false); 
 }
 
-/* ___________Open Checkout____________ */
-function openCheckout() {
-
-    //add selected items to an array and pass it to the function that will calculate the total cost including shipping and tax
-    var itemsArray = [];
-    if (document.getElementsByClassName("inCart").length == 0) {
-        document.getElementById("message").innerHTML = "You do not have any items in your cart, please return to the shopping page to select an item before checking out.";
-        document.getElementById("message").style.display = "block";
-    } else {
-        document.getElementById("message").style.display = "none";
-        for (var i = 0; i < document.getElementsByClassName("inCart").length; i++) {
-
-            itemsArray[i] = document.getElementsByClassName("inCart")[i].name;
-        }
-        calculateTotal(itemsArray);
-    }
-}
-
 /* ___________Buy Now____________ */
 function buyNow(item) {
     //this function is direct from the slider and only allows one item to be placed in the cart for checkout
