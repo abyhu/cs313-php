@@ -11,7 +11,7 @@ $city = $_SESSION["city"];
 $state = $_SESSION["state"];
 $zip = $_SESSION["zip"];
 $phone = $_SESSION["phone"];
-$subtotal = $_SESSION["subtotal"];
+$subtotal = money_format('$%i', $_SESSION["subtotal"]);
 $shipping = $_SESSION["shipping"];
 $tax = $_SESSION["tax"];
 $total = $_SESSION["total"];
@@ -48,7 +48,7 @@ foreach ($_SESSION['items'] as $key=>$val) {
 		echo $key."</p>";
 }
 									
-print " <p>Subtotal: money_format('$%i', $_SESSION['subtotal'])</p>
+print " <p>Subtotal: $subtotal</p>
         <p>Shipping Cost: $shipping</p>
         <p>Tax Charges: $tax</p>
         <p>Total Purchase: $total</p>
