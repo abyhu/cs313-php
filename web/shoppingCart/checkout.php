@@ -176,6 +176,32 @@ function preventHacks($data) {
                     </div>
                 </form>
             </div>
+	<div id="purchase">
+		<?php 
+		print " <h3 class=\"review\">Shipping Information:</h3>
+        <p>$fName $lName</p>
+        <p>$street</p>
+        <p>$city, $state $zip</p>
+        <p>$phone</p>
+
+        <h3 class=\"review\">Order Summary:</h3>
+        <p>Your purchase includes: $itemsOrdered</p>
+        <p>Subtotal: $subtotal</p>
+        <p>Shipping Cost: $shipping</p>
+        <p>Tax Charges: $tax</p>
+        <p>Total Purchase: $total</p>
+
+        <h3 class=\"review\">Payment Information:</h3>
+        <p>Credit Card Type: $radio </p>
+        <p>Card Expiration Date: $expiration</p>";
+
+		print '<p>
+            <input type="submit" id="clear" name="clearForm" value="Cancel Order" onsubmit="return confirmAndPost(this)" />
+            <input type="submit" id="submitButton" name="submitForm" value="Submit Order" onsubmit="return confirmAndPost(this)" />
+        </p>'
+		?>
+	
+	</div>
 	
 	<!--Validate Data Entered into the Form-->
 	<script language="JavaScript" src="scripts/form.js"></script>
