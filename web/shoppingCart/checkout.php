@@ -58,7 +58,7 @@ if(session_id() == '') {
 							<span id=itemsOrdered>
 								
 							<?php 
-								if(isset($_SESSION['items'][])) {
+								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
 									echo $key." ".$val;
