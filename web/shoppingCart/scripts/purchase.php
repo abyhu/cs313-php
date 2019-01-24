@@ -4,23 +4,19 @@ if(session_id() == '') {
     session_start();
 }
 
-$fName = $lName = $street = $city = $state = $zip = $phone = $subtotal = $shipping = $tax = $total = $radio = $expiration = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$fName = $_SESSION["fName"];
-	$lName = $_SESSION["lName"];
-	$street = $_SESSION["street"];
-	$city = $_SESSION["city"];
-	$state = $_SESSION["state"];
-	$zip = $_SESSION["zip"];
-	$phone = $_SESSION["phone"];
-	$subtotal = $_SESSION["subtotal"];
-	$shipping = $_SESSION["shipping"];
-	$tax = $_SESSION["tax"];
-	$total = $_SESSION["total"];
-	$radio = $_SESSION["radio"];
-	$expiration = $_SESSION["expiration"];
-}
+$fName = $_SESSION["fName"];
+$lName = $_SESSION["lName"];
+$street = $_SESSION["street"];
+$city = $_SESSION["city"];
+$state = $_SESSION["state"];
+$zip = $_SESSION["zip"];
+$phone = $_SESSION["phone"];
+$subtotal = $_SESSION["subtotal"];
+$shipping = $_SESSION["shipping"];
+$tax = $_SESSION["tax"];
+$total = $_SESSION["total"];
+$radio = $_SESSION["radio"];
+$expiration = $_SESSION["expiration"];
 
 print '<!DOCTYPE html>
 <html lang="en">
