@@ -196,7 +196,6 @@ function preventHacks($data) {
         <p>Card Expiration Date: $expiration</p>";
 
 		print '<p>
-            <input type="submit" id="clear" name="clearForm" value="Cancel Order" onsubmit="return confirmAndPost(this)" />
             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" onsubmit="return confirmAndPost(this)" />
         </p>'
 		?>
