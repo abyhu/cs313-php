@@ -114,7 +114,7 @@ if(session_id() == '') {
 	<script language="JavaScript" src="scripts/form.js"></script>
 	
 	<!--Form Submission-->
-	<script language="JavaScript" src="scripts/checkout.js"></script>	
+	
 
 	
 	</script>
