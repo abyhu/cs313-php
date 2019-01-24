@@ -1,8 +1,4 @@
 <?php
-//start a session 
-if(session_id() == '') {
-    session_start();
-}
 
 $fName = $_SESSION["fName"];
 $lName = $_SESSION["lName"];
@@ -42,7 +38,8 @@ print " <h3 class=\"review\">Shipping Information:</h3>
 		
 		foreach ($_SESSION['items'] as $key=>$val) {
 			echo '<p>'; 
-			echo $key." <br/>";
+			echo $key."</p>";
+		}
 									
 print " <p>Subtotal: $subtotal</p>
         <p>Shipping Cost: $shipping</p>
