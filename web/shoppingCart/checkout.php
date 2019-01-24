@@ -85,7 +85,7 @@ if(session_id() == '') {
 									$subtotal += $prices[(int)$key];  
 									}
 								} 
-								echo $subtotal;							
+								echo '$'.(float) $subtotal;							
 							?>
 							</span>
                             <input type="hidden" name="itemsSubtotal" />
