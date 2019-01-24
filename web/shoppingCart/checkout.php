@@ -115,9 +115,6 @@ if(session_id() == '') {
 	
 	<!--Form Submission-->
 	<script language="JavaScript" src="scripts/checkout.js"></script>	
-
-	
-	</script>
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
