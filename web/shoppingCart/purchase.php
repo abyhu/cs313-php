@@ -1,4 +1,8 @@
 <?php
+//start a session 
+if(session_id() == '') {
+    session_start(); 
+}
 
 $fName = $_SESSION["fName"];
 $lName = $_SESSION["lName"];
@@ -29,7 +33,9 @@ print '<!--INCLUDE HEADERNAV-->';
 $page = "shop.php"; 
 include("modules/headerNav.php");
 
-print " <h3 class='review'>Shipping Information:</h3>
+print " 
+		<div>
+		<h3 class='review'>Shipping Information:</h3>
         <p>$fName $lName</p>
         <p>$street</p>
         <p>$city, $state $zip</p>
@@ -49,6 +55,7 @@ print " <p>Subtotal: $subtotal</p>
         <h3 class='review'>Payment Information:</h3>
         <p>Credit Card Type: $radio </p>
         <p>Card Expiration Date: $expiration</p>
+		</div>
 		<!--INCLUDE FOOTER-->";
 
 include('modules/footer.php');
