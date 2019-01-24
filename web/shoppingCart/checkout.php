@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["state"] = $state;
 	$_SESSION["zip"] = $zip;
 	$_SESSION["phone"] = $phone;
-	$_SESSION["subtotal"] = $subtotal;
 	$_SESSION["shipping"] = $shipping;
 	$_SESSION["tax"] = $tax;
 	$_SESSION["total"] = $total;
@@ -116,13 +115,13 @@ function preventHacks($data) {
 							
 							<?php 
 								$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
-								$subtotal = 0; 
+								$_SESSION["subtotal"] = 0; 
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
-									$subtotal += $prices[(int)$key];  
+									$_SESSION["subtotal"] += $prices[(int)$key];  
 									}
 								} 
-								echo money_format('$%i', $subtotal);			
+								echo money_format('$%i', $_SESSION["subtotal"]);			
 							?>
 							</span>
                             <input type="hidden" name="itemsSubtotal" value="<?php echo $subtotal; ?>" />
