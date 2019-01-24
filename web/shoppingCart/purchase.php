@@ -34,7 +34,7 @@ $page = "shop.php";
 include("modules/headerNav.php");
 
 print " 
-		<div>
+		<div class='purchase'>
 		<h3 class='review'>Shipping Information:</h3>
         <p>$fName $lName</p>
         <p>$street</p>
