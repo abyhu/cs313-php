@@ -34,12 +34,12 @@ print " <h3 class=\"review\">Shipping Information:</h3>
         <p>$phone</p>
 
         <h3 class=\"review\">Order Summary:</h3>
-        <p>Your purchase includes:"
+        <p>Your purchase includes:";
 		
-		foreach ($_SESSION['items'] as $key=>$val) {
-			echo '<p>'; 
-			echo $key."</p>";
-		}
+foreach ($_SESSION['items'] as $key=>$val) {
+		echo '<p>'; 
+		echo $key."</p>";
+}
 									
 print " <p>Subtotal: $subtotal</p>
         <p>Shipping Cost: $shipping</p>
@@ -51,5 +51,5 @@ print " <p>Subtotal: $subtotal</p>
         <p>Card Expiration Date: $expiration</p>
 		
 	<!--INCLUDE FOOTER-->
-	<?php include("modules/footer.php");?>";
+	<?php include('modules/footer.php');?>";
 ?>
