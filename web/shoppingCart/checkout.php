@@ -3,6 +3,33 @@
 if(session_id() == '') {
     session_start();
 }
+
+$fName = $lName = $street = $city = $state = $zip = $phone = $subtotal = $shipping = $tax = $total = $radio = $expiration = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$fName = preventHacks($_POST["fName"]);
+	$lName = preventHacks($_POST["lName"]);
+	$street = preventHacks($_POST["street"]);
+	$city = preventHacks($_POST["city"]);
+	$state = preventHacks($_POST["state"]);
+	$zip = preventHacks($_POST["zip"]);
+	$phone = preventHacks($_POST["phone"]);
+	$subtotal = preventHacks($_POST["subtotal"]);
+	$shipping = preventHacks($_POST["shipping"]);
+	$tax = preventHacks($_POST["tax"]);
+	$total = preventHacks($_POST["total"]);
+	$radio = preventHacks($_POST["radio"]);
+	$expiration = preventHacks($_POST["expirationDate"]);
+}
+
+function preventHacks($data) {
+	$data = trim($data); 
+	$data = stripslashes($data); 
+	$data = htmlspecialchars($data); 
+	return $data; 
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +47,7 @@ if(session_id() == '') {
 
 		<div id="checkout">
                 <h2>Checkout</h2>
-                <form method="post" action="scripts/purchase.php" onreset="resetForm()" onsubmit="return validateAndPost()" name="myForm">
+                <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return validateAndPost()" name="myForm">
                     <div>
                         <h3>Personal Information</h3>
                         <p>First Name:
@@ -154,7 +181,8 @@ if(session_id() == '') {
 	<script language="JavaScript" src="scripts/form.js"></script>
 	
 	<!--Form Submission-->
-	<script language="JavaScript" src="scripts/checkout.js"></script>	
+	<script language="JavaScript" src="scripts/checkout.js"></script>
+	<script language="PHP" src="scripts/purchase.php"></script>
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
