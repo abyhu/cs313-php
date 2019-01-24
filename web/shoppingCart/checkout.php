@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$radio = preventHacks($_POST["radio"]);
 	$expiration = preventHacks($_POST["expirationDate"]);
 	
-	session_start();
 	$_SESSION["fName"] = $fName;
 	$_SESSION["lName"] = $lName;
 	$_SESSION["street"] = $street;
