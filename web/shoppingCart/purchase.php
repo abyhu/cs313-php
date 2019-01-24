@@ -48,7 +48,7 @@ foreach ($_SESSION['items'] as $key=>$val) {
 		echo $key."</p>";
 }
 									
-print " <p>Subtotal: $subtotal</p>
+print " <p>Subtotal: money_format('$%i', $_SESSION['subtotal'])</p>
         <p>Shipping Cost: $shipping</p>
         <p>Tax Charges: $tax</p>
         <p>Total Purchase: $total</p>
