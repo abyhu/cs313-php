@@ -84,10 +84,8 @@ if(session_id() == '') {
 									foreach ($_SESSION['items'] as $key=>$val) {
 									$subtotal += $prices[(int)$key];  
 									}
-									echo $subtotal;
-								} else {
-									echo $subtotal;
-								}							
+								} 
+								echo $subtotal;							
 							?>
 							</span>
                             <input type="hidden" name="itemsSubtotal" />

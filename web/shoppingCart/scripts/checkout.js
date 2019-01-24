@@ -20,7 +20,7 @@
 //}
 //
 //
-* ___________Checkout Total Calculation____________ */
+/* ___________Checkout Total Calculation____________ */
 function calculateTotal(itemsArray) {
     //establish variable arrays to calculate pricing and receipt
     var prices = [50, 45, 35, 40, 60, 30, 25, 55, 20];
