@@ -83,6 +83,7 @@ if(session_id() == '') {
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
 									$subtotal += $prices[(int)$key];  
+									}
 									echo $subtotal;
 								} else {
 									echo $subtotal;
