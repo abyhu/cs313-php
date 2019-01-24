@@ -83,9 +83,9 @@ if(session_id() == '') {
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
 									$subtotal += prices[$key];  
-									echo number_format((float)$subtotal, 2, '.', '');
+									echo $subtotal;
 								} else {
-									echo number_format((float)$subtotal, 2, '.', '');
+									echo $subtotal;
 								}							
 							?>
 							</span>
