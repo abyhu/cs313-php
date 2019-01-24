@@ -21,11 +21,14 @@ print '<!DOCTYPE html>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pursula</title>
-    <!--INCLUDE HEAD-->
-	<?php include("modules/head.php"); ?>
+    <!--INCLUDE HEAD-->'; 
+
+include("modules/head.php");
 	
-	<!--INCLUDE HEADERNAV-->
-	<?php $page = "shop.php"; include("modules/headerNav.php"); ?>'
+print '<!--INCLUDE HEADERNAV-->'
+	
+$page = "shop.php"; 
+include("modules/headerNav.php");
 
 print " <h3 class=\"review\">Shipping Information:</h3>
         <p>$fName $lName</p>
@@ -50,6 +53,7 @@ print " <p>Subtotal: $subtotal</p>
         <p>Credit Card Type: $radio </p>
         <p>Card Expiration Date: $expiration</p>
 		
-	<!--INCLUDE FOOTER-->
-	<?php include('modules/footer.php');?>";
+		<!--INCLUDE FOOTER-->";
+
+include('modules/footer.php');
 ?>
