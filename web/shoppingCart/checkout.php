@@ -78,7 +78,7 @@ if(session_id() == '') {
                             <span id="itemsSubtotal">
 							
 							<?php 
-								$prices = [50, 45, 35, 40, 60, 30, 25, 55, 20];
+								$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
 								$subtotal = 0; 
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
