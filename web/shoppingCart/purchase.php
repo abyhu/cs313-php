@@ -12,9 +12,9 @@ $state = $_SESSION["state"];
 $zip = $_SESSION["zip"];
 $phone = $_SESSION["phone"];
 $subtotal = money_format('$%i', $_SESSION["subtotal"]);
-$shipping = $_SESSION["shipping"];
-$tax = $_SESSION["tax"];
-$total = $_SESSION["total"];
+$shipping = money_format('$%i', $_SESSION["shipping"]);
+$tax = money_format('$%i', $_SESSION["tax"]);
+$total = money_format('$%i', $_SESSION["total"]);
 $radio = $_SESSION["radio"];
 $expiration = $_SESSION["expiration"];
 
