@@ -59,16 +59,12 @@ if(session_id() == '') {
 								
 							<?php 
 								
-								if(isset($_SESSION['items'][])) {
-									foreach ($_SESSION['items'] as $key=>$val) {
-									echo '<p>'; 
-									echo $key." ".$val;
-									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
-									echo $key;
-									echo ')"/><br/>';
-								} else {
-									echo '<p id="emptyCartMessage">You do not have items in your cart. Please select an item to purchase before checking out.</p>';
-								}
+								foreach ($_SESSION['items'] as $key=>$val) {
+								echo '<p>'; 
+								echo $key." ".$val;
+								echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
+								echo $key;
+								echo ')"/><br/>';
 							?>
 							
 							</span>
