@@ -22,19 +22,19 @@ print '<!DOCTYPE html>
     <title>Pursula</title>
     <!--INCLUDE HEAD-->'; 
 
-include("modules/head.php");
+include('modules/head.php');
 	
 print '<!--INCLUDE HEADERNAV-->';
 	
 $page = "shop.php"; 
 include("modules/headerNav.php");
 
-print " <h3 class=\"review\">Shipping Information:</h3>
+print " <h3 class='review'>Shipping Information:</h3>
         <p>$fName $lName</p>
         <p>$street</p>
         <p>$city, $state $zip</p>
         <p>$phone</p>
-        <h3 class=\"review\">Order Summary:</h3>
+        <h3 class='review'>Order Summary:</h3>
         <p>Your purchase includes:";
 		
 foreach ($_SESSION['items'] as $key=>$val) {
@@ -46,7 +46,7 @@ print " <p>Subtotal: $subtotal</p>
         <p>Shipping Cost: $shipping</p>
         <p>Tax Charges: $tax</p>
         <p>Total Purchase: $total</p>
-        <h3 class=\"review\">Payment Information:</h3>
+        <h3 class='review'>Payment Information:</h3>
         <p>Credit Card Type: $radio </p>
         <p>Card Expiration Date: $expiration</p>
 		<!--INCLUDE FOOTER-->";
