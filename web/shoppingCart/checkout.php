@@ -131,7 +131,7 @@ function preventHacks($data) {
 								echo money_format('$%i', $subtotal);			
 							?>
 							</span>
-                            <input type="hidden" name="itemsSubtotal" value='$subtotal' />
+                            <input type="hidden" name="itemsSubtotal" value="<?php $subtotal ?>" />
                         </p>
                         <p>Shipping total
                             <span id="shippingCost">
@@ -143,7 +143,7 @@ function preventHacks($data) {
 								echo money_format('$%i', $shipping);			
 							?>
 							</span>
-                            <input type="hidden" name="shippingCost" value='$shipping' />
+                            <input type="hidden" name="shippingCost" value="<?php $shipping ?>" />
                         </p>
                         <p>Tax Estimate
                             <span id="taxCost">
@@ -155,7 +155,7 @@ function preventHacks($data) {
 								echo money_format('$%i', $tax);			
 							?>
 							</span>
-                            <input type="hidden" name="taxCost" value='$tax' />
+                            <input type="hidden" name="taxCost" value="<?php $tax ?>" />
                         </p>
                         <p>Order Total
                             <span id="totalCost">
@@ -167,7 +167,7 @@ function preventHacks($data) {
 								echo money_format('$%i', $total);			
 							?>
 							</span>
-                            <input type="hidden" name="totalCost" value='$total' />
+                            <input type="hidden" name="totalCost" value="<?php $total ?>" />
                         </p>
                     </div>
                     <div>
