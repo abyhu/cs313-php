@@ -88,7 +88,7 @@ if(session_id() == '') {
 								echo money_format('$%i', $subtotal);			
 							?>
 							</span>
-                            <input type="hidden" name="itemsSubtotal" />
+                            <input type="hidden" name="itemsSubtotal" value="$subtotal" />
                         </p>
                         <p>Shipping total
                             <span id="shippingCost">
@@ -100,7 +100,7 @@ if(session_id() == '') {
 								echo money_format('$%i', $shipping);			
 							?>
 							</span>
-                            <input type="hidden" name="shippingCost" />
+                            <input type="hidden" name="shippingCost" value="$shipping" />
                         </p>
                         <p>Tax Estimate
                             <span id="taxCost">
@@ -112,7 +112,7 @@ if(session_id() == '') {
 								echo money_format('$%i', $tax);			
 							?>
 							</span>
-                            <input type="hidden" name="taxCost" />
+                            <input type="hidden" name="taxCost" value="$tax" />
                         </p>
                         <p>Order Total
                             <span id="totalCost">
@@ -124,7 +124,7 @@ if(session_id() == '') {
 								echo money_format('$%i', $total);			
 							?>
 							</span>
-                            <input type="hidden" name="totalCost" />
+                            <input type="hidden" name="totalCost" value=$total />
                         </p>
                     </div>
                     <div>
