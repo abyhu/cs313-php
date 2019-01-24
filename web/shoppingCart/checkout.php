@@ -14,12 +14,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$state = preventHacks($_POST["state"]);
 	$zip = preventHacks($_POST["zip"]);
 	$phone = preventHacks($_POST["phone"]);
+	$items = $_SESSION["items"]; 
 	$subtotal = preventHacks($_POST["subtotal"]);
 	$shipping = preventHacks($_POST["shipping"]);
 	$tax = preventHacks($_POST["tax"]);
 	$total = preventHacks($_POST["total"]);
 	$radio = preventHacks($_POST["radio"]);
 	$expiration = preventHacks($_POST["expirationDate"]);
+	
+	session_start();
+	$_SESSION["fName"] = $fName;
+	$_SESSION["lName"] = $lName;
+	$_SESSION["street"] = $street;
+	$_SESSION["city"] = $city;
+	$_SESSION["state"] = $state;
+	$_SESSION["zip"] = $zip;
+	$_SESSION["phone"] = $phone;
+	$_SESSION["items"] = $items; 
+	$_SESSION["subtotal"] = $subtotal;
+	$_SESSION["shipping"] = $shipping;
+	$_SESSION["tax"] = $tax;
+	$_SESSION["total"] = $total;
+	$_SESSION["radio"] = $radio;
+	$_SESSION["expiration"] = $expiration;
+	
+	window.open('purchase.php','_self',false);
+	
 }
 
 function preventHacks($data) {
@@ -28,8 +48,6 @@ function preventHacks($data) {
 	$data = htmlspecialchars($data); 
 	return $data; 
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -176,38 +194,12 @@ function preventHacks($data) {
                     </div>
                 </form>
             </div>
-	<div id="purchase">
-		<?php 
-		print " <h3 class=\"review\">Shipping Information:</h3>
-        <p>$fName $lName</p>
-        <p>$street</p>
-        <p>$city, $state $zip</p>
-        <p>$phone</p>
-
-        <h3 class=\"review\">Order Summary:</h3>
-        <p>Your purchase includes: $itemsOrdered</p>
-        <p>Subtotal: $subtotal</p>
-        <p>Shipping Cost: $shipping</p>
-        <p>Tax Charges: $tax</p>
-        <p>Total Purchase: $total</p>
-
-        <h3 class=\"review\">Payment Information:</h3>
-        <p>Credit Card Type: $radio </p>
-        <p>Card Expiration Date: $expiration</p>";
-
-		print '<p>
-            <input type="submit" id="submitButton" name="submitForm" value="Submit Order" onsubmit="return confirmAndPost(this)" />
-        </p>'
-		?>
-	
-	</div>
 	
 	<!--Validate Data Entered into the Form-->
 	<script language="JavaScript" src="scripts/form.js"></script>
 	
 	<!--Form Submission-->
 	<script language="JavaScript" src="scripts/checkout.js"></script>
-	<script language="PHP" src="scripts/purchase.php"></script>
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
