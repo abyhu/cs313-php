@@ -140,7 +140,7 @@ function preventHacks($data) {
 								<?php 
 								$_SESSION["tax"] = 0; 
 								if(isset($_SESSION['items'])) {
-									$_SESSION["tax"] = $subtotal * 0.06;  
+									$_SESSION["tax"] = $_SESSION["subtotal"] * 0.06;  
 								} 
 								echo money_format('$%i', $_SESSION["tax"]);			
 							?>
