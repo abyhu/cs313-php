@@ -4,7 +4,7 @@ if(session_id() == '') {
     session_start();
 }
 
-$fName = $lName = $street = $city = $state = $zip = $phone = $subtotal = $shipping = $tax = $total = $radio = $expiration = "";
+$fName = $lName = $street = $city = $state = $zip = $phone = $radio = $expiration = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$fName = preventHacks($_POST["fName"]);
@@ -14,11 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$state = preventHacks($_POST["state"]);
 	$zip = preventHacks($_POST["zip"]);
 	$phone = preventHacks($_POST["phone"]);
-	$items = $_SESSION["items"]; 
-	$subtotal = preventHacks($_POST["subtotal"]);
-	$shipping = preventHacks($_POST["shipping"]);
-	$tax = preventHacks($_POST["tax"]);
-	$total = preventHacks($_POST["total"]);
 	$radio = preventHacks($_POST["radio"]);
 	$expiration = preventHacks($_POST["expirationDate"]);
 	
@@ -29,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["state"] = $state;
 	$_SESSION["zip"] = $zip;
 	$_SESSION["phone"] = $phone;
-	$_SESSION["items"] = $items; 
 	$_SESSION["subtotal"] = $subtotal;
 	$_SESSION["shipping"] = $shipping;
 	$_SESSION["tax"] = $tax;
