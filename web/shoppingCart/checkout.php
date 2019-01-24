@@ -82,7 +82,7 @@ if(session_id() == '') {
 								$subtotal = 0; 
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
-									$subtotal += prices[(int)$key];  
+									$subtotal += $prices[(int)$key];  
 									echo $subtotal;
 								} else {
 									echo $subtotal;
