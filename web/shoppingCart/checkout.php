@@ -58,14 +58,17 @@ if(session_id() == '') {
 							<span id=itemsOrdered>
 								
 							<?php 
-								
-								foreach ($_SESSION['items'] as $key=>$val) {
+								if(isset($_SESSION['items'])) {
+									foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
 									echo $key." ".$val;
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
-									echo ')"/><br/>';}
-								
+									echo ')"/><br/>';
+									}
+								} else {
+									echo '<p id="emptyCartMessage">You do not have any items in your cart. Please select an item to purchase before checking out.</p>';
+								}							
 							?>
 							
 							</span>
