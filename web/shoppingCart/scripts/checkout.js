@@ -18,7 +18,7 @@
 //    openCheckout();
 //    calculateTotal(itemName);
 //}
-//
+
 function validateAndPost() {
     //check all form information is valid
     if (document.myForm.fName.className != "valid" ||
@@ -41,6 +41,5 @@ function validateAndPost() {
     } else {
         return true;
     }
-
     return false;
 }
