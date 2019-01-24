@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["radio"] = $radio;
 	$_SESSION["expiration"] = $expiration;
 	
-	header("Location: scripts/purchase.php"); 	
+	header("Location: purchase.php"); 	
 }
 
 function preventHacks($data) {
