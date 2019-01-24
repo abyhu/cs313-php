@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["radio"] = $radio;
 	$_SESSION["expiration"] = $expiration;
 	
-	window.open('purchase.php','_self',false);
+	//window.open('purchase.php','_self',false);
 	
 }
 
