@@ -12,36 +12,6 @@
 
 
 
-/* _____Onload add reset/submit functions buttons_____ */
-function addFunctions() {
-    var reset = document.myForm.reset;
-    document.getElementById("clear").onclick = function () {
-        document.myForm.reset();
-    }
-}
-
-/* ___________Checkout Submit and Reset____________ */
-function resetForm() {
-    //clear value for all input items
-    document.myForm.fName.value = "";
-    document.myForm.lName.value = "";
-    document.myForm.street.value = "";
-    document.myForm.city.value = "";
-    document.myForm.state.value = "";
-    document.myForm.zip.value = "";
-    document.myForm.phone.value = "";
-    document.myForm.creditCard.value = "";
-    document.myForm.expirationDate.value = "";
-    document.myForm.radio[0].checked = false;
-    document.myForm.radio[1].checked = false;
-    document.myForm.radio[2].checked = false;
-    document.getElementById("message").innerHTML = "";
-    document.getElementById("message").style.display = "none";
-    document.title = "Pursula Home";
-    document.getElementById("index").style.display = "block";
-    document.getElementById("shop").style.display = "none";
-    document.getElementById("references").style.display = "none";
-    document.getElementById("checkout").style.display = "none";
 
     //clear all "valid" classes for input items
     var validInput = document.getElementsByClassName("valid");
