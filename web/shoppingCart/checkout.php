@@ -101,7 +101,7 @@ if(session_id() == '') {
                         <p class="radio"><input type="radio" name="radio" value="Visa" /> Visa</p>
                         <p class="radio"><input type="radio" name="radio" value="Mastercard" /> Mastercard</p>
                         <p class="radio"><input type="radio" name="radio" value="American Express" /> American Express</p>
-                        <p class=message></p>
+                        <p id=message></p>
                         <p>
                             <input type="button" id="continueShop" name="continueShop" value="Continue Shopping" onclick="continueShopping()"/>
                             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
