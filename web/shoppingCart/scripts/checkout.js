@@ -10,23 +10,6 @@
 		window.open('checkout.php','_self',false); 
 }
 
-
-
-
-    //clear all "valid" classes for input items
-    var validInput = document.getElementsByClassName("valid");
-    for (var i = 0; i < validInput.length; i++) {
-        validInput[i].className = ""
-    }
-
-    //clear all "inCart" classes for shopping items
-    var shopItems = document.getElementsByClassName("inCart");
-    for (var i = 0; i < shopItems.length; i++) {
-        shopItems[i].className = "addCart";
-    }
-}
-
-
 /* ___________Open Checkout____________ */
 function openCheckout() {
 
