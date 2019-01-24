@@ -200,6 +200,7 @@ function preventHacks($data) {
 	
 	<!--Form Submission-->
 	<script language="JavaScript" src="scripts/checkout.js"></script>
+	<script language="PHP" src="scripts/purchase.php"></script>
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
