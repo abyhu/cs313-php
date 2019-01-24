@@ -35,7 +35,7 @@ include("modules/headerNav.php");
 
 print " 
 		<div class='purchase'>
-		<p id='finalMessage'>Thank you for shopping at Pursula. Here is your receipt.</p>
+		<p id='finalMessage'>Thank you for shopping at Pursula. Please print out this page for your receipt. Your items will be arriving soon.</p>
 		<h3 class='review'>Shipping Information:</h3>
         <p>$fName $lName</p>
         <p>$street</p>
