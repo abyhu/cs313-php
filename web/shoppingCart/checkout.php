@@ -49,7 +49,7 @@ if(session_id() == '') {
                         </p>
                         <p>Phone Number:
                             <input type="text" name="phone" class="textInput" onfocus="showHelp(name)" onblur="validatePhone(name, value)" />
-                            <span class="help">Ex. (301)555-5555</span>
+                            <span class="help">Ex. 3015555555</span>
                         </p>
                     </div>
                     <div id="orderSummary">
@@ -110,20 +110,11 @@ if(session_id() == '') {
                 </form>
             </div>
 	
-	<script> 
-		/* ___________CONTINUE SHOPPING____________ */
-		function continueShopping() { 
-			//??? DO I NEED TO POST HERE BEFORE I GO BACK? 
-			window.open('shop.php','_self',false); 
-		}
-		
-		/* ___________REMOVE FROM CART____________ */
-		function removeFromCart(itemKey) { 
-			var itemId = {id: itemKey}
-			$.post('scripts/removeCart.php', itemId);
-			window.open('checkout.php','_self',false); 
-		}
-		
+	<!--Validate Data Entered into the Form-->
+	<script language="JavaScript" src="scripts/form.js"></script>
+	
+	<!--Form Submission-->
+	<script language="JavaScript" src="scripts/checkout.js"></script>	
 
 	
 	</script>
