@@ -16,7 +16,6 @@ $expiration = $_SESSION["expiration"];
 
 print '<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +24,7 @@ print '<!DOCTYPE html>
 
 include("modules/head.php");
 	
-print '<!--INCLUDE HEADERNAV-->'
+print '<!--INCLUDE HEADERNAV-->';
 	
 $page = "shop.php"; 
 include("modules/headerNav.php");
@@ -35,7 +34,6 @@ print " <h3 class=\"review\">Shipping Information:</h3>
         <p>$street</p>
         <p>$city, $state $zip</p>
         <p>$phone</p>
-
         <h3 class=\"review\">Order Summary:</h3>
         <p>Your purchase includes:";
 		
@@ -48,11 +46,9 @@ print " <p>Subtotal: $subtotal</p>
         <p>Shipping Cost: $shipping</p>
         <p>Tax Charges: $tax</p>
         <p>Total Purchase: $total</p>
-
         <h3 class=\"review\">Payment Information:</h3>
         <p>Credit Card Type: $radio </p>
         <p>Card Expiration Date: $expiration</p>
-		
 		<!--INCLUDE FOOTER-->";
 
 include('modules/footer.php');
