@@ -75,7 +75,20 @@ if(session_id() == '') {
                             <input type="hidden" name="itemsOrdered" />
                         </p>
                         <p>Items Subtotal
-                            <span id="itemsSubtotal">$0.00</span>
+                            <span id="itemsSubtotal">
+							
+							<?php 
+								$prices = [50, 45, 35, 40, 60, 30, 25, 55, 20];
+								$subtotal = 0; 
+								if(isset($_SESSION['items'])) {
+									foreach ($_SESSION['items'] as $key=>$val) {
+									$subtotal += prices[$key];  
+									echo number_format((float)$subtotal, 2, '.', '');
+								} else {
+									echo number_format((float)$subtotal, 2, '.', '');
+								}							
+							?>
+							</span>
                             <input type="hidden" name="itemsSubtotal" />
                         </p>
                         <p>Shipping total
