@@ -97,7 +97,7 @@ if(session_id() == '') {
 								if(isset($_SESSION['items'])) {
 									$shipping = 9.99;  
 								} 
-								echo money_format('$%i', $subtotal);			
+								echo money_format('$%i', $shipping);			
 							?>
 								
 							</span>
