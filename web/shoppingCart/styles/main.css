@@ -27,6 +27,12 @@ div {
     background-color: white;
 }
 
+.purchase {
+	padding: 5%; 
+	
+}
+
+
 #references {
     margin: 7% auto;
 }
