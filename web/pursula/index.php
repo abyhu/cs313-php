@@ -12,7 +12,7 @@
 	<?php $page = 'index.php'; include('modules/headerNav.php'); ?>
 	<?php include('scripts/slider.php'); ?>
   
-<!--
+
             <div id="index">
                 <div id="slider">
                     <input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="1" />
@@ -25,7 +25,6 @@
                     <input type="button" id="rightArrow" value=">" onclick="arrow(this)" />
                 </div>
             </div>
--->
 
             
 	<!--INCLUDE FOOTER-->
