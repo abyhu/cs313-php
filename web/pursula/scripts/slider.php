@@ -1,13 +1,13 @@
 <?php
 
-	$db = include('scripts/connectToDb.php'); 
+	include('scripts/connectToDb.php'); 
 
-	foreach ($db->query('SELECT id, name, img_url, description FROM products WHERE description != ""') as $row)
-	{
-  		echo 'id: ' . $row['id'];
-  		echo ' name: ' . $row['name'];
-  		echo '<br/>';
-	}
+	//foreach ($db->query('SELECT id, name, img_url, description FROM products WHERE description != ""') as $row)
+	//{
+  	//	echo 'id: ' . $row['id'];
+  	//	echo ' name: ' . $row['name'];
+  	//	echo '<br/>';
+	//}
 
 //	$stmt = $db->prepare('SELECT * FROM products WHERE description != ""');
 //	$stmt->bindValue(':id', $id, PDO::PARAM_INT);
