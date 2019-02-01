@@ -10,11 +10,11 @@
 	
 	<!--INCLUDE HEADERNAV-->
 	<?php $page = 'index.php'; include('modules/headerNav.php'); ?>
-	<?php include('scripts/slider.php'); ?>
   
 
             <div id="index">
                 <div id="slider">
+					<?php include('scripts/slider.php'); ?>
                     <input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="1" />
                     <img src="images/purse1large.jpg" alt="Purse 1" id="sliderImage" />
                     <div id="sliderTextDiv">
