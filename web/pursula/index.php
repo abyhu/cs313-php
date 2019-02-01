@@ -10,6 +10,7 @@
 	
 	<!--INCLUDE HEADERNAV-->
 	<?php $page = 'index.php'; include('modules/headerNav.php'); ?>
+	<?php include('scripts/slider.php'); ?>
   
             <div id="index">
                 <div id="slider">
