@@ -3,7 +3,7 @@
 	require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name, img_url, description FROM products"); 
+	$data = $db->prepare("SELECT id, name, img_url, description FROM products WHERE description != ''"); 
 	$data->execute(); 
 
 	while ($row = $data->fetch(PDO::FETCH_ASSOC))
