@@ -11,6 +11,10 @@
 		$ids[] = $row['id']; 
 		$names[] = $row['name']; 
 		$descriptions[] = $row['description']; 
+		
+		echo $id[0]; 
+		echo $id[1];
+		echo $id[2]; 
 	}
 
 	
