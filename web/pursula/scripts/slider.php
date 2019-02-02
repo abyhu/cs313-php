@@ -3,11 +3,18 @@
 	require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	foreach ($db->query('SELECT id, name, img_url, description FROM products WHERE description != "";') as $row)
+	$data = $db->prepare("SELECT id, name, img_url, description FROM products"); 
+	$data->execute(); 
+
+	while ($row = $data->fetch(PDO::FETCH_ASSOC))
 	{
+		echo '<p>';
   		echo 'id: ' . $row['id'];
   		echo ' name: ' . $row['name'];
+		echo 'img_url: ' . $row['img_url'];
+  		echo 'description: ' . $row['description'];
   		echo '<br/>';
+		echo '</p>';
 	}
 
 ?>
