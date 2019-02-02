@@ -13,8 +13,6 @@
 		$descriptions[] = $row['description']; 
 		
 		print_r($ids);
-		print_r($names);
-		print_r($descriptions);
 	}
 
 	
