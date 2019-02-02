@@ -1,7 +1,8 @@
 <?php
 
 	function get_db() {
-	$db = NULL; 
+	
+		$db = NULL; 
 	
 		try
 		{
@@ -24,6 +25,8 @@
 			echo 'Error!: ' . $ex->getMessage();
 			die();
 		}
+		
+		return $db; 
 	
 	}
 
