@@ -12,9 +12,9 @@
 		$names[] = $row['name']; 
 		$descriptions[] = $row['description']; 
 		
-		echo $id[0]; 
-		echo $id[1];
-		echo $id[2]; 
+		print_r($ids);
+		print_r($names);
+		print_r($descriptions);
 	}
 
 	
