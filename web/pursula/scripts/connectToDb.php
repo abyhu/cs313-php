@@ -1,7 +1,5 @@
 <?php
 
-	$db = null; 
-
 	try
 	{
   		$dbUrl = getenv('DATABASE_URL');
