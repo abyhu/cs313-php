@@ -14,9 +14,9 @@ require('scripts/connectToDb.php');
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
-	$ids[] = $data['id']; 
-	$names[] = $data['name']; 
-	$descriptions[] = $data['description']; 	
+	$ids[] = $data[id]; 
+	$names[] = $data[name]; 
+	$descriptions[] = $data[description]; 	
 }
 
 ?>
