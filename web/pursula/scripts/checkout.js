@@ -10,14 +10,13 @@
 		window.open('checkout.php','_self',false); 
 }
 
-///*___________Buy Now____________*/
-//function buyNow(item) {
-//    //this function is direct from the slider and only allows one item to be placed in the cart for checkout
-//    var itemName = item.name;
-//    document.getElementById(itemName).className = "inCart";
-//    openCheckout();
-//    calculateTotal(itemName);
-//}
+/*___________Buy Now____________*/
+function buyNow(item) {
+//this function is direct from the slider and only allows one item to be placed in the cart for checkout
+    var itemName = item.name;
+    $.post('scripts/addCart.php', itemId);
+    window.open('checkout.php','_self',false);
+}
 
 function validateAndPost() {
     //check all form information is valid
