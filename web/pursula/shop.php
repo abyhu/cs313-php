@@ -36,7 +36,7 @@ require('scripts/connectToDb.php');
 						echo '<div class="item">';
 						echo '<img src="'.$row[img_url].'" alt="'.$row[name].'" class="purse" />';
 						echo '<h2>'.$row[name].'</h2>';
-						echo '<h3>$'.$row[price].'</h3>';
+						echo '<h3>$'.$row[price].'.00</h3>';
 						if(isset($_SESSION['items'][$row[id]])) {
 								echo '<input type="button" class="inCart" value="In Your Cart" id='.$row[id].'name="'.$row[id].'" onclick="addCart(this)" />';
 							} else {
