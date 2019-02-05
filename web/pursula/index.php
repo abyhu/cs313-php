@@ -41,7 +41,7 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
 					echo '<div id="sliderTextDiv">';
 						echo '<h2 id="sliderTitle">'.$products[1][name].'</h2>';
 						echo '<p id="sliderText">'.$products[1][description].'</p>';
-						echo '<input type="button" id="buyNow" name="'.$products[1][id].'" value="Buy Now" onclick="buyNow(this)" />';
+						echo '<input type="button" id="buyNow" name="'.$products[1][id].'" value="Buy Now" onclick="buyNow('.$products[id].')" />';
 					echo '</div>';
 					?>
 					
