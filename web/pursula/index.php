@@ -49,6 +49,9 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
                 </div>
             </div>
             
+	<!--ADD FUNCTIONS-->
+	<script language="JavaScript" src="scripts/checkout.js"></script>
+	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
   
