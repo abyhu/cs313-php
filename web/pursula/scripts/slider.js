@@ -19,9 +19,4 @@ function arrow(arrow, products) {
     }
     //change the slider items to the newly selected item
     document.getElementById("leftArrow").setAttribute("name", i);
-    document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
-    document.getElementById("sliderImage").setAttribute("alt", "Purse " + i);
-    document.getElementById("sliderTitle").innerHTML = products[i].name;
-    document.getElementById("sliderText").innerHTML = products[i].description;
-    document.getElementById("buyNow").setAttribute("name", i);
 }

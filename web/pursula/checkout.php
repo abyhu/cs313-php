@@ -4,6 +4,16 @@ if(session_id() == '') {
     session_start();
 }
 
+require('scripts/connectToDb.php'); 
+	$db = get_db(); 
+
+	$data = $db->prepare("SELECT id, name, description FROM products WHERE description != ''"); 
+	$data->execute();
+
+while ($row = $data->fetch(PDO::FETCH_ASSOC)){
+	$products[] = $row; 	
+}
+
 $fName = $lName = $street = $city = $state = $zip = $phone = $radio = $expiration = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -94,7 +104,7 @@ function preventHacks($data) {
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key=>$val) {
 									echo '<p>'; 
-									echo $key." ".$val;
+									echo $products[$key][name];
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
 									echo ')"/><br/>';
