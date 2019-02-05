@@ -4,6 +4,16 @@ if(session_id() == '') {
     session_start();
 }
 
+require('scripts/connectToDb.php'); 
+	$db = get_db(); 
+
+	$data = $db->prepare("SELECT id, name, description FROM products WHERE description != ''"); 
+	$data->execute();
+
+while ($row = $data->fetch(PDO::FETCH_ASSOC)){
+	$products[] = $row; 	
+}
+
 $fName = $lName = $street = $city = $state = $zip = $phone = $radio = $expiration = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -92,9 +102,9 @@ function preventHacks($data) {
 								
 							<?php 
 								if(isset($_SESSION['items'])) {
-									foreach ($_SESSION['items'] as $key=>$val) {
+									foreach ($_SESSION['items'] as $key) {
 									echo '<p>'; 
-									echo $key." ".$val;
+									echo $products[$key][name];
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
 									echo ')"/><br/>';
@@ -114,8 +124,8 @@ function preventHacks($data) {
 								$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
 								$_SESSION["subtotal"] = 0; 
 								if(isset($_SESSION['items'])) {
-									foreach ($_SESSION['items'] as $key=>$val) {
-									$_SESSION["subtotal"] += $prices[(int)$key];  
+									foreach ($_SESSION['items'] as $key) {
+									$_SESSION["subtotal"] += $products[$key][price];  
 									}
 								} 
 								echo money_format('$%i', $_SESSION["subtotal"]);			
