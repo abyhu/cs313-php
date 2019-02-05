@@ -105,6 +105,7 @@ function preventHacks($data) {
 									foreach ($_SESSION['items'] as $key) {
 									echo '<p>'; 
 									//echo $products[$key][name];
+									echo $key.' '.$value;
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
 									echo ')"/><br/>';
@@ -122,52 +123,52 @@ function preventHacks($data) {
 							
 							<?php 
 								$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
-								$_SESSION["subtotal"] = 0; 
+								$_SESSION['subtotal'] = 0; 
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key) {
-									$_SESSION["subtotal"] += $products[$key][price];  
+									$_SESSION['subtotal'] += $products[$key][price];  
 									}
 								} 
-								echo money_format('$%i', $_SESSION["subtotal"]);			
+								echo money_format('$%i', $_SESSION['subtotal']);			
 							?>
 							</span>
-                            <input type="hidden" name="itemsSubtotal" value="<?php echo $_SESSION["subtotal"]; ?>" />
+                            <input type="hidden" name="itemsSubtotal" value="<?php echo $_SESSION['subtotal']; ?>" />
                         </p>
                         <p>Shipping total
                             <span id="shippingCost">
 								<?php 
-								$_SESSION["shipping"] = 0; 
+								$_SESSION['shipping'] = 0; 
 								if(isset($_SESSION['items'])) {
-									$_SESSION["shipping"] = 9.99;  
+									$_SESSION['shipping'] = 9.99;  
 								} 
-								echo money_format('$%i', $_SESSION["shipping"]);			
+								echo money_format('$%i', $_SESSION['shipping']);			
 							?>
 							</span>
-                            <input type="hidden" name="shippingCost" value="<?php echo $_SESSION["shipping"]; ?>" />
+                            <input type="hidden" name="shippingCost" value="<?php echo $_SESSION['shipping']; ?>" />
                         </p>
                         <p>Tax Estimate
                             <span id="taxCost">
 								<?php 
-								$_SESSION["tax"] = 0; 
+								$_SESSION['tax'] = 0; 
 								if(isset($_SESSION['items'])) {
-									$_SESSION["tax"] = $_SESSION["subtotal"] * 0.06;  
+									$_SESSION['tax'] = $_SESSION['subtotal'] * 0.06;  
 								} 
-								echo money_format('$%i', $_SESSION["tax"]);			
+								echo money_format('$%i', $_SESSION['tax']);			
 							?>
 							</span>
-                            <input type="hidden" name="taxCost" value="<?php echo $_SESSION["tax"]; ?>" />
+                            <input type="hidden" name="taxCost" value="<?php echo $_SESSION['tax']; ?>" />
                         </p>
                         <p>Order Total
                             <span id="totalCost">
 							<?php 
-								$_SESSION["total"] = 0; 
+								$_SESSION['total'] = 0; 
 								if(isset($_SESSION['items'])) {
-									$_SESSION["total"] = $_SESSION["subtotal"] + $_SESSION["shipping"] + $_SESSION["tax"];   
+									$_SESSION['total'] = $_SESSION['subtotal'] + $_SESSION['shipping'] + $_SESSION['tax'];   
 								} 
-								echo money_format('$%i', $_SESSION["total"]);			
+								echo money_format('$%i', $_SESSION['total']);			
 							?>
 							</span>
-                            <input type="hidden" name="totalCost" value="<?php echo $_SESSION["total"]; ?>" />
+                            <input type="hidden" name="totalCost" value="<?php echo $_SESSION['total']; ?>" />
                         </p>
                     </div>
                     <div>
