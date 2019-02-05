@@ -5,14 +5,14 @@ function arrow(arrow, products) {
 
     //the next item depends on which slider button was selected
     if (arrow.value == "<") {
-        if (i == 0) {
-            i = 2;
+        if (i == 1) {
+            i = 3;
         } else {
-            i = i - 1;
+            i--;
         }
     } else {
-        if (i == 2) {
-            i = 0;
+        if (i == 3) {
+            i = 1;
         } else {
             i++;
         }
