@@ -104,7 +104,7 @@ function preventHacks($data) {
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key) {
 									echo '<p>'; 
-									echo $products[$key][name];
+									//echo $products[$key][name];
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
 									echo ')"/><br/>';
