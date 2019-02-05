@@ -1,5 +1,5 @@
 /* ___________Slider Left/Right Arrows____________ */
-function arrow(arrow) {
+function arrow(arrow, products) {
     //establish variables to be used in the slider
     var i = (document.getElementById("leftArrow").name);
 
@@ -19,5 +19,10 @@ function arrow(arrow) {
         }
     }
     //change the slider items to the newly selected item
- 	window.open('index.php','_self',false); 
+    document.getElementById("leftArrow").setAttribute("name", i);
+    document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
+    document.getElementById("sliderImage").setAttribute("alt", "Purse " + i);
+    document.getElementById("sliderTitle").innerHTML = products[i][title];
+    document.getElementById("sliderText").innerHTML = products[i][description];
+    document.getElementById("buyNow").setAttribute("name", i);
 }
