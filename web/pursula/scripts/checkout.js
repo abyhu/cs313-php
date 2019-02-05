@@ -13,7 +13,7 @@
 /*___________Buy Now____________*/
 function buyNow(itemKey) {
 //this function is direct from the slider and only allows one item to be placed in the cart for checkout
-    var itemName = {id: itemKey};
+    var itemId = {id: itemKey};
     $.post('scripts/addCart.php', itemId);
     window.open('checkout.php','_self',false);
 }
