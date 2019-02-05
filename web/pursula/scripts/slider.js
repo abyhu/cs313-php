@@ -19,8 +19,5 @@ function arrow(arrow) {
         }
     }
     //change the slider items to the newly selected item
-    document.getElementById("leftArrow").setAttribute("name", i);
-    document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
-    document.getElementById("sliderImage").setAttribute("alt", "Purse " + i);
-    document.getElementById("buyNow").setAttribute("name", i);
+ 	window.open('index.php','_self',false); 
 }
