@@ -1,10 +1,12 @@
 <?php 
+
 //start a session 
 if(session_id() == '') {
     session_start(); 
 }
 if(!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array(); 
+	$_SESSION['i'] = 0; 
 }
 
 require('scripts/connectToDb.php'); 
@@ -34,14 +36,13 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
 
             <div id="index">
                 <div id="slider">
-                    <input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="1" />
-					
 					<?php 
-					echo '<img src="images/purse'.$products[0][id].'large.jpg" alt="Purse '.$products[1][id].'" id="sliderImage" />';
+                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.$_SESSION['i'].'" />'; 					
+					echo '<img src="images/purse'.$products[$_SESSION['i']][id].'large.jpg" alt="Purse '.$products[$_SESSION['i']][id].'" id="sliderImage" />';
 					echo '<div id="sliderTextDiv">';
-						echo '<h2 id="sliderTitle">'.$products[1][name].'</h2>';
-						echo '<p id="sliderText">'.$products[1][description].'</p>';
-						echo '<input type="button" id="buyNow" name="'.$products[1][id].'" value="Buy Now" onclick="buyNow(this)" />';
+						echo '<h2 id="sliderTitle">'.$products[$_SESSION['i']][name].'</h2>';
+						echo '<p id="sliderText">'.$products[$_SESSION['i']][description].'</p>';
+						echo '<input type="button" id="buyNow" name="'.$products[$_SESSION['i']][id].'" value="Buy Now" onclick="buyNow(this)" />';
 					echo '</div>';
 					?>
 					
@@ -50,7 +51,7 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
             </div>
             
 	<!--ADD FUNCTIONS-->
-	<script language="JavaScript" src="scripts/checkout.js"></script>
+	<script language="JavaScript" src="scripts/slider.js"></script>
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>

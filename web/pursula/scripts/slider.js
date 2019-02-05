@@ -18,5 +18,5 @@ function arrow(arrow) {
         }
     }
     //change the slider items to the newly selected item
-    document.getElementById("leftArrow").setAttribute("name", i);
+    
 }
