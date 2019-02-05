@@ -1,5 +1,5 @@
 /* ___________Slider Left/Right Arrows____________ */
-function arrow(arrow, products) {
+function arrow(arrow) {
     //establish variables to be used in the slider
     var i = (document.getElementById("leftArrow").name);
 
