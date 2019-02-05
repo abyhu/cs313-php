@@ -2,6 +2,7 @@
 function arrow(arrow, products) {
     //establish variables to be used in the slider
     var i = (document.getElementById("leftArrow").name);
+	var productsArray = products; 
 
     //the next item depends on which slider button was selected
     if (arrow.value == "<") {
@@ -11,7 +12,6 @@ function arrow(arrow, products) {
             i = i - 1;
         }
     } else {
-
         if (i == 2) {
             i = 0;
         } else {
@@ -22,7 +22,7 @@ function arrow(arrow, products) {
     document.getElementById("leftArrow").setAttribute("name", i);
     document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
     document.getElementById("sliderImage").setAttribute("alt", "Purse " + i);
-    document.getElementById("sliderTitle").innerHTML = products[i].title;
-    document.getElementById("sliderText").innerHTML = products[i].description;
+    document.getElementById("sliderTitle").innerHTML = productsArray[i].title;
+    document.getElementById("sliderText").innerHTML = productsArray[i].description;
     document.getElementById("buyNow").setAttribute("name", i);
 }
