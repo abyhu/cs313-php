@@ -31,7 +31,6 @@ require('scripts/connectToDb.php');
                 <div id="shopGallery">
 					
 					<?php 
-					
 					while ($row = $data->fetch(PDO::FETCH_ASSOC)){
 						echo '<div class="item">';
 						echo '<img src="'.$row[img_url].'" alt="'.$row[name].'" class="purse" />';
@@ -49,9 +48,7 @@ require('scripts/connectToDb.php');
             </div>
 	
 	<!--ADD FUNCTIONS-->
-	<script language="JavaScript" src="scripts/shop.js"></script>
-	
-	
+	<script language="JavaScript" src="scripts/shop.js"></script>	
 	
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>

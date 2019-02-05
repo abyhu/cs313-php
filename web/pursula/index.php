@@ -1,3 +1,26 @@
+<?php 
+//start a session 
+if(session_id() == '') {
+    session_start(); 
+}
+if(!isset($_SESSION['items'])) {
+	$_SESSION['items'] = array(); 
+}
+
+require('scripts/connectToDb.php'); 
+	$db = get_db(); 
+
+	$data = $db->prepare("SELECT id, name, description FROM products"); 
+	$data->execute();
+
+while ($row = $data->fetch(PDO::FETCH_ASSOC)){
+	$ids[] = $data['id']; 
+	$names[] = $data['name']; 
+	$descriptions[] = $data['description']; 	
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,23 +33,24 @@
 	
 	<!--INCLUDE HEADERNAV-->
 	<?php $page = 'index.php'; include('modules/headerNav.php'); ?>
-  
 
             <div id="index">
                 <div id="slider">
-					<?php include('scripts/slider.php'); ?>
                     <input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="1" />
-                    <img src="images/purse1large.jpg" alt="Purse 1" id="sliderImage" />
-                    <div id="sliderTextDiv">
-                        <h2 id="sliderTitle">Pinch of Punk Purse</h2>
-                        <p id="sliderText">This purse is tough. Sturdy leather with gold studs and hardware add character. This purse includes a matching coin purse and features an interior pocket large enough to fit a standard tablet. When you need something edgy to coordinate with your look, this purse is the one.</p>
-                        <input type="button" id="buyNow" name="1" value="Buy Now" onclick="buyNow(this)" />
-                    </div>
+					
+					<?php 
+					echo '<img src="images/purse'.$ids[0].'large.jpg" alt="Purse '.$ids[0].'" id="sliderImage" />';
+					echo '<div id="sliderTextDiv">';
+						echo '<h2 id="sliderTitle">'.$names[0].'</h2>';
+						echo '<p id="sliderText">'.$descriptions[0].'</p>';
+						echo '<input type="button" id="buyNow" name="'.$ids[0].'" value="Buy Now" onclick="buyNow(this)" />';
+					echo '</div>';
+					?>
+					
                     <input type="button" id="rightArrow" value=">" onclick="arrow(this)" />
                 </div>
             </div>
-
             
 	<!--INCLUDE FOOTER-->
 	<?php include('modules/footer.php'); ?>
-            
+  
