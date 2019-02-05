@@ -37,7 +37,7 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
                     <input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="1" />
 					
 					<?php 
-					echo '<img src="images/purse'.$products[1][id].'large.jpg" alt="Purse '.$products[1][id].'" id="sliderImage" />';
+					echo '<img src="images/purse'.$products[0][id].'large.jpg" alt="Purse '.$products[1][id].'" id="sliderImage" />';
 					echo '<div id="sliderTextDiv">';
 						echo '<h2 id="sliderTitle">'.$products[1][name].'</h2>';
 						echo '<p id="sliderText">'.$products[1][description].'</p>';
