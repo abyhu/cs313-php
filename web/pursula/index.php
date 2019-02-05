@@ -10,7 +10,7 @@ if(!isset($_SESSION['items'])) {
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name, description FROM products"); 
+	$data = $db->prepare("SELECT id, name, description FROM products WHERE description != ''"); 
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
