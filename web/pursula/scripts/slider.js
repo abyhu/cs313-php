@@ -2,16 +2,17 @@
 function arrow(arrow, products) {
     //establish variables to be used in the slider
     var i = (document.getElementById("leftArrow").name);
+	var productNum = (int) "<?php echo $_SESSION['productNum'] ?>";
 
     //the next item depends on which slider button was selected
     if (arrow.value == "<") {
         if (i == 0) {
-            i = 2;
+            i = productNum;
         } else {
             i--;
         }
     } else {
-        if (i == 2) {
+        if (i == productNum) {
             i = 0;
         } else {
             i++;
