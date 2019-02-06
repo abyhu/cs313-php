@@ -4,6 +4,16 @@ if(session_id() == '') {
     session_start(); 
 }
 
+require('scripts/connectToDb.php'); 
+	$db = get_db(); 
+
+	$data = $db->prepare("SELECT id, name, description FROM products WHERE description != ''"); 
+	$data->execute();
+
+while ($row = $data->fetch(PDO::FETCH_ASSOC)){
+	$products[] = $row;
+}
+
 $fName = $_SESSION["fName"];
 $lName = $_SESSION["lName"];
 $street = $_SESSION["street"];
@@ -44,9 +54,9 @@ print "
         <h3 class='review'>Order Summary:</h3>
         <p>Your purchase includes:";
 		
-foreach ($_SESSION['items'] as $key=>$val) {
+foreach ($_SESSION['items'] as $key) {
 		echo '<p>'; 
-		echo $key."</p>";
+		echo $products[$key][name]."</p>";
 }
 									
 print " <p>Subtotal: $subtotal</p>
