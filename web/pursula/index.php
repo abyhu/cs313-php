@@ -90,7 +90,7 @@ echo $productNum;
 		function buyNow(itemId) {
 			var itemId = {id: itemId.name};
 			
-			$.post('scripts/addToCart.php', id);
+			$.post('scripts/addToCart.php', itemId);
 			
 			window.open('shop.php','_self',false);
 		}
