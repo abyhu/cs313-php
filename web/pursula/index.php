@@ -17,9 +17,10 @@ require('scripts/connectToDb.php');
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
-	$products[] = $row; 
-	$productNum = count($products);
+	$products[] = $row;
 }
+
+$productNum = count($products);
 
 ?>
 
