@@ -61,7 +61,7 @@ $productNum = count($products);
 		/* ___________Slider Left/Right Arrows____________ */
 		function arrow(arrow, products) {
 			//establish variables to be used in the slider
-			var i = (document.getElementById("leftArrow").name);
+			var i = {i: (document.getElementById("leftArrow").name)};
 			var productNum = <?php echo $productNum ?>;
 
 			//the next item depends on which slider button was selected
@@ -85,6 +85,8 @@ $productNum = count($products);
 			document.getElementById("sliderTitle").innerHTML = "<?php echo $products[$_SESSION['i']][name] ?>";
 			document.getElementById("sliderText").innerHTML = "<?php echo $products[$_SESSION['i']][description] ?>";
 			document.getElementById("buyNow").setAttribute("name", i);
+			
+			
 			
 			$.post('scripts/slider.php', i);
 			
