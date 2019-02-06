@@ -81,6 +81,8 @@ $productNum = count($products);
 			document.getElementById("sliderTitle").innerHTML = "<?php echo $products[$_SESSION['i']][name] ?>";
 			document.getElementById("sliderText").innerHTML = "<?php echo $products[$_SESSION['i']][description] ?>";
 			document.getElementById("buyNow").setAttribute("name", i);
+			
+			$.post('slider.php', i);
 		}
 	</script>
 	
