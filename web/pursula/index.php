@@ -88,7 +88,7 @@ echo $productNum;
 			document.getElementById("buyNow").setAttribute("name", i + 1); */
 			
 			
-			var iObjectToPHP = {i: i};
+			var iObjectToPHP = {i: i - 1};
 			
 			$.post('scripts/slider.php', iObjectToPHP);
 			
