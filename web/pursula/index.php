@@ -7,6 +7,7 @@ if(session_id() == '') {
 if(!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array(); 
 	$_SESSION['i'] = 0;
+	$_SESSION['j'] = 1; 
 	$_SESSION['productNum'] = 0; 
 }
 
@@ -41,12 +42,12 @@ print_r($products);
             <div id="index">
                 <div id="slider">
 					<?php 
-                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.$_SESSION['i'].'" />'; 					
-					echo '<img src="images/purse'.$products[$_SESSION['i']][id].'large.jpg" alt="Purse '.$products[$_SESSION['i']][id].'" id="sliderImage" />';
+                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.$_SESSION['j'].'" />'; 					
+					echo '<img src="images/purse'.$products[$_SESSION['i']][id].'large.jpg" alt="Purse '.$products[$_SESSION['j']][id].'" id="sliderImage" />';
 					echo '<div id="sliderTextDiv">';
-						echo '<h2 id="sliderTitle">'.$products[$_SESSION['i']][name].'</h2>';
-						echo '<p id="sliderText">'.$products[$_SESSION['i']][description].'</p>';
-						echo '<input type="button" id="buyNow" name="'.$products[$_SESSION['i']][id].'" value="Buy Now" onclick="buyNow(this)" />';
+						echo '<h2 id="sliderTitle">'.$products[$_SESSION['j']][name].'</h2>';
+						echo '<p id="sliderText">'.$products[$_SESSION['j']][description].'</p>';
+						echo '<input type="button" id="buyNow" name="'.$products[$_SESSION['j']][id].'" value="Buy Now" onclick="buyNow(this)" />';
 					echo '</div>';
 					?>
 					
