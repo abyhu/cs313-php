@@ -6,7 +6,7 @@ if(session_id() == '') {
 }
 if(!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array(); 
-	$_SESSION['i'] = 2;
+	$_SESSION['i'] = 3;
 	$_SESSION['productNum'] = 0; 
 }
 
