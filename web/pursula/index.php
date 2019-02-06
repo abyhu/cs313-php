@@ -79,18 +79,18 @@ echo $productNum;
 					i++;
 				}
 			}
-			//change the slider items to the newly selected item
+		/*	//change the slider items to the newly selected item
 			document.getElementById("leftArrow").setAttribute("name", i + 1);
 			document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
 			document.getElementById("sliderImage").setAttribute("alt", "Purse " + i + 1);
 			document.getElementById("sliderTitle").innerHTML = "<?php echo $products[$_SESSION['i']][name] ?>";
 			document.getElementById("sliderText").innerHTML = "<?php echo $products[$_SESSION['i']][description] ?>";
-			document.getElementById("buyNow").setAttribute("name", i + 1);
+			document.getElementById("buyNow").setAttribute("name", i + 1); */
 			
 			
-			i = {i: i};
+			var iObjectToPHP = {i: i};
 			
-			$.post('scripts/slider.php', i);
+			$.post('scripts/slider.php', iObjectToPHP);
 			
 			window.open('index.php','_self',false);
 		}
