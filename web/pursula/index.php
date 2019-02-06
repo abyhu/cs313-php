@@ -6,7 +6,8 @@ if(session_id() == '') {
 }
 if(!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array(); 
-	$_SESSION['i'] = 1; 
+	$_SESSION['i'] = 2;
+	$_SESSION['productNum'] = 0; 
 }
 
 require('scripts/connectToDb.php'); 
@@ -16,7 +17,8 @@ require('scripts/connectToDb.php');
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
-	$products[] = $row; 	
+	$products[] = $row; 
+	$productNum = count($products);
 }
 
 ?>
