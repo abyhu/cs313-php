@@ -87,7 +87,7 @@ $productNum = count($products);
 			document.getElementById("buyNow").setAttribute("name", i);
 			
 			
-			i = {id: i};
+			i = {i: i};
 			
 			$.post('scripts/slider.php', i);
 			
