@@ -59,7 +59,8 @@ foreach ($_SESSION['items'] as $key) {
 		echo $products[$key - 1][name]."</p>";
 }
 									
-print " <p>Subtotal: $subtotal</p>
+print " <br/>
+		<p>Subtotal: $subtotal</p>
         <p>Shipping Cost: $shipping</p>
         <p>Tax Charges: $tax</p>
         <p>Total Purchase: $total</p>
