@@ -7,7 +7,7 @@ if(session_id() == '') {
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name FROM products"); 
+	$data = $db->prepare("SELECT id, name, price FROM products"); 
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
@@ -122,11 +122,11 @@ function preventHacks($data) {
                             <span id="itemsSubtotal">
 							
 							<?php 
-								$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
+								//$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
 								$_SESSION['subtotal'] = 0; 
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key) {
-									$_SESSION['subtotal'] += $prices[$key - 1];  
+									$_SESSION['subtotal'] += $products[$key - 1][price];  
 									}
 								} 
 								echo money_format('$%i', $_SESSION['subtotal']);			
