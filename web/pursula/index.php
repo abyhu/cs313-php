@@ -4,9 +4,13 @@
 if(session_id() == '') {
     session_start(); 
 }
+
 if(!isset($_SESSION['items'])) {
-	$_SESSION['items'] = array(); 
-	$_SESSION['i'] = 0;
+	$_SESSION['items'] = array();
+}
+
+if(!isset($_SESSION['i'])) {
+	$_SESSION['i'] = 0; 
 }
 
 require('scripts/connectToDb.php'); 
