@@ -7,7 +7,6 @@ if(session_id() == '') {
 if(!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array(); 
 	$_SESSION['i'] = 0;
-	$_SESSION['productNum'] = 0; 
 }
 
 require('scripts/connectToDb.php'); 
@@ -59,7 +58,7 @@ $productNum = count($products);
 		function arrow(arrow, products) {
 			//establish variables to be used in the slider
 			var i = (document.getElementById("leftArrow").name);
-			var productNum = <?php echo $_SESSION['productNum'] ?>;
+			var productNum = <?php echo $productNum ?>;
 
 			//the next item depends on which slider button was selected
 			if (arrow.value == "<") {
