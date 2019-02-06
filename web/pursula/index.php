@@ -63,12 +63,12 @@ $productNum = count($products);
 			//the next item depends on which slider button was selected
 			if (arrow.value == "<") {
 				if (i == 0) {
-					i = productNum;
+					i = productNum - 1;
 				} else {
 					i--;
 				}
 			} else {
-				if (i == productNum) {
+				if (i == productNum - 1) {
 					i = 0;
 				} else {
 					i++;
