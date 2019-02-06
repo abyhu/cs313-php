@@ -21,6 +21,8 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
 	$productNum = count($products);
 }
 
+print_r($products);
+
 ?>
 
 <!DOCTYPE html>
