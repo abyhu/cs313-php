@@ -88,11 +88,11 @@ echo $productNum;
 		}
 		
 		function buyNow(itemId) {
-			var id = {id: itemId};
+			var itemId = {id: itemId.name};
 			
 			$.post('scripts/addToCart.php', id);
 			
-			window.open('checkout.php');
+			window.open('shop.php','_self',false);
 		}
 	</script>
 	
