@@ -105,7 +105,6 @@ function preventHacks($data) {
 									foreach ($_SESSION['items'] as $key) {
 									echo '<p>'; 
 									echo $products[$key - 1][name];
-									//echo $key.' '.$value;
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
 									echo ')"/><br/>';
@@ -122,7 +121,6 @@ function preventHacks($data) {
                             <span id="itemsSubtotal">
 							
 							<?php 
-								//$prices = array(50, 45, 35, 40, 60, 30, 25, 55, 20);
 								$_SESSION['subtotal'] = 0; 
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key) {
