@@ -67,14 +67,14 @@ echo $productNum;
 
 			//the next item depends on which slider button was selected
 			if (arrow.value == "<") {
-				if (i == 0) {
-					i = productNum - 1;
+				if (i == 1) {
+					i = productNum;
 				} else {
 					i--;
 				}
 			} else {
-				if (i == (productNum - 1)) {
-					i = 0;
+				if (i == (productNum)) {
+					i = 1;
 				} else {
 					i++;
 				}
