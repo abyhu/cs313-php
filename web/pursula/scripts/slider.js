@@ -21,7 +21,7 @@ function arrow(arrow, products) {
     document.getElementById("leftArrow").setAttribute("name", i);
     document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
     document.getElementById("sliderImage").setAttribute("alt", "Purse " + i);
-    document.getElementById("sliderTitle").innerHTML = products[i].;
-    document.getElementById("sliderText").innerHTML = products[i].description;
+    //document.getElementById("sliderTitle").innerHTML = products[i].;
+    //document.getElementById("sliderText").innerHTML = products[i].description;
     document.getElementById("buyNow").setAttribute("name", i);
 }
