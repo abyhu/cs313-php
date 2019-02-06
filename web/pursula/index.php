@@ -61,7 +61,7 @@ $productNum = count($products);
 		/* ___________Slider Left/Right Arrows____________ */
 		function arrow(arrow, products) {
 			//establish variables to be used in the slider
-			var i = {i: (document.getElementById("leftArrow").name)};
+			var i = (int) {i: (document.getElementById("leftArrow").name)};
 			var productNum = <?php echo $productNum ?>;
 
 			//the next item depends on which slider button was selected
