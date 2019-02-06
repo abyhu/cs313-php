@@ -7,7 +7,7 @@ if(session_id() == '') {
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name, description FROM products"); 
+	$data = $db->prepare("SELECT id, name FROM products"); 
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
@@ -104,7 +104,7 @@ function preventHacks($data) {
 								if(isset($_SESSION['items'])) {
 									foreach ($_SESSION['items'] as $key) {
 									echo '<p>'; 
-									echo $products[$key][name];
+									echo $products[$key - 1][name];
 									//echo $key.' '.$value;
 									echo '<input type="button" class="remove" name="removeButton" value="Remove From Cart" onclick="removeFromCart(';
 									echo $key;
