@@ -72,7 +72,7 @@ $productNum = count($products);
 					i--;
 				}
 			} else {
-				if (i == productNum - 1) {
+				if (i == (productNum - 1)) {
 					i = 0;
 				} else {
 					i++;
