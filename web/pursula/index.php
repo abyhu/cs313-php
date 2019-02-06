@@ -44,8 +44,8 @@ echo $productNum;
             <div id="index">
                 <div id="slider">
 					<?php 
-                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.($_SESSION['i'] + 1).'" />'; 					
-					echo '<img src="images/purse'.($_SESSION['i']).'large.jpg" alt="Purse '.$products[$_SESSION['i']][id].'" id="sliderImage" />';
+                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.($_SESSION['i'][id]).'" />'; 					
+					echo '<img src="images/purse'.($_SESSION['i'][id]).'large.jpg" alt="Purse '.$products[$_SESSION['i']][id].'" id="sliderImage" />';
 					echo '<div id="sliderTextDiv">';
 						echo '<h2 id="sliderTitle">'.$products[$_SESSION['i']][name].'</h2>';
 						echo '<p id="sliderText">'.$products[$_SESSION['i']][description].'</p>';
