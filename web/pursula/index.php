@@ -6,7 +6,7 @@ if(session_id() == '') {
 }
 if(!isset($_SESSION['items'])) {
 	$_SESSION['items'] = array(); 
-	$_SESSION['i'] = 1;
+	$_SESSION['i'] = 0;
 	$_SESSION['productNum'] = 0; 
 }
 
@@ -20,8 +20,6 @@ while ($row = $data->fetch(PDO::FETCH_ASSOC)){
 	$products[] = $row; 
 	$productNum = count($products);
 }
-
-print_r($products);
 
 ?>
 
@@ -41,8 +39,8 @@ print_r($products);
             <div id="index">
                 <div id="slider">
 					<?php 
-                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.$_SESSION['i'].'" />'; 					
-					echo '<img src="images/purse'.($_SESSION['i'] - 1).'large.jpg" alt="Purse '.$products[$_SESSION['i']][id].'" id="sliderImage" />';
+                    echo '<input type="button" id="leftArrow" value="<" onclick="arrow(this)" name="'.($_SESSION['i'] + 1).'" />'; 					
+					echo '<img src="images/purse'.($_SESSION['i']).'large.jpg" alt="Purse '.$products[$_SESSION['i']][id].'" id="sliderImage" />';
 					echo '<div id="sliderTextDiv">';
 						echo '<h2 id="sliderTitle">'.$products[$_SESSION['i']][name].'</h2>';
 						echo '<p id="sliderText">'.$products[$_SESSION['i']][description].'</p>';
