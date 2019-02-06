@@ -78,8 +78,8 @@ $productNum = count($products);
 			document.getElementById("leftArrow").setAttribute("name", i);
 			document.getElementById("sliderImage").setAttribute("src", "images/purse" + i + "large.jpg");
 			document.getElementById("sliderImage").setAttribute("alt", "Purse " + i);
-			document.getElementById("sliderTitle").innerHTML = "<?php echo $products[$_SESSION[i]][name] ?>";
-			document.getElementById("sliderText").innerHTML = "<?php echo $products[$_SESSION[i]][description] ?>";
+			document.getElementById("sliderTitle").innerHTML = "<?php echo $products[$_SESSION['i']][name] ?>";
+			document.getElementById("sliderText").innerHTML = "<?php echo $products[$_SESSION['i']][description] ?>";
 			document.getElementById("buyNow").setAttribute("name", i);
 		}
 	</script>
