@@ -4,7 +4,10 @@ $book = htmlspecialchars($_POST['book']);
 $chapter = htmlspecialchars($_POST['chapter']);
 $verse = htmlspecialchars($_POST['verse']);	
 $content = htmlspecialchars($_POST['content']);
-$topics[] = htmlspecialchars($_POST['topic']); 
+$topics[] = htmlspecialchars($_POST['topics[]']); 
+
+echo $book." ".$chapter." ".$verse; 
+
 
 $db;
 
