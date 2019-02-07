@@ -36,6 +36,8 @@ $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
+
+echo $stmt; 
 //
 //$scriptureId = $db->query('SELECT id FROM scripture 
 //WHERE book = :book 
