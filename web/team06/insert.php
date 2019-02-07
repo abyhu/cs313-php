@@ -4,7 +4,7 @@ $book = htmlspecialchars($_POST['book']);
 $chapter = htmlspecialchars($_POST['chapter']);
 $verse = htmlspecialchars($_POST['verse']);	
 $content = htmlspecialchars($_POST['content']);
-$topic[] = htmlspecialchars($_POST['topic']); 
+$topics[] = htmlspecialchars($_POST['topic']); 
 
 $db;
 
@@ -36,9 +36,23 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-$new_page = "team06.php"; 
+$scriptureId = $db->query('SELECT id from scripture WHERE book = :book AND chapter = :chapter AND verse = :verse AND content = :content;'); 
+$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
+$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+$stmt->execute(); 
 
-header("Location: $new_page"); 
-die(); 
+foreach($topics as $topic) {
+	$topicId = $db->query('SELECT id from topic WHERE name = :name'); 
+	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
+	$stmt->execute(); 
+	
+	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id;'); 
+	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
+	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
+	$stmt->execute(); 
+}
+  
 
 ?>
