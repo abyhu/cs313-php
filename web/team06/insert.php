@@ -30,40 +30,41 @@ catch (PDOException $ex)
 }
 
 $stmt = $db->query('SELECT * FROM scriptures;');
+$stmt->execute(); 
 print_r($stmt); 
 
-$stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
-VALUES(:book, :chapter, :verse, :content;'); 
-$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
-$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
-$stmt->bindValue(':content', $content, PDO::PARAM_STR);
-$stmt->execute(); 
-
-$scriptureId = $db->query('SELECT id FROM scripture 
-WHERE book = :book 
-AND chapter = :chapter 
-AND verse = :verse 
-AND content = :content;'); 
-$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
-$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
-$stmt->bindValue(':content', $content, PDO::PARAM_STR);
-$stmt->execute(); 
-
-echo $scriptureId; 
-
-foreach($topics as $topic) {
-	$topic = htmlentities($topic); 
-	$topicId = $db->query('SELECT id FROM topic WHERE name = :name;'); 
-	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
-	$stmt->execute(); 
-	
-	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id;'); 
-	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
-	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
-	$stmt->execute(); 
-}
+//$stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
+//VALUES(:book, :chapter, :verse, :content;'); 
+//$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
+//$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+//$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+//$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+//$stmt->execute(); 
+//
+//$scriptureId = $db->query('SELECT id FROM scripture 
+//WHERE book = :book 
+//AND chapter = :chapter 
+//AND verse = :verse 
+//AND content = :content;'); 
+//$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
+//$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+//$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+//$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+//$stmt->execute(); 
+//
+//echo $scriptureId; 
+//
+//foreach($topics as $topic) {
+//	$topic = htmlentities($topic); 
+//	$topicId = $db->query('SELECT id FROM topic WHERE name = :name;'); 
+//	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
+//	$stmt->execute(); 
+//	
+//	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id;'); 
+//	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
+//	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
+//	$stmt->execute(); 
+//}
   
 
 ?>
