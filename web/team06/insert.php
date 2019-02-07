@@ -29,6 +29,9 @@ catch (PDOException $ex)
   die();
 }
 
+$stmt = $db->query('SELECT * FROM scriptures;');
+print_r($stmt); 
+
 $stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
 VALUES(:book, :chapter, :verse, :content;'); 
 $stmt->bindValue(':book', $book, PDO::PARAM_STR); 
