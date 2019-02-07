@@ -7,7 +7,7 @@ $content = htmlspecialchars($_POST['content']);
 $topics[] = htmlspecialchars($_POST['topics[]']); 
 
 echo $book." ".$chapter." ".$verse;
-foreach($topics as $topic) {
+foreach($topics[] as $topic) {
 	echo $topic; 
 }
 
