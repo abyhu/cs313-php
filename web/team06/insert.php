@@ -49,14 +49,14 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-foreach($topics[] as $topic) {
+foreach($topics as $topic) {
 	$topicId = $db->query('SELECT id from topic WHERE name = :name;'); 
-	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
+	$stmt->bindValue(':name', htmlspecialchars($topic), PDO::PARAM_STR); 
 	$stmt->execute(); 
 	
 	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id;'); 
 	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
-	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
+	$stmt->bindValue(':topic_id', htmlspecialchars($topic), PDO::PARAM_INT);
 	$stmt->execute(); 
 }
   
