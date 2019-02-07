@@ -37,21 +37,16 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-$scriptureId = $db->prepare('SELECT id FROM scripture 
-WHERE book = :book AND chapter = :chapter AND verse = :verse 
-AND content = :content;'); 
-$scriptureId->bindValue(':book', $book, PDO::PARAM_STR); 
-$scriptureId->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-$scriptureId->bindValue(':verse', $verse, PDO::PARAM_INT);
-$scriptureId->bindValue(':content', $content, PDO::PARAM_STR);
+$scriptureId = $db->query('SELECT id FROM scripture 
+WHERE book ='.$book.' AND chapter = '.$chapter.' AND verse = '.$verse.' 
+AND content = '.$content.); 
 $scriptureId->execute(); 
 
 echo $scriptureId; 
  
 foreach($topics as $topic) {
 	$topic = htmlentities($topic); 
-	$topicId = $db->prepare('SELECT id FROM topic WHERE name = :name;'); 
-	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
+	$topicId = $db->query('SELECT id FROM topic WHERE name = '.$topic.';'); 
 	$stmt->execute(); 
 	
 	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id);'); 
