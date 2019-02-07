@@ -37,12 +37,16 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-$scriptureId = $db->query('SELECT id FROM scripture 
-WHERE book = '.$book.' AND chapter = '.$chapter.' AND verse = '.$verse.' 
-AND content = '.$content.';'); 
-$scriptureId->execute(); 
+$stmt = $db->prepare('SELECT id FROM scripture 
+WHERE book = :book AND chapter = :$chapter AND verse = :$verse
+AND content = :content;');
+$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
+$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+$stmt->execute(); 
 
-echo $scriptureId; 
+echo $stmt; 
  
 //foreach($topics as $topic) {
 //	$topic = htmlentities($topic); 
