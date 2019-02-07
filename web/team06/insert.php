@@ -6,8 +6,6 @@ $verse = htmlspecialchars($_POST['verse']);
 $content = htmlspecialchars($_POST['content']);
 $topics = $_POST['topics']; 
 
-echo $book." ".$chapter." ".$verse." ".$content; 
-
 $db;
 
 try
@@ -39,18 +37,16 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-$scriptureId = $db->query('SELECT id FROM scripture 
-WHERE book = :book 
-AND chapter = :chapter 
-AND verse = :verse 
+$stmt = $db->query('SELECT id FROM scripture 
+WHERE book = :book AND chapter = :chapter AND verse = :verse 
 AND content = :content;'); 
-$scriptureId->bindValue(':book', $book, PDO::PARAM_STR); 
-$scriptureId->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-$scriptureId->bindValue(':verse', $verse, PDO::PARAM_INT);
-$scriptureId->bindValue(':content', $content, PDO::PARAM_STR);
-$scriptureId->execute(); 
+$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
+$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+$stmt->execute(); 
 
-echo $scriptureId; 
+$scriptureId = $stmt->fetch(PDO::FETCH_ASSOC); 
 
 //foreach($topics as $topic) {
 //	$topic = htmlentities($topic); 
