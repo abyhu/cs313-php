@@ -33,13 +33,12 @@ catch (PDOException $ex)
 
 $stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
 VALUES (:book, :chapter, :verse, :content;'); 
-$stmt->bindValue(':book', $book, PDO::PARAM_STR); 
-$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
-$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
-$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+$stmt->bindValue(':book', $book); 
+$stmt->bindValue(':chapter', $chapter);
+$stmt->bindValue(':verse', $verse);
+$stmt->bindValue(':content', $content);
 $stmt->execute(); 
 
-echo "hello"; 
 
 //$scriptureId = $db->query('SELECT id FROM scripture 
 //WHERE book = :book 
