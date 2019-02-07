@@ -44,16 +44,16 @@ $scriptureId->execute();
 
 echo $scriptureId; 
  
-foreach($topics as $topic) {
-	$topic = htmlentities($topic); 
-	$topicId = $db->query('SELECT id FROM topic WHERE name = '.$topic.';'); 
-	$stmt->execute(); 
-	
-	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id);'); 
-	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
-	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
-	$stmt->execute(); 
-}
+//foreach($topics as $topic) {
+//	$topic = htmlentities($topic); 
+//	$topicId = $db->query('SELECT id FROM topic WHERE name = '.$topic.';'); 
+//	$stmt->execute(); 
+//	
+//	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id);'); 
+//	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
+//	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
+//	$stmt->execute(); 
+//}
   
 
 ?>
