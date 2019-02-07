@@ -29,8 +29,9 @@ catch (PDOException $ex)
   die();
 }
 
-$stmt = $db->query('SELECT * FROM scriptures;');
+$stmt = $db->query('SELECT * FROM scripture;');
 $stmt->execute(); 
+
 print_r($stmt); 
 
 //$stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
