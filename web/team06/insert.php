@@ -49,7 +49,7 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-foreach($topics as $topic) {
+foreach($topics[] as $topic) {
 	$topicId = $db->query('SELECT id from topic WHERE name = :name;'); 
 	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
 	$stmt->execute(); 
