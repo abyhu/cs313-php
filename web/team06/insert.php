@@ -38,8 +38,8 @@ $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
 $scriptureId = $db->query('SELECT id FROM scripture 
-WHERE book ='.$book.' AND chapter = '.$chapter.' AND verse = '.$verse.' 
-AND content = '.$content.); 
+WHERE book = '.$book.' AND chapter = '.$chapter.' AND verse = '.$verse.' 
+AND content = '.$content';'); 
 $scriptureId->execute(); 
 
 echo $scriptureId; 
