@@ -37,7 +37,7 @@ catch (PDOException $ex)
     </head>
     <body>
         <h1>Insert Scripture</h1>
-        <form method="post" action="https://webhook.site/e831eb7e-5557-489c-9248-926e425a8e0e">
+        <form method="post" action="insert.php">
 
             <label for="book">Book</label>
             <input name="book" id="book" type="text"/>
