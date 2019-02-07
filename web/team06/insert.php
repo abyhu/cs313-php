@@ -39,7 +39,7 @@ $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
-$scriptureId = $db->query('SELECT id from scripture WHERE book = :book AND chapter = :chapter AND verse = :verse AND content = :content;'); 
+$scriptureId = $db->query('SELECT id FROM scripture WHERE book = :book AND chapter = :chapter AND verse = :verse AND content = :content;'); 
 $stmt->bindValue(':book', $book, PDO::PARAM_STR); 
 $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
@@ -47,7 +47,7 @@ $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
 foreach($topics as $topic) {
-	$topicId = $db->query('SELECT id from topic WHERE name = :name'); 
+	$topicId = $db->query('SELECT id from topic WHERE name = :name;'); 
 	$stmt->bindValue(':name', $topic, PDO::PARAM_STR); 
 	$stmt->execute(); 
 	
