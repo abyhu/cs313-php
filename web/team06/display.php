@@ -30,7 +30,7 @@ catch (PDOException $ex)
 
 <html>
     <head>
-        <title>Team 05</title>
+        <title>Team 06</title>
         <style type="text/css">
             .scripture{
                 font-weight: bold;
@@ -42,7 +42,7 @@ catch (PDOException $ex)
 
         <?php
 
-          foreach($db->query('SELECT * FROM Scriptures WHERE id ='.$_GET['id'].';') as $row)
+          foreach($db->query('SELECT * FROM Scripture WHERE id ='.$_GET['id'].';') as $row)
             {
 
                 echo "<p>";
