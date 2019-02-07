@@ -45,6 +45,8 @@ $scriptureId->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $scriptureId->bindValue(':verse', $verse, PDO::PARAM_INT);
 $scriptureId->bindValue(':content', $content, PDO::PARAM_STR);
 $scriptureId->execute(); 
+
+echo $scriptureId; 
  
 foreach($topics as $topic) {
 	$topic = htmlentities($topic); 
