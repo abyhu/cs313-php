@@ -42,7 +42,7 @@ catch (PDOException $ex)
 
         <?php
 
-          foreach($db->query('SELECT * FROM Scripture WHERE id ='.$_GET['id'].';') as $row)
+          foreach($db->query('SELECT * FROM scripture WHERE id ='.$_GET['id'].';') as $row)
             {
 
                 echo "<p>";
