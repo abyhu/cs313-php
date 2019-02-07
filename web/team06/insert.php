@@ -4,7 +4,7 @@ $book = htmlspecialchars($_POST['book']);
 $chapter = htmlspecialchars($_POST['chapter']);
 $verse = htmlspecialchars($_POST['verse']);	
 $content = htmlspecialchars($_POST['content']);
-$topics[] = $_POST['topics[]']; 
+$topics[] = $_POST['topics']; 
 
 echo $book." ".$chapter." ".$verse;
 foreach($topics as $topic) {
