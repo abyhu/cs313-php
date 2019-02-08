@@ -43,8 +43,7 @@ WHERE book = ? AND chapter = ? AND verse = ?
 AND content = ?');
 $stmt->execute(array($book, $chapter, $verse, $content));
 while ($row = $stmt->fetch()) {
-    foreach ($row as $r) {
-		echo $r;
+    $scriptureId = reset($row);
 	}
   }
 
