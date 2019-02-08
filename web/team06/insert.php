@@ -6,9 +6,6 @@ $verse = htmlspecialchars($_POST['verse']);
 $content = htmlspecialchars($_POST['content']);
 $topics = $_POST['topics']; 
 
-echo book; 
-echo verse; 
-
 $db;
 
 try
@@ -31,7 +28,7 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 } 
-
+echo 'connected to database'; 
 
 $stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
 VALUES (:book, :chapter, :verse, :content)'); 
