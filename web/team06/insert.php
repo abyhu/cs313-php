@@ -38,7 +38,7 @@ $stmt->bindValue(':content', $content, PDO::PARAM_STR);
 $stmt->execute(); 
 
 $stmt = $db->prepare('SELECT id FROM scripture 
-WHERE book = :book AND chapter = :$chapter AND verse = :$verse
+WHERE book = :book AND chapter = :chapter AND verse = :verse
 AND content = :content;');
 $stmt->bindValue(':book', $book, PDO::PARAM_STR); 
 $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
