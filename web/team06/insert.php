@@ -42,26 +42,29 @@ $stmt = $db->prepare('SELECT id FROM scripture
 WHERE book = ? AND chapter = ? AND verse = ?
 AND content = ?');
 $stmt->execute(array($book, $chapter, $verse, $content));
-
-$scriptureId; 
 while ($row = $stmt->fetch()) {
-    $scriptureId = $row;
-	echo $row; 
+    foreach ($row as $r) {
+		echo $r;
+	}
   }
 
+echo $success; 
+//bindValue(':book', $book, PDO::PARAM_STR); 
+//$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
+//$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
+//$stmt->bindValue(':content', $content, PDO::PARAM_STR);
+//$stmt->execute(); 
+ 
+// 
 //foreach($topics as $topic) {
 //	$topic = htmlentities($topic); 
-//	$topicId = $db->prepare('SELECT id FROM topic WHERE name = ?'); 
-//	$stmt->execute(array($topic));
+//	$topicId = $db->query('SELECT id FROM topic WHERE name = '.$topic.';'); 
+//	$stmt->execute(); 
 //	
-//	$topicId; 
-//	while ($row = $stmt->fetch()) {
-//		$topicId = $row; 
-//		echo $row; 
-//	}
-//
-//	$stmt = $db->prepare('INSERT INTO scripture_topic VALUES (?, ?)'); 
-//	$stmt->execute(array($scriptureId, $topicId)); 
+//	$stmt = $db->prepare('INSERT INTO scripture_topic(scripture) VALUES (:scripture_id, :topic_id);'); 
+//	$stmt->bindValue(':scripture_id', $scriptureId, PDO::PARAM_INT); 
+//	$stmt->bindValue(':topic_id', $topic, PDO::PARAM_INT);
+//	$stmt->execute(); 
 //}
   
 
