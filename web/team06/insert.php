@@ -6,6 +6,10 @@ $verse = htmlspecialchars($_POST['verse']);
 $content = htmlspecialchars($_POST['content']);
 $topics = $_POST['topics']; 
 
+print_r($topics); 
+echo $book; 
+echo $verse; 
+
 $db;
 
 try
@@ -28,18 +32,24 @@ catch (PDOException $ex)
   echo 'Error!: ' . $ex->getMessage();
   die();
 } 
+$echo 'connected to database'; 
 
 $stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) 
 VALUES (:book, :chapter, :verse, :content)'); 
+$echo stmt; 
 $stmt->bindValue(':book', $book, PDO::PARAM_STR); 
 $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
+echo $stmt; 
 $stmt->execute(); 
+
+echo $stmt; 
 
 $stmt = $db->prepare('SELECT id FROM scripture 
 WHERE book = :book AND chapter = :chapter AND verse = :verse
 AND content = :content');
+echo $stmt; 
 $stmt->bindValue(':book', $book, PDO::PARAM_STR); 
 $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
