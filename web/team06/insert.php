@@ -42,6 +42,9 @@ $stmt = $db->prepare('SELECT id FROM scripture
 WHERE book = ? AND chapter = ? AND verse = ?
 AND content = ?');
 $success = $stmt->execute(array($book, $chapter, $verse, $content));
+while ($row = $stmt->fetch()) {
+    print_r($row);
+  }
 
 echo $success; 
 //bindValue(':book', $book, PDO::PARAM_STR); 
