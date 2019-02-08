@@ -46,21 +46,23 @@ $stmt->execute(array($book, $chapter, $verse, $content));
 $scriptureId; 
 while ($row = $stmt->fetch()) {
     $scriptureId = $row;
+	echo $row; 
   }
 
-foreach($topics as $topic) {
-	$topic = htmlentities($topic); 
-	$topicId = $db->prepare('SELECT id FROM topic WHERE name = ?'); 
-	$stmt->execute(array($topic));
-	
-	$topicId; 
-	while ($row = $stmt->fetch()) {
-		$topicId = $row; 
-	}
-
-	$stmt = $db->prepare('INSERT INTO scripture_topic VALUES (?, ?)'); 
-	$stmt->execute(array($scriptureId, $topicId)); 
-}
+//foreach($topics as $topic) {
+//	$topic = htmlentities($topic); 
+//	$topicId = $db->prepare('SELECT id FROM topic WHERE name = ?'); 
+//	$stmt->execute(array($topic));
+//	
+//	$topicId; 
+//	while ($row = $stmt->fetch()) {
+//		$topicId = $row; 
+//		echo $row; 
+//	}
+//
+//	$stmt = $db->prepare('INSERT INTO scripture_topic VALUES (?, ?)'); 
+//	$stmt->execute(array($scriptureId, $topicId)); 
+//}
   
 
 ?>
