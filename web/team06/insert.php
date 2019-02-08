@@ -42,6 +42,8 @@ $stmt = $db->prepare('SELECT id FROM scripture
 WHERE book = ? AND chapter = ? AND verse = ?
 AND content = ?');
 $stmt->execute(array($book, $chapter, $verse, $content));
+
+$scriptureId; 
 while ($row = $stmt->fetch()) {
     $scriptureId = reset($row);
   }
