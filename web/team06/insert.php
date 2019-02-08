@@ -44,10 +44,10 @@ AND content = ?');
 $stmt->execute(array($book, $chapter, $verse, $content));
 while ($row = $stmt->fetch()) {
     $scriptureId = reset($row);
-	}
   }
+echo $scriptureId; 
 
-echo $success; 
+ 
 //bindValue(':book', $book, PDO::PARAM_STR); 
 //$stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 //$stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
