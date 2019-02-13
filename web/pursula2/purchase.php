@@ -71,4 +71,6 @@ print " <br/>
 		<!--INCLUDE FOOTER-->";
 
 include('modules/footer.php');
+
+session_destroy(); 
 ?>
