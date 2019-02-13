@@ -83,13 +83,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		$stmt = $db->prepare('UPDATE products SET quantity = quantity - 1 WHERE id = :product_id'); 
 		$stmt->bindValue(':product_id', $products[$key - 1][id], PDO::PARAM_INT);
-		$stmt->execute();
-		
-		
+		$stmt->execute();		
 	}
-	
-	
-	
+		
 	header("Location: purchase.php"); 
 	
 }
