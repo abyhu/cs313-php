@@ -75,10 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	$orderId = reset($row);
   	}
 	
-	foreach ($products as $product) {
+	foreach ($_SESSION['items'] as $key) {
 		$stmt = $db->prepare('INSERT INTO orders_products(order_id, product_id) VALUES (:order_id, :product_id)'); 
 	$stmt->bindValue(':order_id', $orderId, PDO::PARAM_INT); 
-	$stmt->bindValue(':product_id', $product[id], PDO::PARAM_INT); 
+	$stmt->bindValue(':product_id', $products[$key - 1][id], PDO::PARAM_INT); 
 	$stmt->execute();
 	}
 	
