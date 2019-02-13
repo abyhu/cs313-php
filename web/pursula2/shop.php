@@ -10,7 +10,7 @@ if(!isset($_SESSION['items'])) {
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name, img_url, price FROM products ORDER BY id"); 
+	$data = $db->prepare("SELECT id, name, img_url, price FROM products WHERE quantity > 0 ORDER BY id"); 
 	$data->execute(); 
 ?>
 

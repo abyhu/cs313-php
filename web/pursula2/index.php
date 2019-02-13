@@ -16,7 +16,7 @@ if(!isset($_SESSION['i'])) {
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name, description FROM products WHERE description != '' AND quantity > 0 ORDER BY id"); 
+	$data = $db->prepare("SELECT id, name, description, quantity FROM products WHERE description != '' AND quantity > 0 ORDER BY id"); 
 	$data->execute();
 
 while ($row = $data->fetch(PDO::FETCH_ASSOC)){
