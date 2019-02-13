@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$state = preventHacks($_POST["state"]);
 	$zip = preventHacks($_POST["zip"]);
 	$phone = preventHacks($_POST["phone"]);
+	$creditCard = preventHacks($_POST["creditCard"]);
 	$radio = preventHacks($_POST["radio"]);
 	$expiration = preventHacks($_POST["expirationDate"]);
 	
@@ -36,6 +37,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$_SESSION["phone"] = $phone;
 	$_SESSION["radio"] = $radio;
 	$_SESSION["expiration"] = $expiration;
+	
+	$stmt = $db->prepare('INSERT INTO customers(last_name, first_name, street_address, city, state, zip, phone) VALUES (:last_name, :first_name, :street_address, :city, :state, :zip, :phone)'); 
+	$stmt->bindValue(':last_name', $lName, PDO::PARAM_STR); 
+	$stmt->bindValue(':first_name', $fName, PDO::PARAM_STR); 
+	$stmt->bindValue(':street_address', $street, PDO::PARAM_STR); 
+	$stmt->bindValue(':city', $city, PDO::PARAM_STR); 
+	$stmt->bindValue(':state', $state, PDO::PARAM_STR); 
+	$stmt->bindValue(':zip', $zip, PDO::PARAM_INT); 
+	$stmt->bindValue(':phone', $phone, PDO::PARAM_STR); 
+	$stmt->execute();
+	
+	$stmt = $db->prepare('SELECT id FROM customers 
+	WHERE last_name = ? AND first_name = ? AND street_address = ?
+	AND city = ? AND state = ? AND zip = ? AND phone = ?');
+	$stmt->execute(array($lName, $fName, $street, $city, $state, $zip, $phone));
+	
+	$customerId; 
+	while ($row = $stmt->fetch()) {
+    	$customerId = reset($row);
+  	}
+	
+	$stmt = $db->prepare('INSERT INTO orders(customer_id, credit_card_num, expiration, card_type) VALUES (:customerId, :creditCard, :expiration, :radio)'); 
+	$stmt->bindValue(':customerId', $customerId, PDO::PARAM_INT); 
+	$stmt->bindValue(':creditCard', $creditCard, PDO::PARAM_STR); 
+	$stmt->bindValue(':expiration', $expiration, PDO::PARAM_STR); 
+	$stmt->bindValue(':radio', $radio, PDO::PARAM_STR);  
+	$stmt->execute();
+	
+	$stmt = $db->prepare('SELECT id FROM orders
+	WHERE customer_id = ? AND credit_card_num = ? AND expiration = ?
+	AND card_type = ?');
+	$stmt->execute(array($customerId, $creditCard, $expiration, $radio));
+	
+	$orderId; 
+	while ($row = $stmt->fetch()) {
+    	$orderId = reset($row);
+  	}
+	
+	foreach ($products as $product) {
+		$stmt = $db->prepare('INSERT INTO orders_products(order_id, product_id) VALUES (:order_id, :product_id)'); 
+	$stmt->bindValue(':order_id', $orderId, PDO::PARAM_INT); 
+	$stmt->bindValue(':product_id', $product[id], PDO::PARAM_INT); 
+	$stmt->execute();
+	}
 	
 	header("Location: purchase.php"); 
 	
