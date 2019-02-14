@@ -1,8 +1,4 @@
 <?php 
-//start a session 
-if(session_id() == '') {
-    session_start();
-}
 
 require('scripts/connectToDb.php'); 
 $db = get_db(); 
@@ -17,14 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$state = preventHacks($_POST["state"]);
 	$zip = preventHacks($_POST["zip"]);
 	$phone = preventHacks($_POST["phone"]);
-	
-	$_SESSION["fName"] = $fName;
-	$_SESSION["lName"] = $lName;
-	$_SESSION["street"] = $street;
-	$_SESSION["city"] = $city;
-	$_SESSION["state"] = $state;
-	$_SESSION["zip"] = $zip;
-	$_SESSION["phone"] = $phone;
 	
 	$stmt = $db->prepare('SELECT id FROM customers WHERE last_name = ? AND first_name = ? AND street_address = ? AND city = ? AND state = ? AND zip = ? AND phone = ?');  
 	$stmt->execute($lName, $fName, $street, $city, $state, $zip, $phone);
