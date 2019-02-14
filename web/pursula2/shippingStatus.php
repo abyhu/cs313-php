@@ -7,13 +7,6 @@ if(session_id() == '') {
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
 
-	$data = $db->prepare("SELECT id, name, price FROM products ORDER BY id"); 
-	$data->execute();
-
-while ($row = $data->fetch(PDO::FETCH_ASSOC)){
-	$products[] = $row; 	
-}
-
 $fName = $lName = $street = $city = $state = $zip = $phone = $radio = $expiration = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
