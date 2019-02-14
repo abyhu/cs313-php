@@ -102,7 +102,7 @@ function preventHacks($data) {
                     <div id="orderSummary">
                         <h3>Order Status</h3>
 						<?php
-							if($_SERVER["REQUEST_METHOD"] == "POST" && count($orders > 0)) {
+							if($_SERVER["REQUEST_METHOD"] == "POST") {
 							echo '<p>Your order includes: <span id=itemsOrdered>';
 								foreach ($orders as $order) {
 									echo '<p>Product Name: '.$order[name].'</p>';
