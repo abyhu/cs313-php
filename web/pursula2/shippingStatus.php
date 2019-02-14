@@ -27,9 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	$orders[]; 
 	
-	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    	$orders = $row;
-  	}	
+//	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+//    	$orders = $row;
+//  	}	
 }
 
 function preventHacks($data) {
