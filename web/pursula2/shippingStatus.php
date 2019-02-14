@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 //	while ($row = $stmt->fetch()) {
 //    	$orders = $row;
 //  	}	
-//}
+}
 
 function preventHacks($data) {
 	$data = trim($data); 
