@@ -1,8 +1,4 @@
 <?php 
-//start a session 
-if(session_id() == '') {
-    session_start();
-}
 
 require('scripts/connectToDb.php'); 
 	$db = get_db(); 
@@ -37,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$stmt = $db->prepare('SELECT o.shipping_status, p.name, p.img_url FROM customers c INNER JOIN orders o ON c.id = o.customer_id INNER JOIN orders_products op ON o.id = op.order_id INNER JOIN products p ON op.product_id = p.id WHERE c.id = ?'); 
 	$stmt->execute($customerId);
 	
-	$orders[]; 
+	$orders; 
 	
 	while ($row = $stmt->fetch()) {
     	$orders = $row;
