@@ -99,7 +99,7 @@ function preventHacks($data) {
               	<?php
 					if($_SERVER["REQUEST_METHOD"] == "POST") {
 						echo '<div id="orderSummary">';
-                    	echo 	'<h3>Order Status</h3>';
+                    	echo '<h3>Order Status</h3>';
 						echo '<p>Your order includes: <span id=itemsOrdered>';
 						foreach ($orders as $order) {
 							echo '<p>Product Name: '.$order[name].'</p>';
@@ -112,7 +112,8 @@ function preventHacks($data) {
 							echo '</span></p>';
 							echo '</div';
 						}
-					?>
+					}
+				?>
 					
                 </form>
             </div>
