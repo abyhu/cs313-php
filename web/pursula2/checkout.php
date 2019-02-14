@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$stmt->bindValue(':customerId', $customerId, PDO::PARAM_INT); 
 	$stmt->bindValue(':creditCard', $creditCard, PDO::PARAM_STR); 
 	$stmt->bindValue(':expiration', $expiration, PDO::PARAM_STR); 
-	$stmt->bindValue(':total', $total, PDO::PARAM_STR);
+	$stmt->bindValue(':total', $total);
 	$stmt->bindValue(':shipping_status', false, PDO::PARAM_BOOL); 
 	$stmt->bindValue(':radio', $radio, PDO::PARAM_STR);  
 	$stmt->execute();
