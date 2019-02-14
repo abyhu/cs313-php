@@ -19,19 +19,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	$customerId; 
 	while ($row = $stmt->fetch()) {
-    	$customerId = reset($row);
-		echo $customerId; 
+    	$customerId = reset($row); 
   	}
 
+	$stmt = $db->prepare('SELECT o.shipping_status, p.name, p.img_url FROM customers c INNER JOIN orders o ON c.id = o.customer_id INNER JOIN orders_products op ON o.id = op.order_id INNER JOIN products p ON op.product_id = p.id WHERE c.id = ?'); 
+	$stmt->execute(array($customerId));
 	
-//	$stmt = $db->prepare('SELECT o.shipping_status, p.name, p.img_url FROM customers c INNER JOIN orders o ON c.id = o.customer_id INNER JOIN orders_products op ON o.id = op.order_id INNER JOIN products p ON op.product_id = p.id WHERE c.id = ?'); 
-//	$stmt->execute(array($customerId));
-//	
-//	//$orders[]; 
-//	
-//	while ($row = $stmt->fetch()) {
-//    	$orders = $row;
-//  	}	
+	$orders[]; 
+	
+	while ($row = $stmt->fetch()) {
+    	$orders = $row;
+  	}	
 }
 
 function preventHacks($data) {
