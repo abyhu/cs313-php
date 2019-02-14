@@ -37,7 +37,7 @@ div {
     margin: 7% auto;
 }
 
-#purchase
+#purchase, #shippingStatus
 {
     width: 80%;
     margin: 0 auto;

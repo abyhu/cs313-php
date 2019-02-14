@@ -56,43 +56,45 @@ function preventHacks($data) {
 	
 	<!--INCLUDE HEADERNAV-->
 	<?php $page = 'shippingStatus.php'; include('modules/headerNav.php'); ?>
-		<h2>Check Shipping Status</h2>
-		<form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return shippingValidateAndPost()" name="myForm">
-			<div>
-				<h3>Customer Information</h3>
-				<p>First Name:
-					<input type="text" name="fName" class="textInput" onfocus="showHelp(name)" onblur="validateName(name, value)" />
-					<span class="help">Ex. Jane </span>
-				</p>
-				<p>Last Name:
-					<input type="text" name="lName" class="textInput" onfocus="showHelp(name)" onblur="validateName(name, value)" />
-					<span class="help">Ex. Doe. </span>
-				</p>
-				<p>Street Address:
-					<input type="text" name="street" class="textInput" onfocus="showHelp(name)" onblur="validateAddr(name, value)" />
-					<span class="help">Ex. 123 W. State Street </span>
-				</p>
-				<p>City:
-					<input type="text" name="city" class="textInput" onfocus="showHelp(name)" onblur="validateName(name, value)" />
-					<span class="help">Ex. Pittsburg</span>
-				</p>
-				<p>State:
-					<input type="text" name="state" class="textInput" onfocus="showHelp(name)" onblur="validateState(name, value)" />
-					<span class="help">Ex. PA </span>
-				</p>
-				<p>Zip Code:
-					<input type="text" name="zip" class="textInput" onfocus="showHelp(name)" onblur="validateZip(name, value)" />
-					<span class="help">Ex. 32134</span>
-				</p>
-				<p>Phone Number:
-					<input type="text" name="phone" class="textInput" onfocus="showHelp(name)" onblur="validatePhone(name, value)" />
-					<span class="help">Ex. 3015555555</span>
-				</p>
-				<p id=message></p>
-				<p>
-					<input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
-				</p>
-			</div>
+
+		<div id="shippingStatus">
+                <h2>Check Shipping Status</h2>
+                <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return shippingValidateAndPost()" name="myForm">
+                    <div>
+                        <h3>Customer Information</h3>
+                        <p>First Name:
+                            <input type="text" name="fName" class="textInput" onfocus="showHelp(name)" onblur="validateName(name, value)" />
+                            <span class="help">Ex. Jane </span>
+                        </p>
+                        <p>Last Name:
+                            <input type="text" name="lName" class="textInput" onfocus="showHelp(name)" onblur="validateName(name, value)" />
+                            <span class="help">Ex. Doe. </span>
+                        </p>
+                        <p>Street Address:
+                            <input type="text" name="street" class="textInput" onfocus="showHelp(name)" onblur="validateAddr(name, value)" />
+                            <span class="help">Ex. 123 W. State Street </span>
+                        </p>
+                        <p>City:
+                            <input type="text" name="city" class="textInput" onfocus="showHelp(name)" onblur="validateName(name, value)" />
+                            <span class="help">Ex. Pittsburg</span>
+                        </p>
+                        <p>State:
+                            <input type="text" name="state" class="textInput" onfocus="showHelp(name)" onblur="validateState(name, value)" />
+                            <span class="help">Ex. PA </span>
+                        </p>
+                        <p>Zip Code:
+                            <input type="text" name="zip" class="textInput" onfocus="showHelp(name)" onblur="validateZip(name, value)" />
+                            <span class="help">Ex. 32134</span>
+                        </p>
+                        <p>Phone Number:
+                            <input type="text" name="phone" class="textInput" onfocus="showHelp(name)" onblur="validatePhone(name, value)" />
+                            <span class="help">Ex. 3015555555</span>
+                        </p>
+						<p id=message></p>
+						<p>
+                            <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
+                        </p>
+                    </div>
 					
               	<?php
 					if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -113,9 +115,10 @@ function preventHacks($data) {
 					}
 				?>
 					
-    	</form>
+                </form>
+            </div>
 	
-   	<!--Validate Data Entered into the Form-->
+	<!--Validate Data Entered into the Form-->
 	<script language="JavaScript" src="scripts/form.js"></script>
 	
 	<!--Form Submission-->
