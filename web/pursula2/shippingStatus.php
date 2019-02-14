@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$stmt = $db->prepare('SELECT o.shipping_status, p.name, p.img_url FROM customers c INNER JOIN orders o ON c.id = o.customer_id INNER JOIN orders_products op ON o.id = op.order_id INNER JOIN products p ON op.product_id = p.id WHERE c.id = ?'); 
 	$stmt->execute($customerId);
 	
-	$orders; 
+	$orders[]; 
 	
 	while ($row = $stmt->fetch()) {
     	$orders = $row;
@@ -99,7 +99,24 @@ function preventHacks($data) {
                             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
                         </p>
                     </div>
-                   
+                    <div id="orderSummary">
+                        <h3>Order Status</h3>
+						<?php
+							if($_SERVER["REQUEST_METHOD"] == "POST" && count($orders > 0)) {
+							echo '<p>Your order includes: <span id=itemsOrdered>';
+								foreach ($orders as $order) {
+									echo '<p>Product Name: '.$order[name].'</p>';
+									if ($order[shipping_status]) {
+										echo '<p>Shipping Status: Shipped</p>';
+									} else {
+										echo '<p>Shipping Status: Pending Shipment</p>';
+									}
+									echo '<img href='.$order[img_url].' alt='.$order[name].' />';	
+							echo '</span></p>';
+							}
+						?>
+                        
+                    </div>
                 </form>
             </div>
 	
