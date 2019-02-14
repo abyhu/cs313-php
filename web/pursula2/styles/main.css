@@ -33,11 +33,11 @@ div {
 }
 
 
-#references {
+#references, #shippingStatus {
     margin: 7% auto;
 }
 
-#purchase, #shippingStatus
+#purchase
 {
     width: 80%;
     margin: 0 auto;
