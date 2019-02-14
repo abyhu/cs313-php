@@ -3,7 +3,7 @@
 require('scripts/connectToDb.php'); 
 $db = get_db(); 
 
-$fName = $lName = $street = $city = $state = $zip = $phone = $radio = $expiration = "";
+$fName = $lName = $street = $city = $state = $zip = $phone = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$fName = preventHacks($_POST["fName"]);
