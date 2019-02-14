@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	$orders[]; 
 	
-	while ($row = $data->fetch(PDO::FETCH_ASSOC)) {
+	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     	$orders = $row;
   	}	
 }
