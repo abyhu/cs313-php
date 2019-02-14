@@ -57,7 +57,7 @@ function preventHacks($data) {
 	<!--INCLUDE HEADERNAV-->
 	<?php $page = 'shippingStatus.php'; include('modules/headerNav.php'); ?>
 
-		<div id="shippingStatus">
+		<div id="references">
                 <h2>Check Shipping Status</h2>
                 <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return shippingValidateAndPost()" name="myForm">
                     <div>
