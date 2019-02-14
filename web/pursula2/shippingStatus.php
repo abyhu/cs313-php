@@ -1,7 +1,7 @@
 <?php 
 
 require('scripts/connectToDb.php'); 
-	$db = get_db(); 
+$db = get_db(); 
 
 $fName = $lName = $street = $city = $state = $zip = $phone = $radio = $expiration = "";
 
@@ -52,7 +52,7 @@ function preventHacks($data) {
 <html lang="en">
 
 <head>
-    <meta name="description" content="Pursula">
+    <meta name="description" content="Pursula Shipping Status">
 	<title>Pursula Checkout</title>
 	
 	<!--INCLUDE HEAD-->
@@ -63,7 +63,7 @@ function preventHacks($data) {
 
 		<div id="shippingStatus">
                 <h2>Check Shipping Status</h2>
-                <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return validateAndPost()" name="myForm">
+                <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>" onsubmit="return shippingValidateAndPost()" name="myForm">
                     <div>
                         <h3>Customer Information</h3>
                         <p>First Name:
@@ -94,6 +94,7 @@ function preventHacks($data) {
                             <input type="text" name="phone" class="textInput" onfocus="showHelp(name)" onblur="validatePhone(name, value)" />
                             <span class="help">Ex. 3015555555</span>
                         </p>
+						<p id=message></p>
 						<p>
                             <input type="submit" id="submitButton" name="submitForm" value="Submit Order" />
                         </p>
@@ -101,7 +102,7 @@ function preventHacks($data) {
                     <div id="orderSummary">
                         <h3>Order Status</h3>
 						<?php
-						if($_SERVER["REQUEST_METHOD"] == "POST" && count($orders > 0)) {
+							if($_SERVER["REQUEST_METHOD"] == "POST" && count($orders > 0)) {
 							echo '<p>Your order includes: <span id=itemsOrdered>';
 								foreach ($orders as $order) {
 									echo '<p>Product Name: '.$order[name].'</p>';
@@ -112,8 +113,7 @@ function preventHacks($data) {
 									}
 									echo '<img href='.$order[img_url].' alt='.$order[name].' />';	
 							echo '</span></p>';
-						}
-						
+							}
 						?>
                         
                     </div>

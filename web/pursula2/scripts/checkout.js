@@ -34,3 +34,23 @@ function validateAndPost() {
     }
     return false;
 }
+
+function shippingValidateAndPost() {
+    //check all form information is valid
+    if (document.myForm.fName.className != "valid" ||
+        document.myForm.lName.className != "valid" ||
+        document.myForm.street.className != "valid" ||
+        document.myForm.city.className != "valid" ||
+        document.myForm.state.className != "valid" ||
+        document.myForm.zip.className != "valid" ||
+        document.myForm.phone.className != "valid") {
+
+        //or send error message to the user
+        document.getElementById("message").innerHTML = "Please make sure your information is complete before submitting your inquiry.";
+        document.getElementById("message").style.display = "block";
+
+    } else {
+        return true;
+    }
+    return false;
+}
