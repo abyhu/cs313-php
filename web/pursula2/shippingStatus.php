@@ -1,4 +1,8 @@
 <?php 
+//start a session 
+if(session_id() == '') {
+    session_start();
+}
 
 require('scripts/connectToDb.php'); 
 $db = get_db(); 
