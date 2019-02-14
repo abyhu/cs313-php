@@ -113,10 +113,9 @@ function preventHacks($data) {
 					}
 				?>
 					
-                </form>
-            </div>
+    	</form>
 	
-	<!--Validate Data Entered into the Form-->
+   	<!--Validate Data Entered into the Form-->
 	<script language="JavaScript" src="scripts/form.js"></script>
 	
 	<!--Form Submission-->
