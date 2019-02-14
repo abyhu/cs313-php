@@ -103,16 +103,17 @@ function preventHacks($data) {
                         <h3>Order Status</h3>
 						<?php
 							if($_SERVER["REQUEST_METHOD"] == "POST") {
-							echo '<p>Your order includes: <span id=itemsOrdered>';
-								foreach ($orders as $order) {
-									echo '<p>Product Name: '.$order[name].'</p>';
-									if ($order[shipping_status]) {
-										echo '<p>Shipping Status: Shipped</p>';
-									} else {
-										echo '<p>Shipping Status: Pending Shipment</p>';
-									}
+								echo '<p>Your order includes: <span id=itemsOrdered>';
+									foreach ($orders as $order) {
+										echo '<p>Product Name: '.$order[name].'</p>';
+										if ($order[shipping_status]) {
+											echo '<p>Shipping Status: Shipped</p>';
+										} else {
+											echo '<p>Shipping Status: Pending Shipment</p>';
+										}
 									echo '<img href='.$order[img_url].' alt='.$order[name].' />';	
-							echo '</span></p>';
+									echo '</span></p>';
+								}
 							}
 						?>
                         
