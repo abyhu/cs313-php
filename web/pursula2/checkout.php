@@ -58,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	$customerId = reset($row);
   	}
 	
-	$stmt = $db->prepare('INSERT INTO orders(customer_id, credit_card_num, expiration, card_type, total, shipping_status) VALUES (:customerId, :creditCard, :expiration, :radio, :total, 0)'); 
+	$stmt = $db->prepare('INSERT INTO orders(customer_id, credit_card_num, expiration, card_type, total, shipping_status) VALUES (:customerId, :creditCard, :expiration, :radio, :total, :shipping_status)'); 
 	$stmt->bindValue(':customerId', $customerId, PDO::PARAM_INT); 
 	$stmt->bindValue(':creditCard', $creditCard, PDO::PARAM_STR); 
 	$stmt->bindValue(':expiration', $expiration, PDO::PARAM_STR); 
-	$stmt->bindValue(':total', $total);
+	$stmt->bindValue(':total', $total, PDO::PARAM_STR);
 	$stmt->bindValue(':shipping_status', false, PDO::PARAM_BOOL); 
 	$stmt->bindValue(':radio', $radio, PDO::PARAM_STR);  
 	$stmt->execute();
