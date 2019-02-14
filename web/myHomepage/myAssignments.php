@@ -15,8 +15,8 @@
 				 <ul> 
 					 <li><a href="https://still-harbor-46445.herokuapp.com/shoppingCart/shop.php">PHP Shopping Cart</a></li>
 					 <li><a href="https://still-harbor-46445.herokuapp.com/pursula/index.php">Database Access</a></li>
-					 <li><a href="">Assignment Three ... Coming Soon!</a></li>
-					 <li><a href="">Assignment Four ... Coming Soon!</a></li>
+					 <li><a href="https://still-harbor-46445.herokuapp.com/pursula2/index.php">Modify Database</a></li>
+					 <li><a href="https://still-harbor-46445.herokuapp.com/pursula2/index.php">Project 1</a></li>
 					 <li><a href="">Assignment Five ... Coming Soon!</a></li>
 					 <li><a href="">Assignment Six ... Coming Soon!</a></li>
 					 <li><a href="">Assignment Seven ... Coming Soon!</a></li>
