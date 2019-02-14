@@ -14,23 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$zip = preventHacks($_POST["zip"]);
 	$phone = preventHacks($_POST["phone"]);
 	
-	echo $fName;
-	echo $lName; 
-	echo $street; 
-	echo $city; 
-	echo $state; 
-	echo $zip; 
-	echo $phone;
-	
 	$stmt = $db->prepare('SELECT id FROM customers WHERE last_name = ? AND first_name = ? AND street_address = ? AND city = ? AND state = ? AND zip = ? AND phone = ?');  
 	$stmt->execute($lName, $fName, $street, $city, $state, $zip, $phone);
 
 	$customerId; 
 	while ($row = $stmt->fetch()) {
     	$customerId = reset($row);
+		echo $customerId; 
   	}
 
-	echo $customerId; 
+	
 //	$stmt = $db->prepare('SELECT o.shipping_status, p.name, p.img_url FROM customers c INNER JOIN orders o ON c.id = o.customer_id INNER JOIN orders_products op ON o.id = op.order_id INNER JOIN products p ON op.product_id = p.id WHERE c.id = ?'); 
 //	$stmt->execute($customerId);
 //	
