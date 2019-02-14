@@ -7,7 +7,7 @@
       		<a href="index.php" class="nav">Home</a>
       		<a href="shop.php" class="nav">Shop</a>
       		<a href="references.php" class="nav">References</a>
-      		<a href="databaseInfo.php" class="nav">Database Info</a>
+      		<a href="shippingStatus.php" class="nav">Shipping Status</a>
 		</nav>
 		<script>$(document).ready(activateNavItem);</script>
 <main>
