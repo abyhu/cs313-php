@@ -98,7 +98,9 @@ function preventHacks($data) {
 							} else {
 								echo '<p>Shipping Status: Pending Shipment</p>';
 							}
-							echo '<img href='.$row[img_url].' alt='.$row[name].' />';	
+							echo '<img href='.$row[img_url].' alt='; 
+							echo $row[name];
+							echo '/>';	
 							echo '</span></p>';
 							echo '</div';
 						}
