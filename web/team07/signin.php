@@ -11,7 +11,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 	$password = preventHacks($_POST['password']); 
 	
 	//query database to make sure user exists
-	require 'scripts/connectToDb.php';
+	require("scripts/connectToDb.php");
 	$db = get_db(); 
 	
 	$stmt = $db->prepare('SELECT user_id FROM authentication 
