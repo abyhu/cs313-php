@@ -1,7 +1,7 @@
 <?php
 if(!isset($_SESSION['userId'])) {
-    //header('Location: signin.php');
-	//die(); 
+    header('Location: signin.php');
+	die(); 
 } else {
 	echo $_SESSION['userId'];
 }
