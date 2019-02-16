@@ -30,7 +30,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was 
 			$_SESSION['username'] = $username;
 			
 			//redirect to the welcome page
-			header('Location: welcome.php');
+			header('Location: https://still-harbor-46445.herokuapp.com/team07/welcome.php');
 			die(); 
 		} 
 	} 
