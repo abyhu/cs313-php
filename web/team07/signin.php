@@ -18,10 +18,12 @@ if(isset($_POST['login'])){ //check if form was submitted
 	$db = get_db(); 
 	echo 'connected to database'; 	 
 	
-	$stmt = $db->prepare('SELECT user_id FROM authentication WHERE username=? AND password=?');
+	$stmt = $db->prepare('SELECT user_id FROM authentication 
+	WHERE username = ? AND password = ?');
 	$stmt->execute(array($username, $password));
-	userId = $stmt->fetch(); 
-	echo $userId; 	
+	
+	$userId = $stmt->fetch();
+	echo $userId;
 	
 	
 		
