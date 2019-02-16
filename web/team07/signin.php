@@ -1,4 +1,11 @@
 <?php
+function preventHacks($data) {
+	$data = trim($data); 
+	$data = stripslashes($data); 
+	$data = htmlspecialchars($data); 
+	return $data; 
+}
+
 if(isset($_POST['login'])){ //check if form was submitted
   	$username = preventHacks($_POST["username"]); //get input text
 	$password = preventHacks($_POST["password"]); 
@@ -25,12 +32,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 	//die(); 
 }  
 
-function preventHacks($data) {
-	$data = trim($data); 
-	$data = stripslashes($data); 
-	$data = htmlspecialchars($data); 
-	return $data; 
-}
+
 ?>
 
 <!DOCTYPE html>
