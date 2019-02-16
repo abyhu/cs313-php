@@ -16,7 +16,10 @@ if(isset($_POST['login'])){ //check if form was submitted
 	
 	$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username=? AND password=?');
 	$stmt->execute(array($username, $password));
-	userId = $stmt->fetch(); 
+	$userId; 
+	while ($row = $stmt->fetch()) {
+    	$userId = reset($row);
+  	}	
 	
 	echo $userId; 
 	
