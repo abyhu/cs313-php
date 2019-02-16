@@ -9,14 +9,10 @@ function preventHacks($data) {
 if(isset($_POST['login'])){ //check if form was submitted
   	$username = preventHacks($_POST['username']); //get input text
 	$password = preventHacks($_POST['password']); 
-
-	echo $username;
-	echo $password; 
 	
 	//query database to make sure user exists
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
-	echo 'connected to database'; 	 
 	
 	$stmt = $db->prepare('SELECT user_id FROM authentication 
 	WHERE username = ? AND password = ?');
@@ -26,18 +22,15 @@ if(isset($_POST['login'])){ //check if form was submitted
 	while ($row = $stmt->fetch()) {
     	$userId = reset($row);
   	}
-	echo $userId;
 	
 	//if user exists set session variable for the user 	
   	if ($userId) {
 		session_start();
 		$_SESSION['userId'] = $userId; 
-		echo $_SESSION['userId']; 
-		echo 'session started';
 		
 		//redirect to the welcome page
-		//header('Location: welcome.php');
-		//die(); 
+		header('Location: welcome.php');
+		die(); 
 	}
 }  
 
