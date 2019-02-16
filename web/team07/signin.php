@@ -28,15 +28,15 @@ if(isset($_POST['login'])){ //check if form was submitted
   	}
 	echo $userId;
 	
-	
-		
-	
 	//if user exists set session variable for the user 	
-  	//if ()
-	
-	//redirect to the welcome page
-	//header('Location: welcome.php');
-	//die(); 
+  	if ($userId != null) {
+		session_start();
+		$_SESSION['userId'] = $userId; 
+		
+		//redirect to the welcome page
+		header('Location: welcome.php');
+		die(); 
+	}
 }  
 
 

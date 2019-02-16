@@ -2,7 +2,8 @@
 if(session_id() == '') {
     header('Location: signin.php');
 	die(); 
-}
+} 
+echo $_SESSION['userId'];
 
 ?>
 
