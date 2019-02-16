@@ -2,8 +2,10 @@
 if(!isset($_SESSION['userId'])) {
     header('Location: signin.php');
 	die(); 
-} 
-echo $_SESSION['userId'];
+} else {
+	echo $_SESSION['userId'];
+}
+
 
 ?>
 
