@@ -14,10 +14,8 @@ if(isset($_POST['login'])){ //check if form was submitted
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
 	
-	$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username=:username and password=:password');
-	$stmt->bindParam(':username', $username, PDO::PARAM_STR, 50);
-	$stmt->bindParam(':password', $password, PDO::PARAM_STR, 50);
-	$stmt->execute();
+	$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username=? AND password=?');
+	$stmt->execute(array($username, $password));
 	userId = $stmt->fetch(); 
 	
 	echo $userId; 
