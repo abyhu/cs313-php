@@ -19,6 +19,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was 
 	$stmt = $db->prepare('SELECT password FROM authentication 
 	WHERE username = ?');
 	$result = $stmt->execute(array($username));
+	echo $result; 
 	
 	//if user exists set session variable for the user 	
   	if ($result) {
@@ -30,7 +31,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was 
 			$_SESSION['username'] = $username;
 			
 			//redirect to the welcome page
-			header('Location: https://still-harbor-46445.herokuapp.com/team07/welcome.php');
+			header('Location: welcome.php');
 			die(); 
 		} 
 	} 
