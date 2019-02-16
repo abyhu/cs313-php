@@ -29,7 +29,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 	echo $userId;
 	
 	//if user exists set session variable for the user 	
-  	if ($userId != null) {
+  	if ($userId) {
 		session_start();
 		$_SESSION['userId'] = $userId; 
 		
