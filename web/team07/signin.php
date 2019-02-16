@@ -22,7 +22,10 @@ if(isset($_POST['login'])){ //check if form was submitted
 	WHERE username = ? AND password = ?');
 	$stmt->execute(array($username, $password));
 	
-	$userId = $stmt->fetch();
+	$userId; 
+	while ($row = $stmt->fetch()) {
+    	$userId = reset($row);
+  	}
 	echo $userId;
 	
 	
