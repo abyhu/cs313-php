@@ -17,11 +17,11 @@ if(isset($_POST['login'])){ //check if form was submitted
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
 	
-	//$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username = ? and password = ?'); 
-	//$stmt->execute(array($username, $password));
-	//$userId = $stmt->fetch(); 
+	$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username = ? and password = ?'); 
+	$stmt->execute(array($username, $password));
+	$userId = $stmt->fetch(); 
 	
-	//echo $userId; 
+	echo $userId; 
 	
 	
 	
