@@ -6,7 +6,9 @@ function preventHacks($data) {
 	return $data; 
 }
 
-if(isset($_POST['login'])){ //check if form was submitted
+session_start();
+
+if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was submitted
   	$username = preventHacks($_POST['username']); //get input text
 	$password = preventHacks($_POST['password']); 
 	
@@ -14,27 +16,25 @@ if(isset($_POST['login'])){ //check if form was submitted
 	require("scripts/connectToDb.php");
 	$db = get_db(); 
 	
-	$stmt = $db->prepare('SELECT user_id FROM authentication 
-	WHERE username = ? AND password = ?');
-	$stmt->execute(array($username, $password));
-	
-	$userId; 
-	while ($row = $stmt->fetch()) {
-    	$userId = reset($row);
-  	}
+	$stmt = $db->prepare('SELECT password FROM authentication 
+	WHERE username = ?');
+	$userPassword = $stmt->execute(array($username));
 	
 	//if user exists set session variable for the user 	
-  	if ($userId) {
-		session_start();
-		$_SESSION['userId'] = $userId; 
+  	if ($userPassword) {
+		$row = $stmt->fetch(); 
+		$hashPasswordFromDb = $row['password']; 
 		
-		//redirect to the welcome page
-		header('Location: welcome.php');
-		die(); 
-	}
-}  
-
-
+		if ($password == $hasPasswordFromDb) {
+			//password is the same 
+			$_SESSION['username'] = $username;
+			
+			//redirect to the welcome page
+			header('Location: welcome.php');
+			die(); 
+		} 
+	} 
+}
 ?>
 
 <!DOCTYPE html>
