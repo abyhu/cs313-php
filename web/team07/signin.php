@@ -6,7 +6,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 	//query database to make sure user exists
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
-	//echo "connected to database"; 
+	echo 'connected to database'; 
 	
 		
 	
