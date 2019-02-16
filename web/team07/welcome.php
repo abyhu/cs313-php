@@ -1,5 +1,5 @@
 <?php
-if(!isset($_SESSION['userId'])) {
+if(!isset($_SESSION['username'])) {
     header('Location: signin.php');
 	die(); 
 } else {
