@@ -1,12 +1,19 @@
 <?php
 if(isset($_POST['login'])){ //check if form was submitted
-  	$username = $_POST['username']; //get input text
-	$password = $_POST['password']; 
+  	$username = preventHacks($_POST["username"]); //get input text
+	$password = preventHacks($_POST["password"]); 
 	
 	//query database to make sure user exists
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
-	echo 'connected to database'; 
+	
+	$stmt = $pdo->prepare("SELECT id FROM authentication WHERE username = ? and password = ?"); 
+	$stmt->execute(array($username, $password));
+	$userId = $stmt->fetch(); 
+	
+	echo $userId; 
+	
+	
 	
 		
 	
@@ -16,7 +23,14 @@ if(isset($_POST['login'])){ //check if form was submitted
 	//redirect to the welcome page
 	//header('Location: welcome.php');
 	//die(); 
-}    
+}  
+
+function preventHacks($data) {
+	$data = trim($data); 
+	$data = stripslashes($data); 
+	$data = htmlspecialchars($data); 
+	return $data; 
+}
 ?>
 
 <!DOCTYPE html>
@@ -28,11 +42,10 @@ if(isset($_POST['login'])){ //check if form was submitted
   <body>
 	  <p>Please sign in: </p>
 	  <form method="post" action="">
-	  	Username: <input type="text" name="username"><br />
-		Password: <input type="text" name="password"><br />
+	  	Username: <input type="text" name="username"><br /><br />
+		Password: <input type="text" name="password"><br /><br />
 	  	<input type="submit" name="login" value="Login">
 	  </form>
-	  
 	  <p>If you do not have an account, create one <a href='signup.php'>here</a>.</p>
   
   </body>
