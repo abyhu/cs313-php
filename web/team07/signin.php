@@ -25,7 +25,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was 
   	if ($result) {
 		$row = $stmt->fetch(); 
 		$passwordFromDb = $row['password']; 
-		echo $passwordFromDb
+		echo $passwordFromDb;
 		
 		if ($password == $passwordFromDb) {
 			//password is the same 
