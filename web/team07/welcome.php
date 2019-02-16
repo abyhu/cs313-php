@@ -3,9 +3,8 @@
 session_start();  
 
 if(!isset($_SESSION['username'])) {
-    //header('Location: signin.php');
-	//die(); 
-	echo 'username no set';
+    header('Location: signin.php');
+	die(); 
 } else {
 	echo $_SESSION['username'];
 }
