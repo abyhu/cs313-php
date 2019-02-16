@@ -15,7 +15,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 	//query database to make sure user exists
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
-	echo $db; 
+	echo 'connected to database'; 
 	
 	//$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username=? AND password=?');
 	//$stmt->execute(array($username, $password));
