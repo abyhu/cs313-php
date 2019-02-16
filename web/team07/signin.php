@@ -29,7 +29,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 		$_SESSION['userId'] = $userId; 
 		
 		//redirect to the welcome page
-		header('Location: welcome.php');
+		echo "<script type='text/javascript'> document.location = 'page1.php'; </script>";
 		die(); 
 	}
 }  
