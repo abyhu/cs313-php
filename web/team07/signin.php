@@ -10,7 +10,7 @@ session_start();
 
 if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was submitted
   	$username = preventHacks($_POST['username']); //get input text
-	$password = preventHacks($_POST['password']); 
+	$password = $_POST['password']; 
 	
 	//query database to make sure user exists
 	require("scripts/connectToDb.php");
