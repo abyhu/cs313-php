@@ -32,6 +32,8 @@ if(isset($_POST['login'])){ //check if form was submitted
   	if ($userId) {
 		session_start();
 		$_SESSION['userId'] = $userId; 
+		echo $_SESSION['userId']; 
+		echo 'session started';
 		
 		//redirect to the welcome page
 		//header('Location: welcome.php');
