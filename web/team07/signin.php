@@ -27,6 +27,7 @@ if(isset($_POST['login'])){ //check if form was submitted
   	if ($userId) {
 		session_start();
 		$_SESSION['userId'] = $userId; 
+		echo $_SESSION['userId'];
 		
 		//redirect to the welcome page
 		echo "<script type='text/javascript'> document.location = 'welcome.php'; </script>";
