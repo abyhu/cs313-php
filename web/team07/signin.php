@@ -7,8 +7,8 @@ function preventHacks($data) {
 }
 
 if(isset($_POST['login'])){ //check if form was submitted
-  	$username = preventHacks($_POST["username"]); //get input text
-	$password = preventHacks($_POST["password"]); 
+  	$username = preventHacks($_POST['username']); //get input text
+	$password = preventHacks($_POST['password']); 
 
 	echo $username $password; 
 	
