@@ -2,6 +2,7 @@
 if(!isset($_SESSION['username'])) {
     //header('Location: signin.php');
 	//die(); 
+	echo 'username no set';
 } else {
 	echo $_SESSION['username'];
 }
