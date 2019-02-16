@@ -34,8 +34,8 @@ if(isset($_POST['login'])){ //check if form was submitted
 		$_SESSION['userId'] = $userId; 
 		
 		//redirect to the welcome page
-		header('Location: welcome.php');
-		die(); 
+		//header('Location: welcome.php');
+		//die(); 
 	}
 }  
 
