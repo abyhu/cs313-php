@@ -1,5 +1,5 @@
 CREATE TABLE products (
-	ID				SERIAL PRIMARY KEY, 
+	ID			SERIAL PRIMARY KEY, 
 	name			varchar(80), 
 	img_url			varchar(80), 
 	description		varchar(500), 
@@ -8,22 +8,24 @@ CREATE TABLE products (
 );
 
 CREATE TABLE customers (
-	ID				SERIAL PRIMARY KEY, 
+	ID			SERIAL PRIMARY KEY, 
 	last_name		varchar(20),
 	first_name 		varchar(20), 
-	street_address	varchar(80), 
+	street_address		varchar(80), 
 	city			varchar(30), 
 	state			varchar(2),
-	zip				int, 
+	zip			int, 
 	phone			varchar(10)
 );
 
 CREATE TABLE orders (
-	ID					SERIAL PRIMARY KEY, 
-	customer_id			int references customers(ID), 
+	ID			SERIAL PRIMARY KEY, 
+	customer_id		int references customers(ID), 
 	credit_card_num		varchar(16), 
-	expiration			varchar(8), 
-	card_type			varchar(20)
+	expiration		varchar(8), 
+	card_type		varchar(20),
+	total			double precision,
+	shipping_status		boolean
 );
 
 CREATE TABLE orders_products (
@@ -31,7 +33,8 @@ CREATE TABLE orders_products (
 	product_id		int references products(ID)
 );
 
-INSERT INTO products (name, img_url, description, price, quantity)                 VALUES ('Oh So Retro Traveler Purse', 'images/purse0med.jpg', 'This vintage style purse is a new twist on an old classic. Embossed leather creates a feminine look. The soft camel color and honey highlights make the purse a staple for any closet. Extra large pockets, a sturdy zipper, and an over the shoulder strap give the fashionable purse function.', 50.00, 10);       
+INSERT INTO products (name, img_url, description, price, quantity)                 
+VALUES ('Oh So Retro Traveler Purse', 'images/purse0med.jpg', 'This vintage style purse is a new twist on an old classic. Embossed leather creates a feminine look. The soft camel color and honey highlights make the purse a staple for any closet. Extra large pockets, a sturdy zipper, and an over the shoulder strap give the fashionable purse function.', 50.00, 10);       
 
 INSERT INTO products (name, img_url, description, price, quantity) 
 VALUES ('Pinch of Punk Purse', 'images/purse1med.jpg', 'This purse is tough. Sturdy leather with gold studs and hardware add character. This purse includes a matching coin purse and features an interior pocket large enough to fit a standard tablet. When you need something edgy to coordinate with your look, this purse is the one.', 45.00, 10);
