@@ -10,11 +10,14 @@ if(isset($_POST['login'])){ //check if form was submitted
   	$username = preventHacks($_POST["username"]); //get input text
 	$password = preventHacks($_POST["password"]); 
 	
+	echo $username; 
+	echo $password; 
+	
 	//query database to make sure user exists
 	require 'scripts/connectToDb.php';
 	$db = get_db(); 
 	
-	$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username = ? and password = ?'); 
+	//$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username = ? and password = ?'); 
 	//$stmt->execute(array($username, $password));
 	//$userId = $stmt->fetch(); 
 	
