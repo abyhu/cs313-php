@@ -18,14 +18,14 @@ if(isset($_POST['username']) && isset($_POST['password'])){ //check if form was 
 	
 	$stmt = $db->prepare('SELECT password FROM authentication 
 	WHERE username = ?');
-	$userPassword = $stmt->execute(array($username));
+	$result = $stmt->execute(array($username));
 	
 	//if user exists set session variable for the user 	
-  	if ($userPassword) {
+  	if ($result) {
 		$row = $stmt->fetch(); 
-		$hashPasswordFromDb = $row['password']; 
+		$passwordFromDb = $row['password']; 
 		
-		if ($password == $hasPasswordFromDb) {
+		if ($password == $passwordFromDb) {
 			//password is the same 
 			$_SESSION['username'] = $username;
 			
