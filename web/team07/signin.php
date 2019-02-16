@@ -19,7 +19,7 @@ if(isset($_POST['login'])){ //check if form was submitted
 	
 	$stmt = $pdo->prepare('SELECT user_id FROM authentication WHERE username = ? and password = ?'); 
 	$stmt->execute(array($username, $password));
-	$userId = $stmt->fetch(); 
+	//$userId = $stmt->fetch(); 
 	
 	echo $userId; 
 	
