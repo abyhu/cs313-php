@@ -25,12 +25,12 @@
 			<label>Pounds: <input type="number" name="pounds"></label>
 			<label>Ounces: <input type="number" name="ounces"></label>
 			<p>Please select which type of item will be shipped.</p>
-			<select name="mailType">
+			<select name="type">
 				<option selected>Select Mail Type</option>
-				<option>Letters (Stamped)</option>
-				<option>Letters (Metered)</option>
-				<option>Large Envelopes (Flats)</option>
-				<option>First-Class Package Service (Retail)</option>
+				<option name="stamped">Stamped Letters</option>
+				<option name="metered">Metered Letters</option>
+				<option name="flat">Large Flat Envelopes</option>
+				<option name="package">First Class Package Service</option>
 			</select>
 			<br><br>
 			<input type="submit" value="Calculate Shipping" class="submitButton">

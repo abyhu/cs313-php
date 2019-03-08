@@ -21,17 +21,17 @@ app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 function calculate(request, response) {
 	const pounds = Number(request.query.pounds); 
 	const ounces = Number(request.query.ounces);
-	const type = request.query.mailType;
+	const type = request.query.type;
 	
 	if(pounds == 0 
-	   && ounces > 4 && (type == "Letters (Stamped)" 
-						 || type == "Letters (Metered")) 
+	   && ounces > 4 && (type == "Stamped Letters" 
+						 || type == "Metered Letters")) 
 	{
-		type = "Large Envelopes (Flats)";
+		type = "Large Flat Envelope";
 	} 
-	if ( pounds == 0 && ounces > 13 && type == "Large Envelopes (Flats)") 
+	if (pounds == 0 && ounces > 13 && type == "Large Flat Envelope") 
 	{
-		type = "First-Class Package Service (Retail)";
+		type = "First Class Package Service";
 	}
 	
 	getPrice(response, pounds, ounces, type);
@@ -41,21 +41,20 @@ function getPrice(response, pounds, ounces, type) {
 	var price = 0.0;
 	
 	switch(type) {
-		case "Letters (Stamped)": 
+		case "Stamped Letters": 
 			price = 1.0; 
 			break;
-		case "Letters (Metered)": 
+		case "Metered Letters": 
 			price = 2.0; 
 			break;
-		case "Large Envelopes (Flats)":
+		case "Large Flat Envelope":
 			price = 3.0; 
 			break;
-		case "First-Class Package Service (Retail)":
+		case "default":
 			price = 4.0; 
 			
 			const params = {pounds: pounds, ounces: ounces, type: type, price: price};
 			
-			response.render('pages/index2', params);
+			response.render('pages/result', params);
 	}
-	
 }
