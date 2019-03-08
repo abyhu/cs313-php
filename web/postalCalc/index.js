@@ -1,4 +1,6 @@
+const cool = require('cool-ascii-faces');
 const express = require('express');
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -13,8 +15,9 @@ app.set('view engine', 'ejs');
 app.get('/calculateShipping', calculate); 
 
 //rule for the home page and start the server listening
-app.get('/', (req, res) => res.render('pages/index'))
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+app.get('/', (req, res) => res.render('pages/index'));
+app.get('/cool', (req, res) => res.send(cool()))
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
 
